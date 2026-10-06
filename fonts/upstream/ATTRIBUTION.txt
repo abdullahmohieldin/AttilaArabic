@@ -1,0 +1,5 @@
+Font: Tajawal-Regular.ttf
+Designer / Copyright: Copyright 2018 Boutros International (http://www.boutrosfonts.com).
+License: SIL Open Font License, Version 1.1 (see OFL.txt).
+Source: Google Fonts / Upstream Boutros International release.
+Used as the Arabic glyph source for merging into Attila UI CUF fonts.

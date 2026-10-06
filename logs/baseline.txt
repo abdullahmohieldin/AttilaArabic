@@ -1,0 +1,28 @@
+# Baseline hashes (proves game files unchanged)
+
+Purpose: SHA256 of source packs BEFORE any testing.
+Re-hash AFTER testing and compare. Any mismatch = STOP and investigate.
+
+## 2026-10-06 â€” before testing
+
+| File | Size (bytes) | LastWriteTimeUtc | SHA256 |
+|------|--------------|------------------|--------|
+| D:\SteamLibrary\steamapps\common\Total War Attila\data\local_en.pack | 211301042 | 2026-09-18 12:06:14Z | 45E0F0877B3A644F8C63352A6824416EEDBDC0B85A000E1189A2B05860A7F70D |
+
+Additional packs will be appended here when first copied (before/after hashes).
+Claim label: VERIFIED (Get-FileHash, PowerShell 5.1).
+
+## 2026-10-06 — after Phase 2 + v1 pack build
+local_en.pack (vanilla): 45E0F0877B3A644F8C63352A6824416EEDBDC0B85A000E1189A2B05860A7F70D — UNCHANGED (VERIFIED)
+release\Attila_Arabic_POC_v1.pack: 1967C08D2C72495F5065A975ADB4DD04EC47C0C440A0D16DB9A3D644AB8CA5B1 (new standalone mod, PFH4 type 3)
+
+## 2026-10-06 — after v2 + v3-build
+local_en.pack (vanilla): 45E0F0877B3A644F8C63352A6824416EEDBDC0B85A000E1189A2B05860A7F70D — UNCHANGED (VERIFIED)
+release\Attila_Arabic_POC_v2.pack: C387D01D5ED6F4C3D8590CCB62AC2ABA346D9AD3B770181D7EF9C3057FDA1ABB (loc-only probe, PFH4 type 3)
+release\Attila_Arabic_POC_v3_fonttest.pack: 861326EFBB43716179020C38F890409F19D4DF0C58174920ED1C9BE02432E721 (BUILD ONLY, 31 merged CUFs, PFH4 type 3)
+
+## 2026-10-06 — after v2b + v3b + v3b_big builds
+local_en.pack (vanilla): 45E0F0877B3A644F8C63352A6824416EEDBDC0B85A000E1189A2B05860A7F70D — UNCHANGED (VERIFIED)
+release\Attila_Arabic_POC_v2b.pack: 073C79021BA61821073A8BF3715B3BBA8304CF686B881FD40150495E8D17ACF2 (loc probe, 69 keys, PFH4 type 3)
+release\Attila_Arabic_POC_v3b_fonttest.pack: 5F52AC489A8C5CA24BA63EBCAACCA1912A66EFC2D3D530907DC6C0B8BF6A7564 (31 merged CUFs, current size)
+release\Attila_Arabic_POC_v3b_big.pack: E6BFD58B898EE40FEE2E2E3D4EBA4A87ACBA5A3C7D2A0AF24F6342C24563CF76 (31 merged CUFs, raised px, +2px cells)

@@ -1,0 +1,26 @@
+# Vanilla game data, extracted assets, build artifacts
+extracted/
+build/
+screenshots/
+
+# Pack and font binaries (copyrighted vanilla assets and generated packs)
+*.pack
+*.cuf
+release/*.pack
+
+# Exported vanilla loc/tsv
+*.loc
+*.tsv
+
+# Third-party tools, venv, archives, and caches
+tools/venv/
+tools/rpfm-*/
+tools/rpfm-*.zip
+tools/etwng/
+__pycache__/
+*.pyc
+
+# Logs: exclude all build/run logs, preserve baseline and pip-freeze
+logs/*
+!logs/baseline.txt
+!logs/pip-freeze.txt
