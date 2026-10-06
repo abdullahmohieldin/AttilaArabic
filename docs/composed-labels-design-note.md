@@ -2,56 +2,54 @@
 
 ## Problem Statement (VERIFIED by Game Tests)
 
-Total War: ATTILA's UI engine composes complex labels at runtime by joining separate localized strings via hardcoded engine formatting strings or simple string concatenation (e.g. `"{0} {1}"` or `rating + " " + stat_name`).
+Total War: ATTILA's UI engine composes complex labels at runtime by joining separate localized strings via hardcoded engine formatting strings or simple string concatenation (e.g. `rating + " " + stat_name`).
 
 In earlier test packs, unit stats appeared on screen as:
-`"Very High <Arabic> U03"`
+`"Excellent الدرع"` (or `"Very High <Arabic> U03"`)
 
-This reveals two fundamental conflicts with Arabic localization:
-
-1. **Syntactic Ordering (Adjective vs Noun)**:
-   - English syntax puts the qualifying adjective before the noun: `[Adjective: Very High] [Noun: Health]`.
-   - Arabic syntax requires the noun to precede the qualifying adjective: `[Noun: الصحة] [Adjective: عالية جداً]`.
-   - If keys are translated independently without reordering, the engine's LTR concatenation produces `عالية جداً صحة` (grammatically invalid Arabic).
-
-2. **Bidirectional (BiDi) Boundary Scrambling**:
-   - Because the engine performs no internal BiDi reordering, Arabic strings must be pre-shaped into Arabic Presentation Forms and ordered visually LTR.
-   - When the engine concatenates an untranslated or LTR Latin string (`"Very High "`) with a pre-shaped visual RTL string, or joins two independently pre-shaped strings with a space, the word order is scrambled visually in game.
+This reveals how the game engine handles compound labels:
+1. **Engine Concatenation Order (VERIFIED)**:
+   - The engine concatenates `[Rating string] [Stat string]` from left to right.
+2. **Visual RTL Reversal (INFERENCE)**:
+   - In English LTR reading: the left string is read first, then the right string (`[Rating: Excellent] [Stat: Armour]`).
+   - When Arabic is pre-shaped into visual order and rendered by the engine's LTR layout, the engine places `[Rating: ممتاز]` on the left and `[Stat: الدرع]` on the right.
+   - An Arabic reader reading RTL reads the right element first and the left element second: `[الدرع] [ممتاز]` ("Armour: Excellent"), which naturally matches Arabic adjective-after-noun syntax.
 
 ---
 
-## Which Keys Are Joined (VERIFIED / DOCUMENTED)
+## Screen-Verified Key Analysis
 
-### 1. Unit Stat Qualitative Ratings + Stat Names
+### 1. Unit Info Bullet Point Ratings & Stats (VERIFIED)
+- **Qualitative Rating Keys** (`text\db\ui_unit_bullet_point_enums.loc`):
+  - Real keys verified from database:
+    - `ui_unit_bullet_point_enums_onscreen_name_att_excellent` ("Excellent") -> `ممتاز`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_good` ("Good") -> `جيد`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_average_positive` ("Average") -> `متوسط`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_average_negative` ("Average") -> `متوسط`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_poor` ("Poor") -> `ضعيف`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_very_poor` ("Very Poor") -> `ضعيف جداً`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_high` ("High") -> `مرتفع`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_very_high` ("Very High") -> `مرتفع جداً`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_low` ("Low") -> `منخفض`
+    - `ui_unit_bullet_point_enums_onscreen_name_att_very_low` ("Very Low") -> `منخفض جداً`
 - **Stat Names** (`text\db\ui_unit_stats.loc`):
-  - `ui_unit_stats_onscreen_name_stat_melee_attack` ("Melee Attack")
-  - `ui_unit_stats_onscreen_name_stat_melee_defence` ("Melee Defence")
-  - `ui_unit_stats_onscreen_name_stat_armour` ("Armour")
-  - `ui_unit_stats_onscreen_name_stat_health` ("Health")
-  - `ui_unit_stats_onscreen_name_stat_morale` ("Morale")
-  - `ui_unit_stats_onscreen_name_stat_speed` ("Speed")
-- **Qualitative Ratings** (`text\db\uied_component_texts.loc`):
-  - `uied_component_texts_localised_string_prediction_accuracy_very_high_Text_...` ("Very high")
-  - `uied_component_texts_localised_string_prediction_accuracy_very_low_Text_...` ("Very low")
-  - Rating levels in UI layouts (`Poor`, `Average`, `Good`, `Very High`).
+  - `ui_unit_stats_onscreen_name_stat_armour` ("Armour") -> `الدرع`
+  - `ui_unit_stats_onscreen_name_stat_health` ("Health") -> `الصحة`
+  - `ui_unit_stats_onscreen_name_stat_morale` ("Morale") -> `المعنويات`
+  - `ui_unit_stats_onscreen_name_stat_speed` ("Speed") -> `السرعة`
+  - `ui_unit_stats_onscreen_name_stat_melee_attack` ("Melee Attack") -> `هجوم الاشتباك`
+  - `ui_unit_stats_onscreen_name_stat_melee_defence` ("Melee Defence") -> `دفاع الاشتباك`
 
-### 2. Header and Value Concatenations
-- **Initial Challenge**:
-  - Key: `uied_component_texts_localised_string_tx_initial_challenge:_NewState_Text_670040` (`"Initial challenge: "`)
-  - Joined with difficulty rating string (e.g. `"Normal"`, `"Hard"`).
-- **Faction Leader Title**:
-  - Key: `uied_component_texts_localised_string_heading_tx_NewState_Text_79004a` (`"Faction Leader"`)
-  - Joined or paired with character names in `names.loc`.
+### 2. Disproven Concatenation Claim: Initial Challenge (VERIFIED)
+- **Correction**: An earlier draft claimed that `"Initial challenge:"` was concatenated by the engine with the difficulty rating into a single compound label string.
+- **Screen Verification**: Examination of screenshots (1920x1080) proves that:
+  - `"Initial challenge:"` (`uied_component_texts_localised_string_tx_initial_challenge:_NewState_Text_670040`) is a **separate UI widget** (K50).
+  - The difficulty rating text (`"Normal"`, `"Hard"`, etc.) sits in its own dedicated label widget.
+  - They are NOT concatenated into one localized string by the game.
 
 ---
 
-## Solution Strategies
+## Summary of Rules for Localizing Composed Labels
 
-### Approach A: Whole-Phrase Contextual Strings (Recommended for UI Tooltips)
-Where a UI element allows a single format template (e.g. `"{0}: {1}"`), customize the template so the entire clause forms a cohesive Arabic sentence.
-
-### Approach B: Colon-Separated Neutral Keys
-When two independent database keys are joined at runtime:
-1. Translate the rating adjective in a neutral nominal form or translate the stat label with a trailing separator.
-2. For stat labels in unit cards, use concise standalone terms (e.g. `الصحة`, `الدرع`, `هجوم الاشتباك`).
-3. For composed descriptions, localize the composite UI layout templates rather than individual fragment keys where possible.
+1. **Standalone Localized Keys**: Both rating enums and unit stat labels are pre-shaped as standalone Arabic visual strings.
+2. **LTR Layout Inversion**: The engine's LTR layout of `[Rating] [Stat]` renders in visual space with `Rating` at low X and `Stat` at higher X. Because Arabic is read right-to-left, the eye encounters `Stat` first and `Rating` second, naturally preserving Arabic grammar without code injection or layout modification.

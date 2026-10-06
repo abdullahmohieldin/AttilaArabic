@@ -23,7 +23,7 @@ from cuf import CUF  # noqa: E402
 from shape import shape  # noqa: E402
 
 
-def render_cuf_preview(font_path, text, output_path, scale=4):
+def render_cuf_preview(font_path, text, output_path, scale=4, cell_borders=False):
     c = CUF.decode(open(font_path, "rb").read())
     base_row = c.props["baseline"] - 1
     v_size = c.props["v_size"]
@@ -59,6 +59,17 @@ def render_cuf_preview(font_path, text, output_path, scale=4):
     draw = ImageDraw.Draw(img)
 
     base_y = margin_y + base_row
+
+    # Draw cell borders if requested
+    if cell_borders:
+        cx = margin_x
+        for code, aw, w, h, bm in glyphs:
+            draw.rectangle(
+                [(cx, margin_y), (cx + aw - 1, margin_y + v_size - 1)],
+                outline=(50, 70, 90),
+                width=1,
+            )
+            cx += aw
 
     # Draw red baseline line
     draw.line([(0, base_y), (canvas_w, base_y)], fill=(255, 50, 50), width=1)
@@ -103,9 +114,10 @@ def main():
     parser.add_argument("--text", required=True, help="Logical Arabic text to render")
     parser.add_argument("--output", required=True, help="Output PNG file path")
     parser.add_argument("--scale", type=int, default=4, help="Upscale factor (default 4)")
+    parser.add_argument("--cell-borders", action="store_true", help="Draw cell borders around glyphs")
     args = parser.parse_args()
 
-    render_cuf_preview(args.font, args.text, args.output, scale=args.scale)
+    render_cuf_preview(args.font, args.text, args.output, scale=args.scale, cell_borders=args.cell_borders)
 
 
 if __name__ == "__main__":

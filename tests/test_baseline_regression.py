@@ -6,7 +6,7 @@ sys.path.insert(0, r"D:\AttilaArabic\source")
 from cuf import CUF
 
 BASE = r"D:\AttilaArabic"
-V5_DIR = os.path.join(BASE, "build", "v5fonts")
+V5_DIR = os.path.join(BASE, "build", "v6fonts")
 
 TARGETS = [
     "georgia_italic_10", "georgia_italic_12", "georgia_italic_14", "georgia_italic_16", "georgia_italic_18",
@@ -62,31 +62,36 @@ class TestBaselineRegression(unittest.TestCase):
 
             self.assertGreaterEqual(len(checked_codes), 680, f"Font {font_name} should have >= 680 added Arabic glyphs")
 
-            # Check dal (isolated U+FEA9 or U+062F) - must sit on baseline_row or within 1px anti-aliasing tolerance
-            for dal_cp in (0xFEA9, 0x062F):
-                code = c.table[dal_cp]
-                if code < len(c.dims) and code != c.table[0]:
-                    ah, aw, w, h = c.dims[code]
-                    bmp = c.bitmaps[code]
-                    ys = [y for y in range(h) for x in range(w) if bmp[y * w + x] > 30]
-                    if ys:
-                        ink_bottom = max(ys)
-                        diff = abs(ink_bottom - baseline_row)
-                        self.assertLessEqual(diff, 1, f"{font_name} Dal U+{dal_cp:04X}: bottom {ink_bottom} does not sit on baseline_row {baseline_row} (diff={diff})")
+            # Flat-bottom letters: Dal, Alef, Beh (body), Seen (body)
+            # EXACT: the highest solid ink row AT OR ABOVE baseline_row == baseline_row.
+            # (Beh and Seen have dots below baseline — we check body stroke only.)
+            flat_bottom_checks = [
+                ("Dal",  (0xFEA9, 0x062F)),
+                ("Alef", (0xFE8D, 0x0627)),
+                ("Beh",  (0xFE8F, 0xFE90, 0xFE91, 0xFE92)),
+                ("Seen", (0xFEB1, 0xFEB2, 0xFEB3, 0xFEB4)),
+            ]
+            for letter_name, cps in flat_bottom_checks:
+                for cp in cps:
+                    code = c.table[cp]
+                    if code < len(c.dims) and code != c.table[0]:
+                        ah, aw, w, h = c.dims[code]
+                        bmp = c.bitmaps[code]
+                        # Only rows AT OR ABOVE baseline_row (body stroke — excludes sub-dots)
+                        ys_body = [
+                            y for y in range(baseline_row + 1)
+                            for x in range(w) if bmp[y * w + x] > 50
+                        ]
+                        if ys_body:
+                            body_bottom = max(ys_body)
+                            self.assertEqual(
+                                body_bottom, baseline_row,
+                                f"{font_name} {letter_name} U+{cp:04X}: "
+                                f"body_bottom {body_bottom} != baseline_row {baseline_row}"
+                            )
                         break
 
-            # Check alef (isolated U+FE8D or U+0627) - bottom must sit on baseline_row or within 1px
-            for alef_cp in (0xFE8D, 0x0627):
-                code = c.table[alef_cp]
-                if code < len(c.dims) and code != c.table[0]:
-                    ah, aw, w, h = c.dims[code]
-                    bmp = c.bitmaps[code]
-                    ys = [y for y in range(h) for x in range(w) if bmp[y * w + x] > 30]
-                    if ys:
-                        ink_bottom = max(ys)
-                        diff = abs(ink_bottom - baseline_row)
-                        self.assertLessEqual(diff, 1, f"{font_name} Alef U+{alef_cp:04X}: bottom {ink_bottom} does not sit on baseline_row {baseline_row} (diff={diff})")
-                        break
+
 
             # Check descender (Reh U+FEAD or U+0631) - must descend below baseline_row
             for reh_cp in (0xFEAD, 0x0631):
