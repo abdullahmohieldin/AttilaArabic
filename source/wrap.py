@@ -84,13 +84,21 @@ def wrap_multi(logical, c, adv, width):
 
 def wrap_single(logical, c, adv, width):
     words = logical.split(" ")
+    total_words = len(words)
     ell = ELLIPSIS if has_glyph(c, ord(ELLIPSIS)) else "..."
+    # First check if whole logical text fits without ellipsis
+    v_full = shape(logical)
+    w_full, _ = visual_width(v_full, c, adv)
+    if w_full <= width:
+        return v_full, ""
+
+    # Truncate words from logical end and append ellipsis
     while words:
-        cand = " ".join(words)
+        cand = " ".join(words) + ell
         v = shape(cand)
         w, _ = visual_width(v, c, adv)
         if w <= width:
-            return v, logical[len(cand):].strip()
+            return v, logical[len(" ".join(words)):].strip()
         words = words[:-1]  # clip the LOGICAL end, never the start
     # even one word + ellipsis doesn't fit
     v = shape(ell)
