@@ -96,3 +96,35 @@ Predictions:
    c. One sanity shot (menus must look exactly like the v8 round).
 5. Upload all three; I will measure spans, alef distances, indents, and dots
    per the prediction tables above and call each hypothesis.
+
+## RESULTS (2026-10-07, screenshots 07.37.33.86 / 07.37.36.81 / 07.37.39.37) — measured
+
+| line | predicted (fallback14 / w+2 / aw+2) | measured | verdict |
+|---|---|---|---|
+| ERE L1-L6 (all 6 clones) | 272/270 or mixed 118..196 | **277 every line, pitch 14.0, 20 runs of 11px** | fallback-14 |
+| ERE L7-L9 alef distance | 285 / 125-205 / 85-165 | **285 exactly (alefs at x368 and x653)** | fallback-14 |
+| WRE L1 (FEF2 control) | 238 | **238, pitch 12.0, 10px bowls (our bitmap)** | replicates v9 |
+| WRE L2-L3 (E120/E121) | 275 or ~237 | **277, 11px placeholder runs** | placeholder |
+| WRE L4-L5 phrase indent | 508 / 478 / 448 | **~508** | fallback-14 |
+
+Key findings:
+
+1. **H_fallback14 CONFIRMED.** For codepoints the engine does not know
+   (PUA E1xx), both aw and w are ignored; advance is a constant 14 and the
+   engine draws its **own placeholder glyph** (11px blob + apostrophe mark,
+   pixel dump in logs/crops/zoom/v10_wre_L2_E120_6x.png) — our clone bitmaps
+   were never rendered.
+2. **Real presentation forms DO use our bitmaps** (WRE L1: 10px Tajawal bowls)
+   with the mystery per-codepoint advance (FEF2 = 12).
+3. **The dots experiment did not run** — E120/E121 rendered as placeholders,
+   so the over-box clipping hypothesis is still untested. The only way to test
+   it is to modify a REAL codepoint's bitmap in place in a probe fonts pack.
+4. Record tuning (aw/w) is a dead end for the join fix. The remaining lever is
+   the bitmap itself: stretch each glyph's ink to (engine_advance − 1) px so
+   joins close. Engine advances are measurable per codepoint with 20x ruler
+   lines (method proven in v9/v10).
+5. Sanity: campaigns/battles menus identical to the v8 round (Arabic OK).
+
+Next probe (v11, one fonts pack + one loc): in-place geo12 changes —
+FEF2 refit-18 (dots test), FE92 stretched 6→8px and FE8D 3→5px (join test),
+loc lines 20×FEF2 / 20×FE92 / 20×FE8D + one real sentence.
