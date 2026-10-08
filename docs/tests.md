@@ -141,23 +141,38 @@ choose-faction header, unit-info stat labels, unit dropdown, unit name
 
 **Prediction 3 CONFIRMED**: no vertical clipping; Shyizer `v_size` matches.
 
-#### Big finding 1 — the engine mirrors our strings, so our "visual order" is
-#### the wrong order (this is what created the orphan words)
+#### Big finding 1 — DRAWN DIRECTION IS NOT RESOLVED (retracted claim)
 
-Evidence, custom-battle button key
-`..._button_txt_NewState_Text_36000f` stores
-`FE94 FEBC FEBC FEA8 FEE3 0020 FE94 FEDB FEAE FECC FEE3` and the screen shows
-`معركة مخصصة` — i.e. the on-screen order is the **reverse** of the stored
-order. Same for every other string (titles, buttons, descriptions).
+I first wrote here that the engine mirrors our stored strings, from the fact
+that the custom-battle button key stores
+`FE94 FEBC FEBC FEA8 FEE3 0020 FE94 FEDB FEAE FECC FEE3` while the reader sees
+`معركة مخصصة`. **That claim is retracted**: later measurements contradict it and
+I could not settle it from the C1 pixels. Evidence for both sides:
 
-Consequence: our loc is stored in RTL visual order, the engine treats the value
-as logical text, wraps it by *its own* advances and then mirrors each line. So
-every earlier hard wrap we authored landed on the wrong side: the ERE box shows
-`عامرة` and `من` alone on their own lines, the WRE box shows
-`قف` / `ميديولانوم`, because the wrap points the engine picked are inside words
-of the mirrored string. Fix for the next build: author the strings in **logical**
-order (the order a reader reads) + our own hard wraps, and let the engine
-mirror them. Our current values are logical-order text reversed.
+* FOR mirroring: the stored byte order of the faction titles is the *reverse*
+  of reading order (`factions_screen_name_att_fact_eastern_roman_empire` stores
+  U+FE94 U+FEF4 U+FED7 U+FEAE U+FEB8 U+FEDF U+FE8D U+0020 U+FE8E U+FEE3 U+FEED
+  U+FEAD, which reads as `روما الشرقية` only when reversed). The stored values
+  are RTL visual order; the reader sees logical order.
+* AGAINST mirroring: rendering the *stored* bytes left-to-right and overlaying
+  them on the measured title strokes gives a converging fit
+  (`logs/crops/C4_order/`, IoU 0.579 with the stored order at bitmap scale 1.6),
+  i.e. as-drawn order == stored order.
+* The CUF bitmaps themselves are NOT mirrored (verified directly: U+FE92 has its
+  two dots below the baseline, U+FE94 its two dots above, U+FE8D no dots), so
+  the font cannot explain the contradiction.
+
+Cause of the disagreement: the C1 screenshots do not pin down which loc key
+belongs to which on-screen element, nor the surface's font identity or scale.
+Whole-line stored-vs-reversed comparisons split 3/3 fonts in one test and 1/6 in
+another, and my first reversed-order harness dropped every glyph silently
+(baseline 19 px < bitmap height 23 px, so the placement clip discarded them) —
+the early "reversed" numbers were therefore meaningless, and the claim was
+built on them.
+
+**Status: unresolved. Do not author anything on either reading yet.** A loc
+value only needs mirror compensation if the engine mirrors, and C1 cannot say.
+The dedicated test that settles it is in "Next test" below.
 
 #### Big finding 2 — pitch is NOT `aw` and NOT `w`
 
@@ -209,6 +224,33 @@ between cells.
   175 px), label y391-405.
 - Word gap in the menu buttons is 8-9 px (the 12 px fonts give U+0020 advance
   4-5 px), i.e. the engine adds space width on top of the space advance.
+
+### Next test — C4 as designed (settles direction, wrap and alignment in one launch)
+
+Because C1 cannot settle the drawn direction, the next pack must settle it by
+construction instead of by inference. One pack, three declared changes, each
+readable from one screenshot:
+
+1. **Direction ruler.** U+FD3E/FD3F are unusable (0/37 fonts carry ink). Use two
+   clone glyphs instead, in the style of C3: append two glyph records per font
+   whose bitmap is a column-clipped copy of that font's own U+FE92, one 6 px
+   wide, one 13 px wide, both with `aw == w`. Remap two unused codepoints to
+   them (U+FEC7 = 6 px, U+FE9A = 13 px). Then one line of 20 x U+FEC7 followed
+   by 20 x U+FE9A, and the mirror line 20 x U+FE9A then 20 x U+FEC7. The two
+   halves are visually unmistakable (thin stems vs broad stems), so the
+   on-screen arrangement reads the drawn direction directly, with no font or
+   scale assumption and nothing to do with Arabic orthography.
+2. **Same-line stress**: the two rulers on the faction title bar, the ERE
+   description box and the difficulty box (3 surfaces, 2 lines each).
+3. **NBSP pad test**: the difficulty description gets, line by line, a leading
+   pad of 9 / 0 NBSPs (variant A = none for the other key), so left- vs
+   right-alignment shows as which edge the text hugs.
+
+Predicted: if the engine draws as-stored, the FD3E line shows the left-parens on
+the LEFT; if it mirrors, they appear on the RIGHT. No other measurement is
+needed. Packs `Attila_Arabic_CR_C4.pack` + `_C4_fonts.pack` once rebuilt on this
+design (the pack currently in `release/` was built on the retracted mirror
+hypothesis and must not be installed).
 
 ---
 
