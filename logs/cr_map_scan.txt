@@ -1,0 +1,111 @@
+loc uses 195 distinct codepoints
+  arabic-range 100: U+060C U+061B U+0640 U+FE80 U+FE82 U+FE83 U+FE84 U+FE87 U+FE88 U+FE8B U+FE8D U+FE8E U+FE90 U+FE91 U+FE92 U+FE93 U+FE94 U+FE95 U+FE96 U+FE97 U+FE98 U+FE99 U+FE9C U+FE9F U+FEA0 U+FEA1 U+FEA3 U+FEA4 U+FEA7 U+FEA8 U+FEA9 U+FEAA U+FEAB U+FEAC U+FEAD U+FEAE U+FEAF U+FEB0 U+FEB3 U+FEB4 U+FEB5 U+FEB6 U+FEB7 U+FEB8 U+FEBB U+FEBC U+FEBE U+FEBF U+FEC0 U+FEC1 U+FEC2 U+FEC3 U+FEC4 U+FEC5 U+FEC6 U+FEC8 U+FEC9 U+FECA U+FECB U+FECC U+FED0 U+FED1 U+FED2 U+FED3 U+FED4 U+FED5 U+FED6 U+FED7 U+FED8 U+FED9 U+FEDA U+FEDB U+FEDC U+FEDD U+FEDE U+FEDF U+FEE0 U+FEE1 U+FEE2 U+FEE3 U+FEE4 U+FEE5 U+FEE6 U+FEE7 U+FEE8 U+FEEA U+FEEB U+FEEC U+FEED U+FEEE U+FEEF U+FEF0 U+FEF1 U+FEF2 U+FEF3 U+FEF4 U+FEF7 U+FEF9 U+FEFB U+FEFC
+  other 95: U+000A U+0020 U+0021 U+0022 U+0023 U+0025 U+0026 U+0027 U+0028 U+0029 U+002B U+002C U+002D U+002E U+002F U+0030 U+0031 U+0032 U+0033 U+0034 U+0035 U+0036 U+0037 U+0038 U+0039 U+003A U+003B U+003C U+003D U+003E U+003F U+0041 U+0042 U+0043 U+0044 U+0045 U+0046 U+0047 U+0048 U+0049 U+004A U+004B U+004C U+004D U+004E U+004F U+0050 U+0051 U+0052 U+0053 U+0054 U+0055 U+0056 U+0057 U+0058 U+0059 U+005A U+005B U+005D U+005F U+0061 U+0062 U+0063 U+0064 U+0065 U+0066 U+0067 U+0068 U+0069 U+006A U+006B U+006C U+006D U+006E U+006F U+0070 U+0071 U+0072 U+0073 U+0074 U+0075 U+0076 U+0077 U+0078 U+0079 U+007A U+007C U+00A0 U+00E4 U+2013 U+2018 U+2019 U+201C U+201D U+2026
+
+arialunicode_10.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_12.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_14.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_16.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_18.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_20.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+arialunicode_22.cuf              N=38948 0xFFFF=    1 dangling=    3 distinct_dangling=[38948, 65535] arabic_in_range=100/100 dang=0
+    other_in_range=95/95
+georgia_italic_10.cuf            N=  626 0xFFFF=    1 dangling= 1278 distinct_dangling=[626, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+georgia_italic_12.cuf            N=  626 0xFFFF=    1 dangling= 1278 distinct_dangling=[626, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+georgia_italic_14.cuf            N=  626 0xFFFF=    1 dangling= 1278 distinct_dangling=[626, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+georgia_italic_16.cuf            N=  626 0xFFFF=    1 dangling= 1278 distinct_dangling=[626, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+georgia_italic_18.cuf            N=  626 0xFFFF=    1 dangling= 1278 distinct_dangling=[626, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_10.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_12.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_14.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_16.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_18.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_20.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_22.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_24.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_26.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_28.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_30.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_32.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_38.cuf               N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_10.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_12.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_14.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_16.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_18.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_20.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_22.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_24.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_26.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_28.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_30.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_32.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95
+la_gioconda_uppercase_38.cuf     N=  285 0xFFFF=    1 dangling= 4094 distinct_dangling=[285, 65535] arabic_in_range=3/100 dang=97
+    in_range_cps: U+060C U+061B U+0640
+    other_in_range=95/95

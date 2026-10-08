@@ -1,0 +1,6 @@
+{
+  "test": "C1",
+  "change": "font pack only: Shyizer's 37 CUFs byte-for-byte on top of the C0 loc. Test only - never committed.",
+  "fonts": { "mode": "shyizer" },
+  "loc": { "descriptions_from_long": true }
+}

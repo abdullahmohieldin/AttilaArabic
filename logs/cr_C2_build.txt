@@ -1,0 +1,47 @@
+== C2 == declared change: font identification: 3 glyphs appended to every vanilla CUF (blank, block, blank) and 11 real Arabic codepoints remapped to an 11-slot barcode carrying the font id; the same barcode is placed on 13 UI keys across 9 surfaces.
+vanilla local_en.pack SHA256 before: OK
+loc change: 2 description keys := long_description (tatweel pads dropped)
+loc change: barcode on 13 keys (8 files), 11 glyphs/line
+loc pack: D:\AttilaArabic\release\Attila_Arabic_CR_C2.pack (1813498 B) SHA256=48522F648BE0C2FC
+fonts pack: 38 vanilla CUFs + 3 appended glyphs each, 11 table entries remapped each
+font -> marker table:
+  id  barcode   font
+  0  00000000  arialunicode_10.cuf
+  1  00000001  arialunicode_12.cuf
+  2  00000010  arialunicode_14.cuf
+  3  00000011  arialunicode_16.cuf
+  4  00000100  arialunicode_18.cuf
+  5  00000101  arialunicode_20.cuf
+  6  00000110  arialunicode_22.cuf
+  7  00000111  georgia_italic_10.cuf
+  8  00001000  georgia_italic_12.cuf
+  9  00001001  georgia_italic_14.cuf
+ 10  00001010  georgia_italic_16.cuf
+ 11  00001011  georgia_italic_18.cuf
+ 12  00001100  la_gioconda_10.cuf
+ 13  00001101  la_gioconda_12.cuf
+ 14  00001110  la_gioconda_14.cuf
+ 15  00001111  la_gioconda_16.cuf
+ 16  00010000  la_gioconda_18.cuf
+ 17  00010001  la_gioconda_20.cuf
+ 18  00010010  la_gioconda_22.cuf
+ 19  00010011  la_gioconda_24.cuf
+ 20  00010100  la_gioconda_26.cuf
+ 21  00010101  la_gioconda_28.cuf
+ 22  00010110  la_gioconda_30.cuf
+ 23  00010111  la_gioconda_32.cuf
+ 24  00011000  la_gioconda_38.cuf
+ 25  00011001  la_gioconda_uppercase_10.cuf
+ 26  00011010  la_gioconda_uppercase_12.cuf
+ 27  00011011  la_gioconda_uppercase_14.cuf
+ 28  00011100  la_gioconda_uppercase_16.cuf
+ 29  00011101  la_gioconda_uppercase_18.cuf
+ 30  00011110  la_gioconda_uppercase_20.cuf
+ 31  00011111  la_gioconda_uppercase_22.cuf
+ 32  00100000  la_gioconda_uppercase_24.cuf
+ 33  00100001  la_gioconda_uppercase_26.cuf
+ 34  00100010  la_gioconda_uppercase_28.cuf
+ 35  00100011  la_gioconda_uppercase_30.cuf
+ 36  00100100  la_gioconda_uppercase_32.cuf
+ 37  00100101  la_gioconda_uppercase_38.cuf
+vanilla local_en.pack SHA256 after: OK

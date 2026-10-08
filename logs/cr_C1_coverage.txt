@@ -1,0 +1,75 @@
+loc codepoints: 194
+arialunicode_12.cuf              missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_10.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_12.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_14.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_16.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_18.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_20.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_22.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+georgia_italic_24.cuf            missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_10.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_12.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_14.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_16.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_18.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_20.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_22.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_24.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_26.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_28.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_30.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_32.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_38.cuf               missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_10.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_12.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_14.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_16.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_18.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_20.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_22.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_24.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_26.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_28.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_30.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_32.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_38.cuf     missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_8.cuf      missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
+la_gioconda_uppercase_9.cuf      missing=  0 blank=  3
+    blank  : U+000A U+0020 U+00A0
