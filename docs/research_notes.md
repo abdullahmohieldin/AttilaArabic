@@ -74,3 +74,33 @@
   the user copies them to D:\AttilaArabic\screenshots\ (names
   "Total War  Attila Screenshot ...png").
 - reference/ is gitignored: other people's work, never commit.
+
+## Clean-room findings (2026-10-08, offline, vanilla files only)
+
+- VANILLA FONTS CARRY NO ARABIC OUTSIDE arialunicode. Reading the 65536-entry
+  char table of all 38 vanilla CUFs (logs/cr_map_scan.txt): arialunicode_10-22
+  (N=38948) map 100/100 of the Arabic codepoints our loc uses to real glyphs
+  with ink; georgia_italic_10-18 (N=626) and la_gioconda_10-38 +
+  la_gioconda_uppercase_10-38 (N=285) map 97/100 to a DANGLING entry
+  (table[cp] == N, past the end of the glyph array). Only U+060C, U+061B and
+  U+0640 are in range in those fonts. Dangling counts: arialunicode 3,
+  georgia_italic 1278, gioconda/uppercase 4094.
+- Therefore v8-v15 (31 CUFs = georgia_italic + la_gioconda + uppercase, no
+  arialunicode) could only ever affect a surface if that surface draws from one
+  of those fonts, and only via the v8 trick of appending glyphs and remapping
+  the table. Any surface drawing from arialunicode_* was untouched by all of
+  v8-v15 - the v15 faction-description anomaly (our georgia_italic_12
+  half-blocks never appeared there) is exactly that.
+- Appending glyphs + remapping table entries is proven to reach the screen
+  (v8 onwards drew Arabic from gio/geo this way). It touches no existing glyph.
+- The measured pitch table (FE92/FE98/FE9C/FEF4=8, FE8D=5, FE8E=6, FEF2=12,
+  space=5) matches NO vanilla font's aw or w at any size (arialunicode_12 aw =
+  4/4/4/4/4/4/13/4; _14 = 5x6/15/5; _16 = 5,5,5,5,5,6,17,6). It also matches
+  neither our v14 nor v15 gio12/geo12 dims. The pitch source is still unknown;
+  C1 (Shyizer, aw==w, per-font values differ) and C2 (font identity per
+  surface) are designed to settle it.
+- Shyizer coverage of our loc: 0 missing codepoints in all 37 CUFs; only
+  U+000A/U+0020/U+00A0 are blank (logs/cr_C1_coverage.txt). Its v_size values
+  equal Attila's vanilla ones for the same file names, so no clipping expected.
+- Round-trip gate: all 38 vanilla CUFs decode->encode byte-identical
+  (logs/cr_gate.txt), so the codec is trusted for clean-room builds.
