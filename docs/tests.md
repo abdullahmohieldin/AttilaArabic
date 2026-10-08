@@ -268,19 +268,25 @@ records. Nothing else is touched (asserted at build time: original dims,
 bitmaps, header props and kerning tail byte-identical, and only those 4 table
 entries differ per font).
 
-Per font: `FE92.w = W`. So the four lines on screen are
+Per font: `FE92.w = W`. The bitmap of each new record is a column-clipped copy
+of that font's own FE92 bitmap, and its `aw` is set to the *bitmap width of its
+own row*, so each row's `aw` differs from its bitmap `w` by a constant offset:
 
-| line | codepoint | bitmap width w | declared advance aw |
-|---|---|---|---|
-| 1 | U+FEC7 | W-2 | W-2 |
-| 2 | U+FE9A | W-1 | W-2 |
-| 3 | U+FEF5 | W   | W-2 |
-| 4 | U+FE8E | W+1 | W-2 |
+| line | codepoint | bitmap width w | declared advance aw | relation |
+|---|---|---|---|---|
+| 1 | U+FEC7 | W-2 | W-2 | aw == w |
+| 2 | U+FE9A | W-1 | W-2 | aw == w-1 |
+| 3 | U+FEF5 | W   | W-2 | aw == w-2 |
+| 4 | U+FE8E | W+1 | W-2 | aw == w-3 |
 
-If the pitch follows `aw`: lines 2, 3 and 4 have the **same pitch** (all aw=W-2)
-and line 1 too — all four rows identical. If the pitch follows the bitmap `w`:
-lines differ by exactly 1 px each, 20 cells apart → row widths differ by ~19 px
-per step (line1 shortest, line4 longest).
+(`logs/cr_C3_build.txt` prints the full aw/w pair set for all 37 fonts.)
+
+If the pitch follows `aw`: all four rows have the **same pitch** (aw = W-2 in
+every row) and the row ink widths **shrink** by ~1 px per row only because the
+bitmap is narrower. If the pitch follows the bitmap `w`: the rows differ by
+exactly 1 px of pitch each, 20 cells apart, so the 20-copy row width **grows**
+by ~19 px per row from line 1 to line 4 (rows 2-4 then also show 1-3 blank
+columns of slack after each cell because aw < w).
 
 Loc: each of ERE description, WRE description, difficulty description and the
 campaign-menu "battle settings" button gets, prepended, 4 lines of 20 copies of
