@@ -21,6 +21,7 @@ SETS = {
     "C0": ["Attila_Arabic_CR_C0.pack"],
     "C1": ["Attila_Arabic_CR_C1.pack", "Attila_Arabic_CR_C1_fonts.pack"],
     "C2": ["Attila_Arabic_CR_C2.pack", "Attila_Arabic_CR_C2_fonts.pack"],
+    "C3": ["Attila_Arabic_CR_C3.pack", "Attila_Arabic_CR_C3_fonts.pack"],
     "v14": ["Attila_Arabic_POC_v14.pack", "Attila_Arabic_POC_v14_fonts.pack"],
     "none": [],
 }
@@ -38,6 +39,11 @@ SHOTS = {
            "main menu buttons",
            "custom battle -> choose army: header, unit name, stat labels",
            "hover the difficulty medal (tooltip)"],
+    "C3": ["faction select -> ERE: the 4 sweep rows at the top of the description box",
+           "faction select -> WRE: the 4 sweep rows",
+           "difficulty box (right panel): the 4 sweep rows",
+           "campaign menu: the battle-settings button line (single row)",
+           "the same 4 surfaces again at 1920x1080, do not crop"],
 }
 
 test = sys.argv[1] if len(sys.argv) > 1 else "C0"

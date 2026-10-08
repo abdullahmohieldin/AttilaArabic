@@ -127,7 +127,88 @@ U+000A, U+0020, U+00A0 (whitespace, expected).
 
 ### Measured
 
-_(to be filled from the screenshots)_
+Batch: 06:52 screenshots (5 files, C1 installed). Tools: `source/cr_lines.py`
+(line finder), `source/cr_seams.py` (baseline-strip seams), `source/cr_glyphs.py`
+(connected components), `source/cr_desc.py` (parchment-panel text mask),
+`source/cr_pitch.py`, `source/cr_pairs.py`, `source/cr_fit_loc.py`.
+Raw output: `logs/cr_c1_*.txt`. Crops: `logs/crops/C1/`.
+
+**Prediction 1 CONFIRMED**: real Arabic on every surface, no placeholder boxes:
+faction title bar, faction group labels + faction names in the panel, both
+description boxes, difficulty box, campaign menu buttons, battle menu buttons,
+choose-faction header, unit-info stat labels, unit dropdown, unit name
+("COMES"), unit bullet points.
+
+**Prediction 3 CONFIRMED**: no vertical clipping; Shyizer `v_size` matches.
+
+#### Big finding 1 — the engine mirrors our strings, so our "visual order" is
+#### the wrong order (this is what created the orphan words)
+
+Evidence, custom-battle button key
+`..._button_txt_NewState_Text_36000f` stores
+`FE94 FEBC FEBC FEA8 FEE3 0020 FE94 FEDB FEAE FECC FEE3` and the screen shows
+`معركة مخصصة` — i.e. the on-screen order is the **reverse** of the stored
+order. Same for every other string (titles, buttons, descriptions).
+
+Consequence: our loc is stored in RTL visual order, the engine treats the value
+as logical text, wraps it by *its own* advances and then mirrors each line. So
+every earlier hard wrap we authored landed on the wrong side: the ERE box shows
+`عامرة` and `من` alone on their own lines, the WRE box shows
+`قف` / `ميديولانوم`, because the wrap points the engine picked are inside words
+of the mirrored string. Fix for the next build: author the strings in **logical**
+order (the order a reader reads) + our own hard wraps, and let the engine
+mirror them. Our current values are logical-order text reversed.
+
+#### Big finding 2 — pitch is NOT `aw` and NOT `w`
+
+On-screen cell pitch, measured from repeated letterforms (distance between two
+occurrences of the same codepoint on one line, divided by the sum of that font's
+advances between them):
+
+| surface | measured span | sum of Shyizer advances | implied scale |
+|---|---|---|---|
+| custom battle button `معركة مخصصة`, FE94→FE94 (ink starts x162 → x239) | 77 px | georgia_italic_16 79, georgia_italic_14 76, la_gioconda_16 78, la_gioconda_12 64 | ≈1.0 at 16 px |
+| campaign-menu button `الحملة الكبرى`, FE8D→FE8D (run x240 → x264) | 24 px | georgia_italic_16 32, la_gioconda_16 31, georgia_italic_24 49, la_gioconda_12 25 | 0.75 (16 px) |
+| battle-menu button `معركة تاريخية`, FE94→FE94 | 12.5 px for 3 glyphs | — | ≈4.3 px per glyph |
+| ERE description line 0, FE92→FE92 (`الرومانية`) dot cluster x524.5 → x556.5 | 32.5 px | georgia_italic_16 22, la_gioconda_16 22, georgia_italic_24 32, la_gioconda_20 30 | **1.48** |
+
+So the same font family is used at *different* scales on different surfaces and
+the ratio is not 1.0, which is exactly why the `aw`-and-`w` fit never converged
+(best fits came out at scale 0.40-1.7 depending on surface, i.e. unconstrained).
+`FEF2` could not be isolated: the codepoints our loc uses around it differ per
+string, and the two occurrences in a string are always separated by many
+non-repeat codepoints, so its advance is not separately identifiable in C1.
+
+#### Join gap (seams), baseline strip (`cr_seams.py`, threshold 180)
+
+Seam = blank columns between two ink runs **inside one word** along the bottom
+3-7 rows (the Arabic connecting stroke). Word gaps (>=6 px) are excluded.
+
+| string | seams (px) | verdict |
+|---|---|---|
+| `اختر الفصيل` (title bar) | 1,1,1,1,1,1 | zero gaps; letters joined, 1 px hairline only |
+| `اختر الفصيل` (custom-battle header) | 1,1,1,1,1,3,1,1 | one 3 px seam |
+| `معركة مخصصة` (main menu) | 2,3,3,1,1,4,4,1,3,1 | 4 px seams = the visible breaks |
+| `إعدادات المعركة` (campaign menu) | 1,1,1,1,1,4,3,3,1,1,1,1,1,1 | 3-4 px seams |
+| `معركة تاريخية` (battle menu) | 1,1,1,1,1,3,2,3,1,1,1,1,1,1 | 2-3 px seams |
+
+So 1 px seams dominate (rendering hairline) and the eye-visible breaks are the
+3-4 px ones, which fall at *word* boundaries and before `م`/`خ`/`ة`. The 1 px
+seams are the draw-window artefact measured in v13 (ink = min(w,pitch)-1), not
+an advance problem: at 16 px the seam is 1 px, i.e. one background column
+between cells.
+
+#### Other measurements
+
+- Description box: line baselines y621, y639, y657, y675 → **line pitch 18 px**;
+  text block x396-711 (315 px). 10 authored lines are drawn; the 11th is clipped
+  at the box bottom (half-height row at y~690), so C1's description is 1 line
+  too long — the same overflow C0 had.
+- Difficulty box (right panel, x1170-1580): Arabic description lines y417-431
+  and y436-449 → pitch **19 px**, text x1261-1519 (line 1 258 px, line 2
+  175 px), label y391-405.
+- Word gap in the menu buttons is 8-9 px (the 12 px fonts give U+0020 advance
+  4-5 px), i.e. the engine adds space width on top of the space advance.
 
 ---
 
@@ -170,6 +251,63 @@ Side effect: index N becomes a blank glyph, so chars that were dangling
 5. Latin UI text unchanged everywhere (no existing glyph was touched).
 6. Falsifier: a barcode appearing at a width/height that matches no font's
    v_size, or two different fonts reporting the same id.
+
+### Measured
+
+_(to be filled from the screenshots)_
+
+---
+
+## C3 — advance-width sweep (aw vs w), all 37 fonts
+
+Declared change, one variable only: four Arabic codepoints our loc does not use
+(`U+FEC7`, `U+FE9A`, `U+FEF5`, `U+FE8E`) get **one new glyph record each** in
+**every one of the 37 fonts**. The bitmap of each new record is a column-clipped
+copy of that font's own `U+FE92` bitmap; `aw` is set to `w - 2` in all four
+records. Nothing else is touched (asserted at build time: original dims,
+bitmaps, header props and kerning tail byte-identical, and only those 4 table
+entries differ per font).
+
+Per font: `FE92.w = W`. So the four lines on screen are
+
+| line | codepoint | bitmap width w | declared advance aw |
+|---|---|---|---|
+| 1 | U+FEC7 | W-2 | W-2 |
+| 2 | U+FE9A | W-1 | W-2 |
+| 3 | U+FEF5 | W   | W-2 |
+| 4 | U+FE8E | W+1 | W-2 |
+
+If the pitch follows `aw`: lines 2, 3 and 4 have the **same pitch** (all aw=W-2)
+and line 1 too — all four rows identical. If the pitch follows the bitmap `w`:
+lines differ by exactly 1 px each, 20 cells apart → row widths differ by ~19 px
+per step (line1 shortest, line4 longest).
+
+Loc: each of ERE description, WRE description, difficulty description and the
+campaign-menu "battle settings" button gets, prepended, 4 lines of 20 copies of
+one codepoint each (20 x 4 = 80 glyphs). Packs:
+`Attila_Arabic_CR_C3.pack` + `Attila_Arabic_CR_C3_fonts.pack` (test only).
+
+### Predicted on screen
+
+1. Four rows of identical shape (all are the FE92 beh stem) on each of the four
+   surfaces. Row 1 has the narrowest ink cell, row 4 the widest.
+2. `aw`-model prediction: **all four rows show the same pitch** = the pitch of
+   the surface (whatever it is), 20 copies spanning 20 * P px, and the ink of
+   rows 2-4 leaves 1-3 extra blank columns at the right of each cell. Row width
+   order = 1 < 2 < 3 < 4 only because the bitmap is wider, not the pitch.
+3. `w`-model prediction: row pitches P1 < P2 < P3 < P4 with P4 - P1 ≈ 3 px, so
+   the 20-copy row width grows ~57-60 px from row 1 to row 4.
+4. Scalars to read: row ink span (first to last ink column) / 19 = pitch of that
+   row. On the difficulty box (19 px line pitch) and on the descriptions
+   (18 px line pitch) 4 extra lines fit; the button shows only its own line.
+5. Kerning hypothesis (same pack, no extra change): the 350/33 matrix covers
+   codes 33..382 only, so **no Arabic Presentation-Form Code is inside it**
+   (`logs/cr_C3_kerning.txt`) — FE92 (code 683) and every joining form we use
+   are outside. The matrix cannot affect Arabic pitch; its only negative deltas
+   are for Latin `A`-like codes. So no pair-width change was shipped for C3.
+6. Falsifier: rows with a pitch *smaller* than the bitmap width (that would mean
+   the engine clips the advance to `w`) or a row whose ink span does not scale
+   linearly in the number of copies.
 
 ### Measured
 

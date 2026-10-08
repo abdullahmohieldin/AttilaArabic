@@ -1,0 +1,6 @@
+{
+  "test": "C3",
+  "change": "ONE declared change on top of C1: an advance-width sweep. Four unused Arabic codepoints (U+FEC7 FE9A FEF5 FE8E) get one new glyph record each in every one of the 37 fonts; the bitmap is a column-clipped copy of that font's FE92 and alloc_width is set to w-2 in all four. Four lines of 20 copies of each codepoint are prepended to the ERE/WRE descriptions, the difficulty description and the campaign-menu battle-settings button.",
+  "fonts": { "mode": "shyizer_sweep" },
+  "loc": { "descriptions_from_long": true, "sweep": true }
+}

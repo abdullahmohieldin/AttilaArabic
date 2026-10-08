@@ -1,0 +1,16 @@
+== C3 == declared change: advance-width sweep on 4 unused Arabic codepoints in all 37 Shyizer fonts (one new glyph record each, bitmap = clipped copy of that font's FE92)
+vanilla local_en.pack SHA256 before: OK
+fonts pack: 37 CUFs, 4 new glyph records each, only 4 table entries changed per font
+loc change: 2 description keys := long_description (tatweel pads dropped)
+loc pack: D:\AttilaArabic\release\Attila_Arabic_CR_C3.pack (1814120 B) SHA256=0E378843A06EA986
+loc probe block: 4 lines x 20 copies, on 4 keys
+vanilla local_en.pack SHA256 after: OK
+  variant  cp    aw   w   h   | 20 copies advance-line width
+  U+FEC7 (bitmap w = FE92.w-2): aw/w pairs across 37 fonts = [(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (15, 15), (16, 16)]
+  U+FE9A (bitmap w = FE92.w-1): aw/w pairs across 37 fonts = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9), (9, 10), (10, 11), (11, 12), (12, 13), (13, 14), (15, 16), (16, 17)]
+  U+FEF5 (bitmap w = FE92.w+0): aw/w pairs across 37 fonts = [(1, 3), (2, 4), (3, 5), (4, 6), (5, 7), (6, 8), (7, 9), (8, 10), (9, 11), (10, 12), (11, 13), (12, 14), (13, 15), (15, 17), (16, 18)]
+  U+FE8E (bitmap w = FE92.w+1): aw/w pairs across 37 fonts = [(1, 4), (2, 5), (3, 6), (4, 7), (5, 8), (6, 9), (7, 10), (8, 11), (9, 12), (10, 13), (11, 14), (12, 15), (13, 16), (15, 18), (16, 19)]
+  line 1: U+FEC7 x20   [bitmap w-2, aw=w-2]
+  line 2: U+FE9A x20   [bitmap w-1, aw=w-2]
+  line 3: U+FEF5 x20   [bitmap w,   aw=w-2]
+  line 4: U+FE8E x20   [bitmap w+1, aw=w-2]
