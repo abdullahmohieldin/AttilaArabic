@@ -104,3 +104,22 @@
   equal Attila's vanilla ones for the same file names, so no clipping expected.
 - Round-trip gate: all 38 vanilla CUFs decode->encode byte-identical
   (logs/cr_gate.txt), so the codec is trusted for clean-room builds.
+
+## C0 measured (2026-10-08 06:40 screenshots)
+
+- Predictions 1 and 4 falsified: NO surface shows real arialunicode Arabic.
+  Every Arabic codepoint draws BLANK (zero ink) on all surfaces: faction title,
+  group labels, ERE/WRE description boxes, difficulty box, menu buttons,
+  choose-army header, unit name, unit stat labels, bullet points.
+- Dangling table entries draw blank, NOT a placeholder box. The v10 "placeholder
+  drawn" observation was about in-range glyphs we had created, not dangling.
+- Blank glyphs still consume advance: the ERE description box shows one
+  punctuation mark per wrapped line at the left edge (x 380-424, y 638-782,
+  ~18 px line pitch), implying line widths 298-342 px against the 350 px v14
+  wrap target. The v13 pitch table still describes this surface.
+- Therefore every Arabic surface draws from georgia_italic / la_gioconda /
+  uppercase (Arabic dangling there); arialunicode_* is used by none of them.
+- v15 anomaly revised: the description box draws from a font we DID ship (v13's
+  PUA ruler appeared in it) but not georgia_italic_12, where v15's half-block
+  probes sat - the box kept showing v14-surgery ticks instead. So the box's font
+  is a la_gioconda or uppercase size. C2's barcode decodes which.

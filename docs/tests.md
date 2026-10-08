@@ -65,7 +65,32 @@ Pack: `release/Attila_Arabic_CR_C0.pack` (1813448 B, SHA256 B09302E641204AB2…)
 
 ### Measured
 
-_(to be filled from the screenshots)_
+Screenshots 2026-10-08 06:40 batch (6 files). **Predictions 1 and 4 FALSIFIED.**
+
+1. No surface shows real Arabic. No placeholder boxes either: every Arabic
+   codepoint draws **blank (zero ink) but still consumes advance**. Surviving
+   ink is only ASCII `.` `:` and the in-range U+060C/U+061B/U+0640.
+2. Blank on every Arabic surface: faction title bar, faction group labels,
+   ERE+WRE description boxes, difficulty box, campaign and battle menu buttons,
+   choose-army header, unit name, unit stat labels, bullet points. English text
+   everywhere unaffected ("Prologue", "Hard", "Very Hard", "Magister Militum",
+   stat numbers all render).
+3. ERE description box: 9-10 punctuation marks stacked at the LEFT edge
+   (x≈380-424, y≈638-782), one per wrapped line → hard wraps respected, RTL
+   puts the trailing mark left, ~10 lines fit with no clipping. Line pitch
+   ≈18 px (row diffs 14/18/22).
+4. Implied line widths: box right edge ≈722, marks at x 380-424 → lines are
+   298-342 px wide vs the 350 px v14 wrap target. Blank glyphs advance at
+   roughly the v13 pitch table, so the pitch table still describes this surface.
+5. Revised conclusion: every Arabic surface draws from a font whose table has
+   Arabic dangling = georgia_italic / la_gioconda / uppercase. `arialunicode_*`
+   is used by none of them. Dangling entries draw blank, not a box (revises the
+   v10 "placeholder drawn" note, which was about in-range glyphs we created).
+6. v15 anomaly revised: the description box does draw from a font we shipped,
+   but not the one we probed. v13's PUA ruler appeared in this box (so its font
+   is one of our 31), while v15's half-block probes sat in georgia_italic_12 and
+   the box kept showing v14-surgery ticks → the box's font is a la_gioconda or
+   uppercase size, not georgia_italic_12. C2 decodes which.
 
 ---
 
