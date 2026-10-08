@@ -24,3 +24,4 @@ __pycache__/
 logs/*
 !logs/baseline.txt
 !logs/pip-freeze.txt
+reference/
