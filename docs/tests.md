@@ -300,7 +300,14 @@ _(to be filled from the screenshots)_
 
 ---
 
-## C3 — advance-width sweep (aw vs w), all 37 fonts
+## C3 — advance-width sweep (aw vs w), all 37 fonts — SUPERSEDED BY C5
+
+Status: built (`Attila_Arabic_CR_C3.pack` 1814120 B + `_fonts.pack` 33042160 B)
+but **never launched**; C5 carries the same idea plus the direction ruler and is
+the pack to install. The C3 build as shipped used codepoints `U+FEC7`, `U+FE9A`,
+`U+FEF5`, `U+FE8E` with `aw = w - 2` in all four rows; the reasoning below was
+written for that build and is kept only as history. See the C5 section for the
+design actually under test.
 
 Declared change, one variable only: four Arabic codepoints our loc does not use
 (`U+FEC7`, `U+FE9A`, `U+FEF5`, `U+FE8E`) get **one new glyph record each** in
@@ -356,6 +363,95 @@ one codepoint each (20 x 4 = 80 glyphs). Packs:
 6. Falsifier: rows with a pitch *smaller* than the bitmap width (that would mean
    the engine clips the advance to `w`) or a row whose ink span does not scale
    linearly in the number of copies.
+
+### Measured
+
+_(to be filled from the screenshots)_
+
+---
+
+## C5 — aw sweep + direction ruler in one pack (supersedes C3)
+
+Declared change on top of C1, in one font pack and one loc pack. Per font, six
+new glyph records are appended (nothing existing is modified — asserted per font:
+original dims, bitmaps, header props and kerning tail byte-identical; exactly
+those six table entries differ). Every record's bitmap is a horizontal resample
+of that font's own U+FE92 artwork (its own W x H), so the rows differ only in
+the two numbers under test.
+
+Let `W = FE92.w = FE92.aw` in the font being drawn, and let `P` be whatever pitch
+that surface actually uses. The probe block (six lines, in this stored order) is
+prepended to four keys: ERE description, WRE description, difficulty
+description, campaign-menu battle-settings button.
+
+| row | content | bitmap w | declared aw | copies |
+|---|---|---|---|---|
+| 1 | U+FEF5 | W-2 | W-2 | 14 |
+| 2 | U+FE71 | W+2 | W-2 | 12 |
+| 3 | U+FE79 | W+2 | W+1 | 12 |
+| 4 | U+FE86 | W+2 | W+2 | 10 |
+| 5 | U+FEC7 x16 then U+FE9A x11 | 5-6 / 12 | = w | 27 |
+| 6 | U+FE9A x11 then U+FEC7 x16 | 12 / 5-6 | = w | 27 |
+
+Rows 2-4 carry an **identical bitmap** and differ only in `aw`, so the two
+hypotheses are ~19 px apart per row and cannot be confused with an ink
+difference. Row 1 is the control (bitmap and aw both from FE92 itself).
+
+Row widths were checked before building (`logs/cr_C5_build.txt`), worst case
+over all 37 fonts at the calibrated ≈1 px per advance unit: 224 / 192 / 228 /
+200 / 212 / 247 px against a 300 px budget and the 345 px widest line the engine
+has demonstrably drawn in this panel. **No probe row should wrap.**
+
+### Predicted on screen
+
+**1. Pitch (the aw question).** Rows 2 and 3 are the decisive pair: they draw
+the **same bitmap** (W+2) yet declare advances 3 apart (W-2 vs W+1). Worked
+through for `georgia_italic_12` (W=5, so bitmap W+2 = 7 px, advances 3 / 6 / 7):
+
+| row | bitmap w | aw | copies | row width if `aw` controls | row width if `w` controls | if a fixed pitch P |
+|---|---|---|---|---|---|---|
+| 1 U+FEF5 | 3 | 3 | 14 | 42 | 42 | 14 P |
+| 2 U+FE71 | 7 | 3 | 12 | 36 | 84 | 12 P |
+| 3 U+FE79 | 7 | 6 | 12 | 72 | 84 | 12 P |
+| 4 U+FE86 | 7 | 7 | 10 | 70 | 70 | 10 P |
+
+* **`aw` controls the pitch** → row 2 = 36 px and row 3 = 72 px (a 36 px
+  difference, 3 px per cell) even though both draw the same 7 px bitmap; row 2's
+  ink sits in a 3 px cell so cells 4-7 of its bitmap are clipped and the ink-to-
+  ink pitch is 3 px.
+* **`w` controls the pitch** → rows 2 and 3 are **identical** (84 px, pitch
+  7 px); the difference between row 2 (36) and row 2-as-drawn is the giveaway.
+* **fixed font-independent pitch P** (the v13 conclusion) → all four rows share
+  one P, so row2 == row3 exactly and row1/row2 = 14/12 = 1.167, row2/row4 =
+  12/10 = 1.2.
+* The same logic at `la_gioconda_12` (W=6): aw-controlled gives 48 / 48 / 84 /
+  80; w-controlled gives 84 / 84 / 84 / 80 — again rows 2 and 3 are the pair to
+  read.
+* Falsifier for all three: a row width that is not a whole multiple of its copy
+  count (per-cell kerning or justification in play).
+
+**2. Direction ruler (the reading-order question).** U+FEC7 is drawn as a
+resampled FE92 stem 5 px wide, U+FE9A as the same stem 12 px wide; both have
+`aw == w` (5 and 12 in every font), so pitch and ink agree and each block's
+extent is unambiguous. Row 5 stores thin-then-broad, row 6 stores
+broad-then-thin.
+
+* If the engine **draws the stored order**: row 5 shows the thin block at the
+  **left** end of its line and the broad block at the right; row 6 shows broad
+  left, thin right.
+* If the engine **mirrors** the value before drawing: row 5 shows the broad
+  block at the left and the thin at the right — i.e. rows 5 and 6 appear swapped
+  relative to the above.
+* **If the engine draws stored order but places a prepended block at the END of
+  the value**: both rows still appear as two blocks, but the whole probe block
+  lands at the *bottom* of the box instead of the top. That does not change
+  which block is left/right inside a row, so the direction reading is unaffected
+  — it only changes where the six rows sit. This is the case C3 alone could not
+  distinguish, and it is why the ruler rows exist.
+* No bidi reordering of the two blocks is expected (no neutral or Latin
+  characters inside a row), so any reversal is the engine's own.
+* Falsifier: more than two blocks in a row, or a row whose two blocks are
+  separated by more than a few px (a word gap would mean a space crept in).
 
 ### Measured
 
