@@ -42,12 +42,15 @@
   - **H6 Vertical Bounds:** Tall Alef (+3px) + Deep Yeh (-3px).
   - **H7 Space Advances:**
     - Line 5: 8 leading plain spaces (`0x20`)
-    - Line 6: Leading $40\text{ px}$ blank glyph (`CP_BLANK_40 = 0xFE86`, expected advance $41\text{ px}$)
+    - Line 6: Leading $40\text{ px}$ blank glyph (`CP_BLANK_40 = 0xE006`, expected advance $41\text{ px}$)
     - Line 7: Inline $40\text{ px}$ blank glyph between marker words (expected gap $41\text{ px}$)
   - **H9 Formatting Tags:** `[[col:yellow]]` color markup and `%s` placeholder test.
-- **Build Assertion:** Build script strictly asserts that 100% of probe codepoints defined in the font pack appear in at least one loc string.
+- **Probe Codepoints Isolated to PUA:** All 11 probe codepoints migrated to Unicode Private Use Area (`U+E000`–`U+E00A`) following collision audit (where Forms-B legacy probes collided with real letters in "بدء", "أصفر", "مؤشر", "للاعبين"). Real Forms-B remain mapped to plain glyphs.
+- **Build Assertion Tightened:** Build script asserts that 100% of probe codepoints appear specifically in their designated probe lines, and do not leak into any non-probe string.
+- **Font Vertical Extents Audit Completed:** Measured line_height, baseline, cell height, Latin ascenders/descenders vs Arabic glyphs across all 27 merged font sizes. Documented in `docs/round2_predictions.md`.
 
 ---
+
 
 ## 3. Next Steps
 
