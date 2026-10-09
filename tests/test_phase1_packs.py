@@ -101,6 +101,11 @@ class TestPhase1Packs(unittest.TestCase):
             for real_cp in [0xFE80, 0xFE8E, 0xFE90, 0xFE92, 0xFEBC, 0xFEE3]:
                 self.assertGreater(m_cuf.table[real_cp], len(v_cuf.dims) - 1)
 
+            # Assert positional forms are distinct from isolated forms (anti-regression check for decompose_cp bug)
+            idx_initial_beh = m_cuf.table[0xFE91]
+            idx_isolated_beh = m_cuf.table[0xFE8F]
+            self.assertNotEqual(m_cuf.bitmaps[idx_initial_beh], m_cuf.bitmaps[idx_isolated_beh])
+
 
 if __name__ == "__main__":
     unittest.main()

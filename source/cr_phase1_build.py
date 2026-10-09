@@ -187,20 +187,6 @@ def calibrate_px(target_cap_h: int) -> int:
     return best_px
 
 
-def decompose_cp(cp: int) -> int:
-    try:
-        name = unicodedata.name(chr(cp))
-    except ValueError:
-        return cp
-    decomp = unicodedata.decomposition(chr(cp))
-    if decomp:
-        parts = decomp.split()
-        if len(parts) >= 2 and parts[0].startswith("<"):
-            try:
-                return int(parts[1], 16)
-            except ValueError:
-                pass
-    return cp
 
 
 def write_pack(out_path, entries):
@@ -273,9 +259,6 @@ def build_fonts():
 
         for cp in sorted(set(arabic_cps)):
             char_to_draw = chr(cp)
-            decomp = decompose_cp(cp)
-            if decomp != cp:
-                char_to_draw = chr(decomp)
 
             mask = font.getmask(char_to_draw, mode="L")
             bbox = font.getbbox(char_to_draw)
@@ -299,8 +282,8 @@ def build_fonts():
                 if 0 <= cy < cell_h:
                     for mx in range(mw):
                         val = mask_bytes[my * mw + mx]
-                        if val > 60:
-                            cell_bm[cy * w + mx] = 255
+                        if val > 0:
+                            cell_bm[cy * w + mx] = val
                     if bleed:
                         cell_bm[cy * w + (w - 1)] = cell_bm[cy * w + (w - 2)]
 
@@ -348,19 +331,24 @@ def build_loc():
     print("\n--- Building Phase 1 Round 3 Loc ---")
     pack = PackFile(VANILLA_PACK)
 
-    # 8-line right-aligned historical narrative for Eastern Roman Empire
+    # 13-line right-aligned historical narrative for Eastern Roman Empire
     narrative_raw = [
-        "أطلق تقسيم الإمبراطورية عنان الشرق،",
-        "مما مكنه من بسط نفوذه على العالم الروماني.",
-        "أتاح المركز الإداري في القسطنطينية",
-        "استبدال النظم القديمة وملء الخزائن بالأموال.",
-        "نجح الشرق في تحويل مسار هجرات البرابرة غرباً،",
-        "لكن الإمبراطور أركاديوس سيواجه تحديات جسيمة،",
-        "بين مؤامرات البلاط وخطر الساسانيين المستمر،",
-        "لضمان بقاء شعلة روما الأخيرة متقدة."
+        "أطلق تقسيم الإمبراطورية",
+        "عنان الشرق، مما مكنه من",
+        "بسط نفوذه على العالم الروماني.",
+        "أتاح المركز الإداري بالقسطنطينية",
+        "استبدال النظم القديمة،",
+        "وملء الخزائن بالأموال.",
+        "نجح الشرق في تحويل مسار",
+        "هجرات البرابرة غرباً،",
+        "لكن الإمبراطور أركاديوس",
+        "سيواجه تحديات جسيمة،",
+        "بين مؤامرات البلاط وخطر",
+        "الساسانيين المستمر لضمان",
+        "بقاء شعلة روما الأخيرة متقدة."
     ]
 
-    target_panel_w = 365
+    target_panel_w = 300
     px_12 = calibrate_px(11) # cap_h for la_gioconda_12 is 11
     font_12 = ImageFont.truetype(TAJAWAL, px_12, layout_engine=ImageFont.Layout.BASIC)
 
@@ -401,7 +389,7 @@ def build_loc():
         # 5. Difficulty description
         TARGET_KEYS["diff_desc"][1]: "[D] " + shape("للاعبين المتمرسين في توتال وور."),
         # 6. Difficulty legendary body description
-        TARGET_KEYS["diff_legendary"][1]: "[L] " + shape("الحفظ اليدوي غير متاح في الحملة. لا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً."),
+        TARGET_KEYS["diff_legendary"][1]: "[L] " + "\n".join([shape("الحفظ اليدوي غير متاح في الحملة."), shape("لا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.")]),
         # 7. Cultural trait header
         TARGET_KEYS["header_cultural"][1]: "[C] " + shape("السمة الثقافية"),
         # 8. Faction title
