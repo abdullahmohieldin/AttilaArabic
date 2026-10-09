@@ -229,8 +229,16 @@ Every merged CUF font was evaluated for:
 - **Observed in Round 1:** The title text was clipped flat at Full $Y = 525$, with only the bottom $5\text{–}6\text{ px}$ of letters visible above the divider frame ($Y = 532$).
 - **Competing Predictions for Round 2:**
   - **Hypothesis A (UI Scissor Clip):** If clipping is enforced by the UI component's fixed bounding box (`tx_faction_name` has a fixed height of $\sim 10\text{–}15\text{ px}$), the text will display the marker `[FT]` at the left, but `[FT]` and the Arabic letters will STILL have their upper halves clipped at Full $Y = 525$.
-  - **Hypothesis B (Font Vertical Extent / Placement Clipping):** If clipping is caused by the font cell boundary or glyph placement, the Latin marker `[FT]` (which uses vanilla Latin glyphs with normal $ah$) will render **completely intact**, while the Arabic glyphs immediately adjacent to it will be clipped at the top.
+  - **Hypothesis B (Font Vertical Extent / Placement Clipping):** If clipping is caused by the font cell boundary or glyph placement, the Latin marker `[FT]` (which uses vanilla Latin glyphs with normal $ah$) will render **completely intact**, while the Arabic glyphs immediately adjacent to it will be displaced or clipped at the top.
 - **Verification Criterion:**
   In Round 2 capture:
   - If `[FT]` is clipped flat at $Y = 525$ along with the Arabic letters $\rightarrow$ **CONFIRMED UI SCISSOR CLIP**.
-  - If `[FT]` Latin letters 'F' and 'T' are fully visible while Arabic ascenders are clipped $\rightarrow$ **CONFIRMED GLYPH TOP / PLACEMENT OVERFLOW**.
+  - If `[FT]` Latin letters 'F' and 'T' are fully visible while Arabic is displaced $\rightarrow$ **CONFIRMED GLYPH PLACEMENT / VERTICAL OFFSET (HYPOTHESIS B)**.
+
+### 6.4 Round 2 Outcome: Scissor-Clip Hypothesis Refuted, Hypothesis B Confirmed
+- **In-Game Evidence (`Phase1_R2_01`, `Phase1_R2_03`):**
+  - Latin marker `[FT]` is **100% intact**: top at $Y = 4$, baseline at $Y = 18$, full cap height $14\text{ px}$ cleanly visible with clear margins above and below.
+  - Arabic letters immediately adjacent have their top at $Y = 19$ and baseline at $Y = 28$ ($+10\text{ px}$ vertical displacement relative to Latin).
+  - In Round 1, without `[FT]`, this $+10\text{ px}$ displacement pushed the Arabic letters into the bottom frame/divider bar, leaving only the lower $5\text{–}6\text{ px}$ visible.
+- **Verdict:** **Hypothesis A (Scissor Clip) is REFUTED**. **Hypothesis B (Font Vertical Extent / Placement Offset) is CONFIRMED**.
+

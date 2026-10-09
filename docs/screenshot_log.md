@@ -20,6 +20,18 @@ Screenshots taken after Phase 1 mod packs were copied to `data\` (`10/9/2026 11:
 
 ---
 
+## Round 2 Captures (2026-10-10)
+
+Screenshots taken after Phase 1 Round 2 mod packs were deployed to `data\`. Renamed in-place in NVIDIA directory and copied into workspace:
+
+| Original Name | Renamed File Name | Timestamp | Resolution | Identified Surface / Contents |
+|---|---|---|---|---|
+| `Total War  Attila Screenshot 2026.10.10 - 01.01.10.48.png` | `Phase1_R2_01_faction_select_no_hover.png` | 2026-10-10 01:01:10 | 1920x1080 | Grand Campaign Faction Select: Eastern Roman Empire full screen without hover (`[FT]`, `[F2]`, `[B1]`, `[H1]`, `[D1]`, `[C1]`, compact 8-line description box). |
+| `Total War  Attila Screenshot 2026.10.10 - 01.01.18.53.png` | `Phase1_R2_02_slider_hover_legendary.png` | 2026-10-10 01:01:18 | 1920x1080 | Grand Campaign Faction Select: Hover tooltip on Difficulty Slider at Legendary level showing `[T3]` tooltip title. |
+| `Screenshot 2026-10-10 010135.png` | `Phase1_R2_03_left_panel_crop.png` | 2026-10-10 01:01:35 | 453x684 | High-resolution 1:1 crop of left panel showing `[FT]` title row, cultural trait `[C1]`, and description box with all 8 probe rows. |
+
+---
+
 ## Pre-Existing Older Screenshots (In Workspace)
 
 These files pre-date Round 1 and remain untouched with original names:
