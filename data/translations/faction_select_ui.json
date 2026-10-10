@@ -320,6 +320,120 @@
       "ar": "أطلق تقسيم الإمبراطورية\nعنان الشرق، مما مكنه من\nبسط نفوذه على العالم الروماني.\nأتاح المركز الإداري بالقسطنطينية\nاستبدال النظم القديمة،\nوملء الخزائن بالأموال.\nنجح الشرق في تحويل مسار\nهجرات البرابرة غرباً،\nلكن الإمبراطور أركاديوس\nسيواجه تحديات جسيمة،\nبين مؤامرات البلاط وخطر\nالساسانيين المستمر لضمان\nبقاء شعلة روما الأخيرة متقدة.",
       "en": "Eastern Roman Empire long description",
       "is_narrative": true
+    },
+    {
+      "key": "names_name_2147362044",
+      "table": "text/db/names.loc",
+      "ar": "خينغيلا",
+      "en": "Khingila"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الهجرة الكبرى",
+      "en": "The Great Migration"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الحكيم يرتحل. واليائس يرتحل دوماً. أما القوي فينجو ويزدهر.",
+      "en": "The wise move. The desperate move often. The mighty survive and prosper."
+    },
+    {
+      "key": "effects_description_att_effect_faction_trait_migrators_great_migration_growth",
+      "table": "text/db/effects.loc",
+      "ar": "النمو: %+n عند بدء الهجرة أو الاستقرار",
+      "en": "Growth: %+n when initiating a migration or resettling"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_nomad",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سوط الله",
+      "en": "Scourge of God"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_nomad",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أنت لا تعلم شيئاً. الجحيم مجرد كلمة، أما الحقيقة فهي أسوأ بكثير.",
+      "en": "You know nothing. Hell is only a word. The reality is much, much worse."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_white_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سوط الشرق",
+      "en": "Scourge of the East"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_white_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قد يكونون الأكثر تحضراً بين بني جلدتهم، لكنهم يبقون خصوماً متوحشين لا يعرفون الرحمة.",
+      "en": "They may be the most civilised of their kind, but remain savage, unforgiving opponents."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_suebi",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهاجرون مهرة",
+      "en": "Skilled Migrators"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_suebi_occupation",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهاجرون مهرة",
+      "en": "Skilled Migrators"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_suebi",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين تفوق القوة والعدد كل حد، فهناك دائماً سبيل للمضي قدماً.",
+      "en": "When power and numbers exceed all, there is always a way forward."
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_suebi_occupation",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين تفوق القوة والعدد كل حد، فهناك دائماً سبيل للمضي قدماً.",
+      "en": "When power and numbers exceed all, there is always a way forward."
+    },
+    {
+      "key": "start_pos_factions_description_2120157400",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "لا يضاهي الغموض المحيط بالهون البيض\nإلا الرعب الذي يلقونه في قلوب أعدائهم.\nمن منحدرات هندوكوش الجليدية،\nيرمقون العالم المتحضر بأطماعهم.\nومع كل أرض يجتاحونها يولد لغز جديد،\nفالرومان يرونهم هونا لصلابتهم،\nوالساسانيون يخلعون عليهم ألقاب فارسية،\nوالصينيون يرونهم خطرا يتربص خلف الأسوار.\nآلتهم الحربية لا تعرف الهوادة،\nوعيونهم ترنو لابتلاع بلاد فارس برمتها.",
+      "en": "White Huns campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120157400",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "لا يضاهي الغموض المحيط بالهون البيض\nإلا الرعب الذي يلقونه في قلوب أعدائهم.\nمن منحدرات هندوكوش الجليدية،\nيرمقون العالم المتحضر بأطماعهم.\nومع كل أرض يجتاحونها يولد لغز جديد،\nفالرومان يرونهم هونا لصلابتهم،\nوالساسانيون يخلعون عليهم ألقاب فارسية،\nوالصينيون يرونهم خطرا يتربص خلف الأسوار.\nآلتهم الحربية لا تعرف الهوادة،\nوعيونهم ترنو لابتلاع بلاد فارس برمتها.",
+      "en": "White Huns long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156317",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن هالة الرعب المحيطة بالهون بالغة العظم\nحتى أن أعداءهم لا يكادون يصدقون أنهم بشر.\nإن براعتهم الفريدة في ركوب الخيل هي سر قوتهم،\nوفي المعارك يشكل مزيج الرماية والسرعة\nقوة كاسحة تزرع الهلع في النفوس.\nاجتاح الهون أوروبا ووصل تهديدهم لروما ذاتها،\nوعليهم الآن تحويل هذه الفوضى لإمبراطورية عظمى.\nوبينما تتنازع القيادات تنتظر الحشود قدوم رجل\nيملك من القوة ما يوحد به قبائل الهون تحت إرادته.",
+      "en": "Huns campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156317",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن هالة الرعب المحيطة بالهون بالغة العظم\nحتى أن أعداءهم لا يكادون يصدقون أنهم بشر.\nإن براعتهم الفريدة في ركوب الخيل هي سر قوتهم،\nوفي المعارك يشكل مزيج الرماية والسرعة\nقوة كاسحة تزرع الهلع في النفوس.\nاجتاح الهون أوروبا ووصل تهديدهم لروما ذاتها،\nوعليهم الآن تحويل هذه الفوضى لإمبراطورية عظمى.\nوبينما تتنازع القيادات تنتظر الحشود قدوم رجل\nيملك من القوة ما يوحد به قبائل الهون تحت إرادته.",
+      "en": "Huns long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156287",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "السويبيون اتحاد لقبائل جرمانية متعددة،\nيجمعهم شغف عارم بالغزو والحرب.\nالقتال هو جوهر مجتمعهم ومصدر رفعتهم،\nويتميز محاربوهم بالعقدة السويبية الشهيرة.\nبعد صراع طويل مع الإمبراطورية الرومانية،\nبدأ الكثير منهم الهجرة غرباً رفقة الوندال،\nفراراً من بطش الهون وضغطهم المتزايد.\nعبروا الراين إلى بلاد الغال لنهب مدنها الثرية،\nوهناك تكمن غنائم سيادتهم الموعودة.",
+      "en": "Suebi campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156287",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "السويبيون اتحاد لقبائل جرمانية متعددة،\nيجمعهم شغف عارم بالغزو والحرب.\nالقتال هو جوهر مجتمعهم ومصدر رفعتهم،\nويتميز محاربوهم بالعقدة السويبية الشهيرة.\nبعد صراع طويل مع الإمبراطورية الرومانية،\nبدأ الكثير منهم الهجرة غرباً رفقة الوندال،\nفراراً من بطش الهون وضغطهم المتزايد.\nعبروا الراين إلى بلاد الغال لنهب مدنها الثرية،\nوهناك تكمن غنائم سيادتهم الموعودة.",
+      "en": "Suebi long description",
+      "is_narrative": true
     }
   ]
 }

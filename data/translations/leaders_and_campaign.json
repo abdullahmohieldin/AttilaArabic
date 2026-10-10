@@ -270,6 +270,12 @@
       "table": "text/db/religions.loc",
       "ar": "ديانات أخرى",
       "en": "Minor Religions"
+    },
+    {
+      "key": "names_name_2147362044",
+      "table": "text/db/names.loc",
+      "ar": "خينغيلا",
+      "en": "Khingila"
     }
   ]
 }

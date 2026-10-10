@@ -174,12 +174,19 @@ def compile_all_locs(vanilla_pack_path: str = VANILLA_PACK,
             table = item["table"].replace("/", "\\")
             raw_val = item.get("raw_value")
 
+            ar_text = item.get("ar", "")
+            if raw_val is None and not ar_text.strip():
+                continue
+
+            if key in table_overrides.get(table, {}) and "catalog" in jpath.lower():
+                continue
+
             if raw_val is not None:
                 final_text = raw_val
             elif item.get("is_narrative"):
-                final_text = format_narrative(item["ar"])
+                final_text = format_narrative(ar_text)
             else:
-                shaped = shape(item["ar"])
+                shaped = shape(ar_text)
                 # Apply seamless chunk ligatures for known sequences (e.g. الشرقية)
                 # U+FE94 (Teh Marbuta final) + U+FEF4 (Yeh medial) + U+FED7 (Qaf medial) -> U+E112
                 # U+FEAE (Reh final) + U+FEB8 (Sheen medial) + U+FEDF (Lam initial) -> U+E113
