@@ -106,6 +106,12 @@ class TestPhase1Packs(unittest.TestCase):
             idx_isolated_beh = m_cuf.table[0xFE8F]
             self.assertNotEqual(m_cuf.bitmaps[idx_initial_beh], m_cuf.bitmaps[idx_isolated_beh])
 
+            # Assert isolated Alef (0xFE8D) has ink and is not empty
+            idx_alef = m_cuf.table[0xFE8D]
+            self.assertGreater(idx_alef, len(v_cuf.dims) - 1)
+            bm_alef = m_cuf.bitmaps[idx_alef]
+            self.assertTrue(any(b > 0 for b in bm_alef))
+
 
 if __name__ == "__main__":
     unittest.main()

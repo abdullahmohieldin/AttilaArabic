@@ -31,9 +31,22 @@ import struct
 import hashlib
 import unicodedata
 from PIL import Image, ImageFont
+from fontTools.ttLib import TTFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+
+def decompose_cp(cp: int) -> int:
+    decomp = unicodedata.decomposition(chr(cp))
+    if decomp:
+        parts = decomp.split()
+        if len(parts) >= 2 and parts[0].startswith("<"):
+            try:
+                return int(parts[1], 16)
+            except ValueError:
+                pass
+    return cp
+
 
 from source.cuf import CUF, PROP_NAMES
 from source.loc import decode as loc_decode, encode as loc_encode
@@ -214,6 +227,9 @@ def build_fonts():
     pack = PackFile(VANILLA_PACK)
     font_entries = {}
 
+    tt = TTFont(TAJAWAL)
+    tajawal_cmap = tt.getBestCmap()
+
     for fname in TARGET_FONTS:
         raw = pack.get_file("font\\" + fname)
         if raw is None:
@@ -249,16 +265,24 @@ def build_fonts():
         cell_h = v_size
         cell_ah = v_size
 
-        # 1. Render standard Arabic forms with full-cell baseline alignment and bleed
+        # 1. Render standard Arabic forms with full-cell baseline alignment and gap closure
         arabic_cps = (
             list(range(0xFE70, 0xFEFF)) +
+            list(range(0x0600, 0x06FF)) +
             [0x0640, 0x060C, 0x061B, 0x061F, 0x066A] +
             list(range(0x0660, 0x066A)) +
             list(range(0x064B, 0x0653))  # Shaddah, Kasrah, Fathah, Dammah, Sukun
         )
 
         for cp in sorted(set(arabic_cps)):
-            char_to_draw = chr(cp)
+            if cp in tajawal_cmap:
+                char_to_draw = chr(cp)
+            else:
+                decomp = decompose_cp(cp)
+                if decomp in tajawal_cmap:
+                    char_to_draw = chr(decomp)
+                else:
+                    continue  # Skip unmapped / non-character codes to prevent .notdef box rendering
 
             mask = font.getmask(char_to_draw, mode="L")
             bbox = font.getbbox(char_to_draw)
@@ -266,14 +290,13 @@ def build_fonts():
             if mw == 0 or mh == 0:
                 continue
 
-            # Determine connecting bleed (+1px on right edge for connecting forms in visual LTR)
-            form_name = unicodedata.name(char_to_draw, "")
-            is_connecting = ("FINAL" in form_name or "MEDIAL" in form_name or cp == 0x0640)
-            bleed = 1 if is_connecting else 0
+            form_name = unicodedata.name(chr(cp), "")
+            is_conn_left = ("INITIAL" in form_name or "MEDIAL" in form_name or cp == 0x0640)
+            is_conn_right = ("FINAL" in form_name or "MEDIAL" in form_name or cp == 0x0640)
 
             # Anchor FreeType baseline to row baseline_H
             top_cuf = baseline_H - (taj_base - 1) + bbox[1]
-            w = mw + bleed
+            w = mw
             cell_bm = bytearray(w * cell_h)
             mask_bytes = bytes(mask)
 
@@ -284,8 +307,22 @@ def build_fonts():
                         val = mask_bytes[my * mw + mx]
                         if val > 0:
                             cell_bm[cy * w + mx] = val
-                    if bleed:
-                        cell_bm[cy * w + (w - 1)] = cell_bm[cy * w + (w - 2)]
+
+            # Fill connecting baseline stroke to cell edges on baseline rows to minimize gap
+            for cy in [baseline_H - 1, baseline_H]:
+                if 0 <= cy < cell_h:
+                    row_vals = [cell_bm[cy * w + mx] for mx in range(w)]
+                    dark_indices = [mx for mx in range(w) if row_vals[mx] > 100]
+                    if dark_indices:
+                        first_x = dark_indices[0]
+                        last_x = dark_indices[-1]
+                        stroke_val = max(row_vals[first_x], row_vals[last_x], 220)
+                        if is_conn_left:
+                            for x in range(first_x):
+                                cell_bm[cy * w + x] = stroke_val
+                        if is_conn_right:
+                            for x in range(last_x + 1, w):
+                                cell_bm[cy * w + x] = stroke_val
 
             glyph_idx = len(new_dims)
             new_dims.append((cell_ah, w, w, cell_h))
@@ -351,18 +388,23 @@ def build_loc():
     target_panel_w = 300
     px_12 = calibrate_px(11) # cap_h for la_gioconda_12 is 11
     font_12 = ImageFont.truetype(TAJAWAL, px_12, layout_engine=ImageFont.Layout.BASIC)
+    tt = TTFont(TAJAWAL)
+    tajawal_cmap = tt.getBestCmap()
 
     narrative_lines = []
     for line_text in narrative_raw:
         shaped_text = shape(line_text)
         total_w = 0
         for ch in shaped_text:
-            mask = font_12.getmask(ch)
+            cp = ord(ch)
+            if cp in tajawal_cmap:
+                target_ch = ch
+            else:
+                decomp = decompose_cp(cp)
+                target_ch = chr(decomp) if decomp in tajawal_cmap else ch
+            mask = font_12.getmask(target_ch)
             mw = mask.size[0]
-            form_name = unicodedata.name(ch, "")
-            is_conn = ("FINAL" in form_name or "MEDIAL" in form_name or ord(ch) == 0x0640)
-            glyph_w = (mw + 1) if (mw > 0 and is_conn) else mw
-            pitch = (glyph_w + 1) if glyph_w > 0 else 6
+            pitch = (mw + 1) if mw > 0 else 6
             total_w += pitch
         indent = max(0, target_panel_w - total_w)
         spacer = make_spacer(indent)
