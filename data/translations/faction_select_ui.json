@@ -434,6 +434,270 @@
       "ar": "السويبيون اتحاد لقبائل جرمانية متعددة،\nيجمعهم شغف عارم بالغزو والحرب.\nالقتال هو جوهر مجتمعهم ومصدر رفعتهم،\nويتميز محاربوهم بالعقدة السويبية الشهيرة.\nبعد صراع طويل مع الإمبراطورية الرومانية،\nبدأ الكثير منهم الهجرة غرباً رفقة الوندال،\nفراراً من بطش الهون وضغطهم المتزايد.\nعبروا الراين إلى بلاد الغال لنهب مدنها الثرية،\nوهناك تكمن غنائم سيادتهم الموعودة.",
       "en": "Suebi long description",
       "is_narrative": true
+    },
+    {
+      "key": "random_localisation_strings_string_legendary",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "أسطوري",
+      "en": "Legendary"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_eastern",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "المدرسة العظمى",
+      "en": "Grand School"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_eastern",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهد العلوم والحضارات، ومركز المعرفة في الشرق.",
+      "en": "The cradle of sciences and civilisation in the East."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_eastern_sassanid",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "شاهنشاه (ملك الملوك)",
+      "en": "King of Kings"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_eastern_sassanid",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سيادة مطلقة وتاج مرصع بالمجد يحكم الشرق بقبضة من حديد.",
+      "en": "Absolute sovereignty ruling the East with an iron fist."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الممالك الجديدة",
+      "en": "New Kingdoms"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فجر جديد يولد من رماد النظام القديم لتبنى ممالك جديدة.",
+      "en": "A new dawn rises from the ashes of the old order."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_franks",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "محاربون ضوار",
+      "en": "Ferocious Warriors"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian_franks",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بسالة وشراسة في ساحات الوغى لا تعرف التراجع.",
+      "en": "Ferocity in battle that knows no retreat."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_saxons",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ساحل الساكسون",
+      "en": "Saxon Shore"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian_saxons",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة البحار الذين تمتد أشرعتهم لتهديد كل الشواطئ.",
+      "en": "Raiders whose sails threaten every coastline."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_alamanni",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الوحدة الجرمانية",
+      "en": "Germanic Unity"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_burgindians",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "نشأة الصيد",
+      "en": "Bred for the Hunt"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_langobards",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مختارو الإله غودان",
+      "en": "Godans Chosen"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_alans",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فروسية السارماتيين",
+      "en": "Sarmatian Horsemanship"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_alans",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "لركوب السهوب، يجب أن يكون الرجل وجواده كياناً واحداً.",
+      "en": "To ride the steppes, man and steed must be one."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_ostrogoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ورثة روما",
+      "en": "Inheritors of Rome"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_ostrogoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قد تتبدل الحضارات وتتغير، لكن المدينة الخالدة باقية أبداً.",
+      "en": "Civilisation may shift and change, but the eternal city remains."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_visigoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "دية الدم",
+      "en": "Blood Money"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_visigoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "دفع الجزية كفارة عادلة، إن لم تكن ضرورية تماماً.",
+      "en": "A tributary penance is only just, if not entirely necessary."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_vandals",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بحر الوندال",
+      "en": "Sea of the Vandals"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_vandals",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الرياح تنذر بالهلاك وتحمل الموت فوق الأمواج.",
+      "en": "The winds cry doom, and carry death across the waves."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_nomad_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فرسان نهاية الزمان",
+      "en": "Horsemen of the Apocalypse"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_nomad_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قدوم الفرسان يعني دمار البشرية وفناء العوالم.",
+      "en": "Come the horsemen, come the ruin of man."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_sands",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ممالك الصحراء",
+      "en": "Desert Kingdoms"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_sands",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين لا ينجو هنا سوى الأشداء، يتطلب الأمر نسلاً فريداً ليزدهر ويسود.",
+      "en": "When only the hardiest survive, it takes a special breed to prosper."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_arabian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة الصحراء",
+      "en": "Desert Power"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_tanukhids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة أسطوريون",
+      "en": "Legendary Raiders"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_tanukhids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة يحسب لها ألف حساب، وشعب لا يمكن الاستهانة به.",
+      "en": "Truly a force to be reckoned with, not to be underestimated."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_himyar",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "محاربو الصحراء",
+      "en": "Desert Warriors"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_lakhmids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مدينة الثقافة",
+      "en": "City of Culture"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_garamantes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة الصحراء",
+      "en": "Desert Power"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_axum",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بوابة الشرق",
+      "en": "Gateway to the East"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة الشمال",
+      "en": "Viking Raiders"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "النار والحرب هي كل ما يعرفه بعض الرجال، وهي التي تصنع مجدهم.",
+      "en": "Fire and war is all some men know."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_danes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أبناء البحار",
+      "en": "Seaborn"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_danes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "عانق الملح والأمواج كما تعانق الحبيب.",
+      "en": "Embrace the salt and spray as if they were a lover."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_geats",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الدم البارد",
+      "en": "Cold Blood"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_geats",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "يذوب الجليد حتى الأعماق حيث يشتد ويتصلب، وهكذا هم الرجال أيضاً.",
+      "en": "Ice thaws down to the core where it hardens."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_jutes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الناهبون",
+      "en": "Despoilers"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_jutes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الدمار فن قائم بذاته، جمال عابر وسريع الزوال.",
+      "en": "Destruction is its own art."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_celtic",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الغنائم الخاطفة",
+      "en": "Swift Spoils"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_picts",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أبناء الليل",
+      "en": "Children of the Night"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_ebdani",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الهلاك والدمار",
+      "en": "Wrack & Ruin"
     }
   ]
 }

@@ -85,7 +85,7 @@ def calibrate_px(target_cap_h: int) -> int:
     return best_px
 
 
-def format_narrative(arabic_text: str, target_panel_w: int = 300) -> str:
+def format_narrative(arabic_text: str, target_panel_w: int = 340) -> str:
     px_12 = calibrate_px(11)
     font_12 = ImageFont.truetype(TAJAWAL, px_12, layout_engine=ImageFont.Layout.BASIC)
     tt = TTFont(TAJAWAL)
@@ -234,6 +234,13 @@ def compile_all_locs(vanilla_pack_path: str = VANILLA_PACK,
         print(f"  -> {table_path}: {applied_count}/{len(overrides)} overrides applied ({len(rows)} total rows)")
         encoded = loc_encode(updated_rows)
         loc_entries[table_path] = encoded
+
+    # 2b. Add Arabic UI Layout Overrides (Faction Leader & Religion RTL position swap)
+    uic_path = os.path.join(BASE, "data", "ui", "frontend ui", "sp_grand_campaign")
+    if os.path.exists(uic_path):
+        with open(uic_path, "rb") as f:
+            loc_entries[r"ui\frontend ui\sp_grand_campaign"] = f.read()
+            print("  -> Added Arabic UI Layout Override: ui\\frontend ui\\sp_grand_campaign")
 
     # 3. Write pack
     os.makedirs(os.path.dirname(out_pack_path), exist_ok=True)
