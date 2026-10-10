@@ -1,0 +1,48 @@
+﻿
+=== custom battle btn box=(150, 605, 300, 635) mode=light thr=180
+  line: ink rows y612..627 (h=16)
+  row ink profile: [np.int64(2), np.int64(9), np.int64(22), np.int64(21), np.int64(17), np.int64(41), np.int64(52), np.int64(54), np.int64(49), np.int64(51), np.int64(54), np.int64(83), np.int64(74), np.int64(6), np.int64(10), np.int64(7)]
+  strip(17..23): baseline strip y17..23 runs=12 words=2
+    run bounds [(162, 170), (172, 177), (180, 183), (186, 196), (197, 216), (217, 221), (225, 228), (240, 253), (257, 261), (262, 271), (274, 283), (284, 288)]
+    intra-word seams [2, 3, 3, 1, 1, 4, 4, 1, 3, 1]
+    seam min/med/max = 1/2/4 n>=2px=6/10
+  full(7..23): baseline strip y7..23 runs=12 words=2
+    run bounds [(162, 170), (172, 177), (180, 183), (186, 196), (197, 216), (217, 222), (225, 228), (239, 253), (256, 261), (262, 272), (274, 283), (284, 289)]
+    intra-word seams [2, 3, 3, 1, 1, 3, 3, 1, 2, 1]
+    seam min/med/max = 1/2/3 n>=2px=6/10
+
+=== campaign menu btn box=(120, 685, 335, 712) mode=light thr=180
+  line: ink rows y689..705 (h=17)
+  row ink profile: [np.int64(8), np.int64(18), np.int64(23), np.int64(14), np.int64(23), np.int64(60), np.int64(77), np.int64(73), np.int64(64), np.int64(69), np.int64(75), np.int64(137), np.int64(132), np.int64(7), np.int64(9), np.int64(14), np.int64(7)]
+  strip(15..21): baseline strip y15..21 runs=17 words=3
+    run bounds [(131, 143), (144, 151), (152, 159), (160, 170), (171, 184), (185, 189), (193, 196), (208, 214), (217, 224), (227, 237), (238, 251), (252, 259), (260, 269), (280, 289), (290, 297), (298, 310), (311, 319)]
+    intra-word seams [1, 1, 1, 1, 1, 4, 3, 3, 1, 1, 1, 1, 1, 1]
+    seam min/med/max = 1/1/4 n>=2px=3/14
+  full(4..21): baseline strip y4..21 runs=17 words=3
+    run bounds [(131, 143), (144, 151), (152, 159), (160, 170), (171, 184), (185, 190), (193, 196), (207, 215), (217, 224), (227, 237), (238, 251), (252, 259), (260, 269), (279, 289), (290, 297), (298, 310), (311, 321)]
+    intra-word seams [1, 1, 1, 1, 1, 3, 2, 3, 1, 1, 1, 1, 1, 1]
+    seam min/med/max = 1/1/3 n>=2px=3/14
+
+=== faction title ERE box=(870, 92, 1050, 130) mode=light thr=180
+  line: ink rows y99..123 (h=25)
+  row ink profile: [np.int64(8), np.int64(20), np.int64(28), np.int64(26), np.int64(16), np.int64(16), np.int64(32), np.int64(48), np.int64(59), np.int64(59), np.int64(51), np.int64(51), np.int64(50), np.int64(53), np.int64(58), np.int64(87), np.int64(112), np.int64(110), np.int64(103), np.int64(12), np.int64(15), np.int64(24), np.int64(25), np.int64(20), np.int64(6)]
+  strip(23..32): baseline strip y23..32 runs=10 words=4
+    run bounds [(881, 901), (902, 913), (914, 944), (945, 961), (962, 968), (974, 978), (992, 1003), (1004, 1015), (1016, 1028), (1035, 1039)]
+    intra-word seams [1, 1, 1, 1, 1, 1]
+    seam min/med/max = 1/1/1 n>=2px=0/6
+  full(7..32): baseline strip y7..32 runs=10 words=2
+    run bounds [(881, 901), (902, 913), (914, 944), (945, 961), (962, 969), (974, 978), (992, 1003), (1004, 1015), (1016, 1031), (1035, 1039)]
+    intra-word seams [1, 1, 1, 1, 5, 1, 1, 4]
+    seam min/med/max = 1/1/5 n>=2px=2/8
+
+=== custom battle header box=(880, 90, 1110, 130) mode=light thr=180
+  line: ink rows y97..121 (h=25)
+  row ink profile: [np.int64(6), np.int64(16), np.int64(21), np.int64(20), np.int64(6), np.int64(4), np.int64(10), np.int64(45), np.int64(81), np.int64(99), np.int64(105), np.int64(83), np.int64(77), np.int64(76), np.int64(76), np.int64(80), np.int64(128), np.int64(171), np.int64(163), np.int64(134), np.int64(4), np.int64(5), np.int64(7), np.int64(6), np.int64(4)]
+  strip(23..32): baseline strip y23..32 runs=10 words=2
+    run bounds [(892, 905), (906, 936), (937, 967), (968, 987), (988, 1002), (1017, 1030), (1031, 1043), (1046, 1057), (1058, 1078), (1079, 1093)]
+    intra-word seams [1, 1, 1, 1, 1, 3, 1, 1]
+    seam min/med/max = 1/1/3 n>=2px=1/8
+  full(7..32): baseline strip y7..32 runs=10 words=2
+    run bounds [(891, 905), (906, 936), (937, 967), (968, 987), (988, 1003), (1016, 1030), (1031, 1043), (1046, 1057), (1058, 1078), (1079, 1093)]
+    intra-word seams [1, 1, 1, 1, 1, 3, 1, 1]
+    seam min/med/max = 1/1/3 n>=2px=1/8

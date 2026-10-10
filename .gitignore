@@ -24,4 +24,9 @@ __pycache__/
 logs/*
 !logs/baseline.txt
 !logs/pip-freeze.txt
+!logs/cr_*.txt
 reference/
+
+# Editor / agent-tool config, not part of the project
+.zcodeignore
+.zcode/

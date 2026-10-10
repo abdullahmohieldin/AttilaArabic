@@ -1,0 +1,13 @@
+== C5 == declared change: C3's aw sweep + a two-clone direction ruler, in one font pack (12 appended glyph records per font, nothing existing modified)
+vanilla local_en.pack SHA256 before: OK
+fonts pack: 37 CUFs, 6 new glyph records each, 6 table entries remapped each
+loc change: 2 description keys := long_description (tatweel pads dropped)
+loc pack: D:\AttilaArabic\release\Attila_Arabic_CR_C5.pack (1814312 B) SHA256=446F1F64D738D856
+loc probe block: 6 rows prepended to 4 keys
+  row 1: advance width across fonts 14-224 px (budget 300) OK [row1 U+FEF5 x14  bitmap W-2  aw W-2   (control row)]
+  row 2: advance width across fonts 12-192 px (budget 300) OK [row2 U+FE71 x12  bitmap W+2  aw W-2]
+  row 3: advance width across fonts 48-228 px (budget 300) OK [row3 U+FE79 x12  bitmap W+2  aw W+1]
+  row 4: advance width across fonts 50-200 px (budget 300) OK [row4 U+FE86 x10  bitmap W+2  aw W+2]
+  row 5: advance width across fonts 212-212 px (budget 300) OK [row5 thin x16 then broad x11  (thin half first in the stored value)]
+  row 6: advance width across fonts 247-247 px (budget 300) OK [row6 broad x11 then thin x16  (broad half first in the stored value)]
+vanilla local_en.pack SHA256 after: OK

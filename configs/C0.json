@@ -1,0 +1,6 @@
+{
+  "test": "C0",
+  "change": "loc only: the two faction description keys use the tatweel-free long_description values. No font pack - vanilla fonts.",
+  "fonts": { "mode": "none" },
+  "loc": { "descriptions_from_long": true }
+}

@@ -1,0 +1,7 @@
+== C1 == declared change: font pack only: Shyizer's 37 CUFs byte-for-byte on top of the C0 loc. Test only - never committed.
+vanilla local_en.pack SHA256 before: OK
+loc change: 2 description keys := long_description (tatweel pads dropped)
+loc pack: D:\AttilaArabic\release\Attila_Arabic_CR_C1.pack (1813448 B) SHA256=B09302E641204AB2
+fonts pack: 37 Shyizer CUFs, byte-for-byte (test only, never committed)
+coverage -> logs/cr_C1_coverage.txt
+vanilla local_en.pack SHA256 after: OK

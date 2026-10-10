@@ -1,0 +1,6 @@
+{
+  "test": "C2",
+  "change": "font identification: 3 glyphs appended to every vanilla CUF (blank, block, blank) and 11 real Arabic codepoints remapped to an 11-slot barcode carrying the font id; the same barcode is placed on 13 UI keys across 9 surfaces.",
+  "fonts": { "mode": "vanilla_marker" },
+  "loc": { "descriptions_from_long": true, "marker": true }
+}

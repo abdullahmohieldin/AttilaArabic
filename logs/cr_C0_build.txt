@@ -1,0 +1,6 @@
+== C0 == declared change: loc only: the two faction description keys use the tatweel-free long_description values. No font pack - vanilla fonts.
+vanilla local_en.pack SHA256 before: OK
+loc change: 2 description keys := long_description (tatweel pads dropped)
+loc pack: D:\AttilaArabic\release\Attila_Arabic_CR_C0.pack (1813448 B) SHA256=B09302E641204AB2
+fonts pack: none (vanilla fonts only)
+vanilla local_en.pack SHA256 after: OK
