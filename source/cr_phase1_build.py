@@ -274,6 +274,7 @@ def build_fonts():
             list(range(0x064B, 0x0653))  # Shaddah, Kasrah, Fathah, Dammah, Sukun
         )
 
+        rendered_cells = {}
         for cp in sorted(set(arabic_cps)):
             if cp in tajawal_cmap:
                 char_to_draw = chr(cp)
@@ -324,10 +325,37 @@ def build_fonts():
                             for x in range(last_x + 1, w):
                                 cell_bm[cy * w + x] = stroke_val
 
+            rendered_cells[cp] = (w, cell_bm)
             glyph_idx = len(new_dims)
             new_dims.append((cell_ah, w, w, cell_h))
             new_bitmaps.append(bytes(cell_bm))
             new_table[cp] = glyph_idx
+
+        # 1b. Render Seamless 0-Pixel Connected Chunk Ligatures
+        CHUNK_DEFS = [
+            # الفصائل: split so no chunk exceeds engine h_size (48px)
+            (0xE110, [0xFEDE, 0xFE8B]),                 # ئل (lam final + yeh hamza initial, ~26px)
+            (0xE111, [0xFE8E, 0xFEBC]),                 # صا (alef final + sad medial, ~34px)
+            (0xE114, [0xFED4, 0xFEDF]),                 # لف (feh medial + lam initial, ~23px)
+            # الشرقية
+            (0xE112, [0xFE94, 0xFEF4, 0xFED7]),         # قية
+            (0xE113, [0xFEAE, 0xFEB8, 0xFEDF]),         # لشر
+        ]
+        for chunk_cp, sub_cps in CHUNK_DEFS:
+            chunk_sub_cells = [rendered_cells[sc] for sc in sub_cps if sc in rendered_cells]
+            if len(chunk_sub_cells) == len(sub_cps):
+                total_cw = sum(cw for cw, _ in chunk_sub_cells)
+                chunk_bm = bytearray(total_cw * cell_h)
+                curr_cx = 0
+                for cw, cbm in chunk_sub_cells:
+                    for cy in range(cell_h):
+                        for cx in range(cw):
+                            chunk_bm[cy * total_cw + curr_cx + cx] = cbm[cy * cw + cx]
+                    curr_cx += cw
+                chunk_idx = len(new_dims)
+                new_dims.append((cell_ah, total_cw, total_cw, cell_h))
+                new_bitmaps.append(bytes(chunk_bm))
+                new_table[chunk_cp] = chunk_idx
 
         # 2. Append Round 3 Binary Blank Spacer Glyphs
         for _, cp, w in BLANK_SPACERS:
@@ -416,10 +444,10 @@ def build_loc():
         # 1. Start Campaign button
         TARGET_KEYS["btn_start_campaign_1"][1]: "[B] " + shape("بدء الحملة"),
         TARGET_KEYS["btn_start_campaign_2"][1]: "[B] " + shape("بدء الحملة"),
-        # 2. Factions header
-        TARGET_KEYS["header_factions_1"][1]: "[F] " + shape("الفصائل"),
-        TARGET_KEYS["header_factions_2"][1]: "[F] " + shape("الفصائل"),
-        TARGET_KEYS["header_factions_3"][1]: "[F] " + shape("الفصائل"),
+        # 2. Factions header (seamless 0-pixel connected chunks: ئل + صا + لف + ا)
+        TARGET_KEYS["header_factions_1"][1]: "[F] \uE110\uE111\uE114\uFE8D",
+        TARGET_KEYS["header_factions_2"][1]: "[F] \uE110\uE111\uE114\uFE8D",
+        TARGET_KEYS["header_factions_3"][1]: "[F] \uE110\uE111\uE114\uFE8D",
         # 3. Difficulty slider tooltip
         TARGET_KEYS["diff_tooltip_1"][1]: "[S] " + shape("مؤشر الصعوبة"),
         TARGET_KEYS["diff_tooltip_2"][1]: "[S] " + shape("مؤشر الصعوبة"),
@@ -434,8 +462,8 @@ def build_loc():
         TARGET_KEYS["diff_legendary"][1]: "[L] " + "\n".join([shape("الحفظ اليدوي غير متاح في الحملة."), shape("لا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.")]),
         # 7. Cultural trait header
         TARGET_KEYS["header_cultural"][1]: "[C] " + shape("السمة الثقافية"),
-        # 8. Faction title
-        TARGET_KEYS["faction_title"][1]: "[T] " + shape("الإمبراطورية الرومانية الشرقية"),
+        # 8. Faction title (with seamless 0-pixel connected chunks for الشرقية)
+        TARGET_KEYS["faction_title"][1]: ("[T] " + shape("الإمبراطورية الرومانية الشرقية")).replace("\uFE94\uFEF4\uFED7\uFEAE\uFEB8\uFEDF", "\uE112\uE113"),
         # 9. Faction description
         TARGET_KEYS["ere_description"][1]: ere_narrative_text,
         TARGET_KEYS["ere_long_description"][1]: ere_narrative_text,
