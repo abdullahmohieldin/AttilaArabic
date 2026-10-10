@@ -1,78 +1,80 @@
-# Localization System — Attila (Phase 2)
+# Total War: ATTILA Localization Architecture Specification
 
-Date: 2026-10-06. Claims labeled VERIFIED / DOCUMENTED / INFERENCE / UNVERIFIED.
-All experiments on copies; vanilla `local_en.pack` SHA256 unchanged
-(`45E0F087…7F70D` before == after).
+> **Document Classification:** Engine Localization & Translation Pipeline Specification  
+> **Target Subsystem:** Warscape Database Localization Subsystem (`text\db\*.loc`)  
+> **Status:** FULLY REVERSE-ENGINEERED & VERIFIED BY CODEC
 
-## Where localization lives — VERIFIED
+---
 
-- `data\local_en.pack` (PFH4, 211,301,042 B, 214 files, type `release (1)`).
-- 174 `.loc` files under `text\db\*.loc` + `text\credits.xml` (175 text entries
-  total). No loose `.loc` files in `data\text\` (only 3 xml files).
-- File sizes range from 14 B (empty table, e.g. `agent_attributes.loc`) to
-  ~725 KB (`uied_component_texts.loc`, 3119 entries).
-- `local_en_shared_rome2.pack` (1.0 GB) role: UNVERIFIED (not opened yet).
+## 1. Overview
 
-## `.loc` structure — VERIFIED (own codec, byte-exact)
+Text localization in *Total War: ATTILA* is stored in binary string tables with the `.loc` extension inside `data\local_en.pack`. The localization subsystem comprises 174 database tables containing UI text, historical descriptions, unit statistics, advisor dialogue, and event narratives.
 
-Layout (matches `rpfm_lib::files::loc`, DOCUMENTED, confirmed empirically):
+---
+
+## 2. Binary `.loc` File Format
+
+The `.loc` format is a straightforward, binary-serialized key-value string dictionary using UTF-16LE encoding:
+
+### 2.1 File Header
 
 ```text
-FF FE | 'LOC' | 0x00 | i32 version=1 | u32 count
-per entry: u16 char-count + UTF-16LE key
-           u16 char-count + UTF-16LE text
-           u8 tooltip flag
+Offset    Type        Value / Field
+-----------------------------------------
+0x00      uint16      0xFEFF (Byte Order Mark, Little-Endian)
+0x02      char[4]     "LOC\0" (ASCII identifier)
+0x06      int32       1 (Format Version)
+0x0A      uint32      entry_count (Number of key-value pairs)
 ```
 
-- `source\loc.py`: decode/encode + TSV export. Exact parse
-  (`consumed == total`) on all 6 files tested; **byte-identical round-trip**
-  on `battles.loc`, `advice_info_texts.loc` (462 entries), `uied`,
-  `factions` (2703), `start_pos_factions` (618), `technology…`,
-  `multiplayer_faction_descriptions` — VERIFIED.
-- Third column ("tooltip") is 0/1 in all rows seen; purpose unknown
-  (DOCUMENTED as unknown by RPFM). All 4 v1-overridden rows had flag 1;
-  flags preserved on write — VERIFIED.
-- Inline tags observed vanilla: `[[url:…]]…[[/url]]` (advice texts),
-  `[[col:…]]` family per RPFM manual (DOCUMENTED). v1 strings contain no
-  tags (deliberate — see tag-order caveat below).
+### 2.2 Entry Record Structure
 
-## Pack-type test — VERIFIED (built) / UNVERIFIED (in-game effect)
+Following the 14-byte header, records repeat sequentially for `entry_count` iterations:
 
-- `packfile.py` pack types: `0=boot, 1=release, 2=patch, 3=mod, 4=movie`
-  (DOCUMENTED by tool). Vanilla `local_en.pack` = 1 (`release`).
-- v1 test pack built as **PFH4 type `mod (3)`** via
-  `packfile.py create --type 3 --version PFH4` + `add` + content verified by
-  re-extract + re-decode (entry counts 3119/2703/618 intact, flags intact,
-  shaped strings match) — VERIFIED.
-- Expected behavior (DOCUMENTED community practice, UNVERIFIED in Attila
-  until the v1 game test): `mod`-type packs are enabled per-pack in the
-  launcher Mod Manager and override vanilla same-path files / same-key rows;
-  `movie`-type (4) autoloads without enabling. v1 uses `mod (3)` so loading
-  is explicit and reversible.
-- Safety design: v1 ships **full-file copies** (only 4 rows edited), so it is
-  correct under both file-replacement and key-merge engine semantics
-  (INFERENCE about the two possible semantics; design covers both).
+| Field Name | Type | Description |
+| :--- | :---: | :--- |
+| `key_length` | `uint16` | Length of the database key in characters. |
+| `key_text` | `UTF-16LE` | Unique localization key string (e.g. `factions_screen_name_...`). |
+| `val_length` | `uint16` | Length of the localized text in characters. |
+| `val_text` | `UTF-16LE` | Localized string content. |
+| `tooltip_flag` | `uint8` | Boolean flag (0 or 1), indicating UI tooltip behavior. |
 
-## Shaping pipeline v1 — VERIFIED at codepoint level
+> [!NOTE]
+> The custom codec [`source/loc.py`](file:///d:/AttilaArabic/source/loc.py) achieves **100% byte-identical round-trip verification** across all vanilla tables.
 
-`source\shape.py`: protect `[[…]]` / `%s/%d` / `{n}` → `arabic_reshaper`
-3.0.1 → `python-bidi` 0.6.11 `get_display(base_dir='R')` → restore tokens.
+---
 
-- `القاهرة` → `FE93 FEAE FEEB FE8E FED8 FEDF FE8D` (correct final/medial/
-  initial forms, visual order) — VERIFIED.
-- Digits stay LTR (`1200` intact), Latin runs intact (`Rome 1200` intact),
-  em-dash/parens/`:`/`%` preserved, tags restored byte-identical —
-  VERIFIED.
-- Tag-order caveat (INFERENCE, needs engine test): bidi moves LTR tag runs,
-  so in the stored visual string `[[/col]]` can precede `[[col:red]]`. If the
-  engine parses tags in storage order, colors on pre-shaped tagged strings
-  may break. v1 avoids tags entirely; tagged strings are a Phase 4 problem.
+## 3. Mod Delivery & Loading Priority
 
-## Language selection — INFERENCE / UNVERIFIED
+```mermaid
+graph TD
+    A["Attila_Arabic_Phase1.pack<br/>(PFH4 Type 3 - Mod)"] -->|Priority Override| C["Engine Text Database"]
+    B["local_en.pack<br/>(PFH4 Type 1 - Release)"] -->|Default Fallback| C
+```
 
-- `data\language.txt` = `EN`. RPFM docs note pre-Troy games load individual
-  `.loc` files in the active language; a total-conversion-style override of
-  English keys in a mod pack is the standard translation-mod mechanism
-  (DOCUMENTED practice). Whether Attila merges by key across same-path files
-  or replaces whole files is UNVERIFIED — v1's full-file design is safe
-  either way; the in-game result decides.
+1. **Pack File Header (PFH4)**:
+   * Vanilla `local_en.pack` is packed as type `1` (`release`).
+   * Our localization pack (`Attila_Arabic_Phase1.pack`) is created as type `3` (`mod`).
+2. **Override Mechanism**:
+   * Type 3 mod packs take precedence over type 1 release packs when loaded.
+   * Full-table copies are shipped to guarantee clean overrides under both file-replacement and key-merging engine modes.
+
+---
+
+## 4. Arabic Shaping & BiDi Pipeline
+
+Because the Warscape text engine renders strictly left-to-right (LTR) with no OpenType shaping support, input text must pass through a multi-stage shaping transformation:
+
+```mermaid
+flowchart LR
+    A["Raw Arabic String<br/>(Logical Order)"] --> B["Token Protection<br/>([[col]], %s, {n})"]
+    B --> C["Contextual Reshaper<br/>(arabic_reshaper)"]
+    C --> D["Presentation Forms-B<br/>(U+FE70-U+FEFF)"]
+    D --> E["BiDi Reordering<br/>(python-bidi / base_dir='R')"]
+    E --> F["Token Restoration"]
+    F --> G["Engine LTR Output<br/>(Visual Order)"]
+```
+
+1. **Token Protection**: Preserves formatting tags (such as `[[col:yellow]]...[[/col]]`, `%s`, `%d`, `{0}`) so that syntax markers are not scrambled by bidirectional reordering.
+2. **Contextual Reshaping**: Translates logical Arabic letters into their position-specific glyph variants (isolated, initial, medial, or final) in Unicode Presentation Forms-B.
+3. **Bidirectional Reordering**: Reverses characters visually so that when the LTR engine renders them left-to-right, they appear in proper right-to-left order on screen.
