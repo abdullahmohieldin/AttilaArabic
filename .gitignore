@@ -30,3 +30,4 @@ reference/
 # Editor / agent-tool config, not part of the project
 .zcodeignore
 .zcode/
+tw_attila_ar/

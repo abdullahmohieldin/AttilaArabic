@@ -1,0 +1,109 @@
+  0: effects_description_att_faction_trait_venedi_growth -> Growth: %+n
+  1: effects_description_att_effect_faction_trait_roman_east_economic_powerhouse_2_trade_tarrifs -> Trade tariffs: %+n%
+  2: effects_description_att_faction_trait_sclaveni_dummy -> Morale, Melee Defence, Melee Attack: %+n and Melee Damage: +20% when fighting Nomadic factions
+  3: effects_description_bel_faction_trait_roman_expedition_3_integrity -> Comitatus: %+n force integrity.
+  4: effects_description_att_effect_faction_trait_norse_geats_cold_blood_2_immune_snow_attrition -> Immune to snow attrition
+  5: effects_description_att_faction_trait_antes_morale_grassland_desert_plains -> Melee Damage: %+n when fighting on grassland or desert plains
+  6: effects_description_att_faction_trait_antes_attack_grassland_desert_plains -> Morale: %+n when fighting on grassland or desert plains
+  7: effects_description_att_faction_trait_antes_damage_grassland_desert_plains -> Melee Attack: %+n when fighting on grassland or desert plains
+  8: effects_description_att_faction_trait_garamantes_conversion -> %+n% conversion time of the main building chain
+  9: effects_description_att_faction_trait_himyar_no_replenishment -> Desert Saboteurs: Stops foreign replenishment in regions where armies are present.
+ 10: effects_description_att_faction_trait_tanukhids_muster_stance -> Swelling Ranks: Raiding stance provides free Rebellion Militia unit
+ 11: effects_description_att_effect_faction_trait_barbarian_saxon_saxon_shore_1_income_for_settlement_damage -> Income: %+n for every 10% damage caused to settlements during a battle.
+ 12: effects_description_att_effect_faction_trait_eastern_grand_school_1_sanitation_per_province_capital -> Sanitation: %+n for every province capital held
+ 13: effects_description_att_effect_faction_trait_barbarian_burgundian_1 -> Icy Determination: %+n% unit replenishment
+ 14: effects_description_att_effect_faction_trait_barbarian_burgundian_2 -> Harsh Sustenance: %+n food for every region with poor fertility.
+ 15: effects_description_att_effect_faction_trait_norse_danes_seaborn_1_immune_seasickness -> Immune to seasickness
+ 16: effects_description_att_faction_trait_lakhmids_sassanid_units -> Can recruit Sassanid units in settlements with Sassanid military buildings
+ 17: effects_description_att_effect_faction_trait_migrators_great_migration_growth -> Growth: %+n when initiating a migration or resettling
+ 18: effects_description_att_effect_faction_trait_migrators_vandals_pirate_raiders_2_income_from_raid_sack -> Income: %+n% from raiding and sacking
+ 19: effects_description_att_effect_faction_trait_steppe_horses -> Elite Steeds: %+n% battle speed for cavalry unit recruits
+ 20: effects_description_att_effect_faction_trait_norse_danes_seaborn_2_immune_sea_attrition -> Immune to high-seas attrition
+ 21: effects_description_att_effect_faction_trait_nomads_scourge_christian_fear -> Enemy morale: %+n when fighting Christian factions
+ 22: effects_description_bel_faction_trait_franks_cav_xp -> Alanic Heritage: %+n experience for cavalry units upon recruitment.
+ 23: effects_description_att_effect_faction_trait_migrators_visigoths_blood_money_2_income_from_migrate -> Income: %+n% when migrating through Roman territory
+ 24: effects_description_cha_faction_trait_asturias_raze_abandon -> Can raze and abandon settlements
+ 25: effects_description_att_effect_faction_trait_migrators_ostrogoths_honorary_romans_2_roman_unit_recruitment -> Can recruit Roman units in settlements with Roman military buildings
+ 26: effects_description_att_faction_trait_lakhmids_puppet_wealth -> Subsidised Peace: %+n wealth per turn while at peace with the Sassanids
+ 27: effects_description_att_effect_faction_trait_roman_west_plurality_1_upkeep_per_foreign_unit -> Upkeep cost: %+n% per non-Roman unit in a military force
+ 28: effects_description_bel_faction_trait_vandals_2_breakers_success -> Sabotage Specialists: %+n% to the success chance of sabotage actions.
+ 29: effects_description_att_effect_faction_trait_nomads_huns_horsemen_1_conquest_growth -> Conquest: %+n growth from razing settlements
+ 30: effects_description_att_effect_faction_trait_barbarian_saxon_saxon_shore_2_morale_for_raiding -> Integrity: %+n when raiding
+ 31: effects_description_att_effect_faction_trait_norse_geats_cold_blood_1_morale_in_winter -> Morale: %+n when fighting during the winter
+ 32: effects_description_att_effect_faction_trait_nomads_huns_horsemen_3_famine_food_drain -> Famine: %+n food consumption in provinces where the horde is present
+ 33: effects_description_att_faction_trait_slavs_defence_against_nomads -> Melee Defence: %+n when fighting Nomadic factions
+ 34: effects_description_bel_faction_trait_vandals_battle_morale -> Rallying Cry: %+n to unit morale when in their own or allied territory.
+ 35: effects_description_att_faction_trait_celts_dummy_1 -> -15% movement speed reduction in raiding stance .
+ 36: effects_description_bel_faction_trait_visigoths_conversion -> Persuasive: High rate of religious conversion in all owned provinces.
+ 37: effects_description_att_faction_trait_himyar_fatigue -> Fatigue rate: %+n% for all units
+ 38: effects_description_att_faction_trait_antes_defence_forest -> Melee Defence: %+n when fighting in a forest
+ 39: effects_description_att_faction_trait_antes_defence_grassland_desert_plains -> Melee Attack: %+n when fighting on grassland or desert plains
+ 40: effects_description_bel_faction_trait_franks_research -> Learned: %+n% to the rate of research.
+ 41: effects_description_att_faction_trait_tanukhids_food -> Rapacious Horde: Food obtained only through settlement battles when horde
+ 42: effects_description_att_faction_trait_slavs_ambush_defence -> Melee Defence: %+n during ambushes
+ 43: effects_description_att_effect_faction_trait_barbarian_langobard_1 -> Emancipators: Doubled unit replenishment when taking on defeated troops post-battle.
+ 44: effects_description_att_effect_faction_trait_barbarian_langobard_2 -> The Fury of Our Maker's Hand: %+n unit morale when fighting against armies of other religions.
+ 45: effects_description_att_effect_faction_trait_norse_raiders_income_from_sack_loot_raid -> Income: %+n% from sacking, looting and raiding
+ 46: effects_description_att_effect_faction_trait_suebi_horde_buildings -> Horde buildings construction cost: %+n%
+ 47: effects_description_att_effect_faction_trait_norse_jutes_despoilers_2_income_from_raze -> Income: %+n% from razing settlements
+ 48: effects_description_att_effect_faction_trait_migrators_alans_sarmatian_horsemanship_1_cavalry_xp_gain -> Battle experience gain rate: %+n%% for cavalry units
+ 49: effects_description_att_faction_trait_celts_raiding_1 -> Raiding income in neutral territory: %+n%
+ 50: effects_description_att_faction_trait_celts_raiding_2 -> Raiding income in enemy territory: %+n%
+ 51: effects_description_att_faction_trait_sands_sanitation -> Sunscorched: %+n sanitation
+ 52: effects_description_att_faction_trait_sands_conversion -> Winds of change: %+n to the rate of religious conversion
+ 53: effects_description_bel_faction_trait_ostrogths_roman_diplomacy -> Roman Sceptic: Decrease in diplomatic relations with the Roman Empire.
+ 54: effects_description_att_effect_faction_trait_barbarian_new_kingdoms_building_conversion -> Building conversion rate: %+n%
+ 55: effects_description_att_faction_trait_venedi_farm_income -> Income:  %+n% from farms
+ 56: effects_description_bel_faction_trait_visigoths_tributary_income -> Blood Money: %+n from the formation of tributary states.
+ 57: effects_description_att_effect_faction_trait_eastern_sassanid_king_of_kings_1_income_from_vassals -> Income: %+n% tribute from puppet states
+ 58: effects_description_att_effect_faction_trait_migrators_vandals_pirate_raiders_1_superior_naval -> Can recruit superior-quality naval units
+ 59: effects_description_att_faction_trait_antes_river_dummy -> Morale, Melee Defence, Melee Attack: %+n and Melee Damage: +20% when fighting a river battle
+ 60: effects_description_att_effect_faction_trait_roman_foederati_horde_levy -> Can levy units from friendly hordes passing through Roman territory
+ 61: effects_description_att_faction_trait_antes_grassland_desert_plains_dummy -> Morale, Melee Defence, Melee Attack: %+n and Melee Damage: -10% when fighting on grassland or open fields
+ 62: effects_description_att_faction_trait_antes_defence_river -> Melee Defence: %+n when fighting a river battle
+ 63: effects_description_bel_faction_trait_roman_expedition_2_stance_cost_reduction -> Roman Will: No movement cost for the Fortify and Encampment stances.
+ 64: effects_description_att_effect_faction_trait_nomads_huns_horsemen_2_war_morale -> War: %+n Integrity for every war being prosecuted
+ 65: effects_description_bel_faction_trait_vandals_1_raiding -> Piracy: %+n% increase to the income from raiding in all provinces and sea regions.
+ 66: effects_description_att_effect_faction_trait_barbarian_alamanni_1 -> Efficient Farming: Bonus agricultural income in regions with poor fertility. 
+ 67: effects_description_att_effect_faction_trait_barbarian_alamanni_2 -> Royal Splendour: %+n% to general's radius of influence.
+ 68: effects_description_att_faction_trait_tanukhids_growth -> Victory Rallies: Additional horde growth gained through successful battles 
+ 69: effects_description_att_effect_faction_trait_nomads_white_huns_war_morale -> Integrity: %+n Integrity for every war being prosecuted
+ 70: effects_description_bel_faction_trait_vandals_naval_superiority -> Forged by the Sea: Can recruit superior quality naval units.
+ 71: effects_description_att_effect_faction_trait_eastern_sassanid_king_of_kings_2_levies_from_vassals -> Puppet state levies: %+n of each type of levy unit
+ 72: effects_description_att_effect_faction_trait_migrators_ostrogoths_honorary_romans_1_no_resistance -> No instability when occupying settlements from Roman factions
+ 73: effects_description_att_effect_faction_trait_eastern_grand_school_2_research_per_province_capital -> Research rate: %+n% for every province capital held
+ 74: effects_description_att_faction_trait_lakhmids_settlement_replenishment -> Heavenly Cities: %+n% increased replenishment inside a settlement
+ 75: effects_description_att_effect_faction_trait_roman_west_plurality_2_refugee_increase -> Constant immigration
+ 76: effects_description_bel_faction_trait_visigoths_tolerance -> Tolerance: No public order penalties from immigration in owned provinces.
+ 77: effects_description_bel_faction_trait_roman_expedition_1_reclaim -> Reclamation: The expedition can reclaim regions for the Roman Empire. 
+ 78: effects_description_att_faction_trait_antes_forest_dummy -> Morale, Melee Defence, Melee Attack: %+n and Melee Damage: +20% when fighting in a forest
+ 79: effects_description_att_effect_faction_trait_migrators_visigoths_blood_money_3_income_from_new_vassals -> Income: %+n from the formation of tributary states
+ 80: effects_description_att_faction_trait_slavs_damage_against_nomads -> Melee Damage: %+n when fighting Nomadic factions
+ 81: effects_description_att_faction_trait_slavs_attack_against_nomads -> Melee Attack: %+n when fighting Nomadic factions
+ 82: effects_description_att_faction_trait_slavs_morale_against_nomads -> Morale: %+n when fighting Nomadic factions
+ 83: effects_description_bel_faction_trait_ostrogths_2_roman_occupation -> Occupation: No Instability public order when occupying settlements.
+ 84: effects_description_att_faction_trait_axum_trade -> Commercial Mastery: %+n% from trade income
+ 85: effects_description_att_effect_faction_trait_nomads_huns_horsemen_4_death_no_replenish -> Death: Stops foreign replenishment (and just about everything else) in regions where the horde is present.
+ 86: effects_description_att_faction_trait_antes_morale_river -> Morale: %+n when fighting a river battle
+ 87: effects_description_att_faction_trait_axum_mercs -> Merchant Guards: %+n% to mercenary pool replenishment rate
+ 88: effects_description_att_faction_trait_antes_attack_river -> Morale: %+n when fighting a river battle
+ 89: effects_description_bel_faction_trait_franks_casualties -> Battle Honour: No penalty to integrity from casualties suffered in battle.
+ 90: effects_description_att_faction_trait_venedi_farms_dummy -> Venedi Farms : Farms do not have any negative effects (squalor or public order).
+ 91: effects_description_att_effect_faction_trait_migrators_alans_sarmatian_horsemanship_2_casualty_exemption -> No post-battle casualties for cavalry units which have routed or withdrawn from battle
+ 92: effects_description_att_faction_trait_antes_damage_river -> Melee Attack: %+n when fighting a river battle
+ 93: effects_description_att_faction_trait_axum_food -> Supply Network: %+n food from each active trade route (Maximum: 150)
+ 94: effects_description_att_effect_faction_trait_barbarian_franks_ferocity_1_morale_for_casualties_inflicted -> Integrity: %+n% penalty from casualties suffered
+ 95: effects_description_bel_faction_trait_roman_expedition_fatigue_recovery -> Physical Training: %+n% to the rate of fatigue recovery.
+ 96: effects_description_att_faction_trait_slavs_ambush_morale -> Morale: %+n during ambushes
+ 97: effects_description_att_effect_faction_trait_norse_jutes_despoilers_1_income_from_units_destroyed -> Extra income for every enemy unit destroyed.
+ 98: effects_description_att_faction_trait_slavs_ambush_attack -> Melee Attack: %+n during ambushes
+ 99: effects_description_att_effect_faction_trait_migrators_visigoths_blood_money_1_food_from_migrate -> Food: %+n when migrating through Roman territory
+100: effects_description_att_effect_faction_trait_roman_east_economic_powerhouse_1_treasury_interest -> Income:  %+n% interest on treasury at end of turn
+101: effects_description_att_faction_trait_antes_morale_forest -> Melee Damage: %+n when fighting in a forest
+102: effects_description_att_faction_trait_antes_damage_forest -> Melee Attack: %+n when fighting in a forest
+103: effects_description_att_faction_trait_antes_attack_forest -> Morale: %+n when fighting in a forest
+104: effects_description_att_faction_trait_venedi_industry_culture_commerce ->  Income: %+n% from commerce, industry & culture
+105: effects_description_att_faction_trait_himyar_marib_dam -> Ma'rib Dam: Unique fertility-boosting building at the capital.
+106: effects_description_att_faction_trait_ebdani_1 -> Sacking and Looting income: %+n%
+107: effects_description_bel_faction_trait_ostrogths_1_victory_battle_morale -> Impatience: +10 morale for 5 turns (primary force only) after battle victory.
+108: effects_description_att_effect_faction_trait_barbarian_franks_ferocity_2_damage_for_casualties_suffered -> Melee damage: %+n% for every 25% casualties suffered by a unit

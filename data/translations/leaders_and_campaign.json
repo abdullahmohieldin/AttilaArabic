@@ -276,6 +276,84 @@
       "table": "text/db/names.loc",
       "ar": "خينغيلا",
       "en": "Khingila"
+    },
+    {
+      "key": "names_name_2147333851",
+      "table": "text/db/names.loc",
+      "ar": "هادوفونس",
+      "en": "Hadufuns"
+    },
+    {
+      "key": "names_name_2147348599",
+      "table": "text/db/names.loc",
+      "ar": "هيرميريك",
+      "en": "Hermeric"
+    },
+    {
+      "key": "names_name_2147333577",
+      "table": "text/db/names.loc",
+      "ar": "فاراموند",
+      "en": "Faramund"
+    },
+    {
+      "key": "names_name_2147345741",
+      "table": "text/db/names.loc",
+      "ar": "فرودي",
+      "en": "Frodi"
+    },
+    {
+      "key": "names_name_2147344912",
+      "table": "text/db/names.loc",
+      "ar": "غيزور",
+      "en": "Gizur"
+    },
+    {
+      "key": "names_name_2147345778",
+      "table": "text/db/names.loc",
+      "ar": "غيزور",
+      "en": "Gizurr"
+    },
+    {
+      "key": "names_name_2147346861",
+      "table": "text/db/names.loc",
+      "ar": "فروين",
+      "en": "Frowin"
+    },
+    {
+      "key": "names_name_2147333822",
+      "table": "text/db/names.loc",
+      "ar": "غونداهار",
+      "en": "Gundahar"
+    },
+    {
+      "key": "names_name_2147351315",
+      "table": "text/db/names.loc",
+      "ar": "ماكريان",
+      "en": "Macrian"
+    },
+    {
+      "key": "names_name_2147348980",
+      "table": "text/db/names.loc",
+      "ar": "عيزانا",
+      "en": "Ezana"
+    },
+    {
+      "key": "names_name_2147355236",
+      "table": "text/db/names.loc",
+      "ar": "أبو كرب",
+      "en": "Abu Kariba"
+    },
+    {
+      "key": "names_name_2147355245",
+      "table": "text/db/names.loc",
+      "ar": "الملكة ماوية",
+      "en": "Queen Mavia"
+    },
+    {
+      "key": "names_name_2147355240",
+      "table": "text/db/names.loc",
+      "ar": "النعمان",
+      "en": "al-Nu'man"
     }
   ]
 }
