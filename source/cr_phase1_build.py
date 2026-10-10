@@ -326,8 +326,9 @@ def build_fonts():
                                 cell_bm[cy * w + x] = stroke_val
 
             rendered_cells[cp] = (w, cell_bm)
+            alloc_w = max(1, w - 1) if is_conn_right else w
             glyph_idx = len(new_dims)
-            new_dims.append((cell_ah, w, w, cell_h))
+            new_dims.append((cell_ah, alloc_w, w, cell_h))
             new_bitmaps.append(bytes(cell_bm))
             new_table[cp] = glyph_idx
 
@@ -352,8 +353,12 @@ def build_fonts():
                         for cx in range(cw):
                             chunk_bm[cy * total_cw + curr_cx + cx] = cbm[cy * cw + cx]
                     curr_cx += cw
+                last_sub_cp = sub_cps[-1]
+                last_name = unicodedata.name(chr(last_sub_cp), "")
+                chunk_conn = ("FINAL" in last_name or "MEDIAL" in last_name or last_sub_cp == 0x0640)
+                chunk_aw = max(1, total_cw - 1) if chunk_conn else total_cw
                 chunk_idx = len(new_dims)
-                new_dims.append((cell_ah, total_cw, total_cw, cell_h))
+                new_dims.append((cell_ah, chunk_aw, total_cw, cell_h))
                 new_bitmaps.append(bytes(chunk_bm))
                 new_table[chunk_cp] = chunk_idx
 
