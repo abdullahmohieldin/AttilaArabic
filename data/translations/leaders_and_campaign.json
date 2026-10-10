@@ -1,0 +1,275 @@
+{
+  "description": "Total War: ATTILA — Faction Leaders, Religion, and Campaign Selection Localisation",
+  "entries": [
+    {
+      "key": "names_name_2147354342",
+      "table": "text/db/names.loc",
+      "ar": "أركاديوس",
+      "en": "Arcadius"
+    },
+    {
+      "key": "names_name_2147343965",
+      "table": "text/db/names.loc",
+      "ar": "أركاديوس",
+      "en": "Arcadius"
+    },
+    {
+      "key": "names_name_2147343967",
+      "table": "text/db/names.loc",
+      "ar": "هونوريوس",
+      "en": "Honorius"
+    },
+    {
+      "key": "names_name_2147353201",
+      "table": "text/db/names.loc",
+      "ar": "هونوريوس",
+      "en": "Honorius"
+    },
+    {
+      "key": "names_name_2147344246",
+      "table": "text/db/names.loc",
+      "ar": "يزدجرد",
+      "en": "Yazdegerd"
+    },
+    {
+      "key": "names_name_2147343885",
+      "table": "text/db/names.loc",
+      "ar": "ألاريك",
+      "en": "Alaric"
+    },
+    {
+      "key": "names_name_2147347397",
+      "table": "text/db/names.loc",
+      "ar": "ألاريك",
+      "en": "Alaric"
+    },
+    {
+      "key": "names_name_2147345091",
+      "table": "text/db/names.loc",
+      "ar": "ألاريك الأول",
+      "en": "Alaric I"
+    },
+    {
+      "key": "names_name_2147345288",
+      "table": "text/db/names.loc",
+      "ar": "أولدين",
+      "en": "Uldin"
+    },
+    {
+      "key": "names_name_2147343956",
+      "table": "text/db/names.loc",
+      "ar": "ستيليكو",
+      "en": "Stilicho"
+    },
+    {
+      "key": "names_name_2147328105",
+      "table": "text/db/names.loc",
+      "ar": "فلافيوس",
+      "en": "Flavius"
+    },
+    {
+      "key": "names_name_2147353012",
+      "table": "text/db/names.loc",
+      "ar": "فلافيوس",
+      "en": "Flavius"
+    },
+    {
+      "key": "names_name_2147343889",
+      "table": "text/db/names.loc",
+      "ar": "فلافيوس",
+      "en": "Flavius"
+    },
+    {
+      "key": "names_name_2147326682",
+      "table": "text/db/names.loc",
+      "ar": "فلافيوس",
+      "en": "Flavius"
+    },
+    {
+      "key": "names_name_2147319642",
+      "table": "text/db/names.loc",
+      "ar": "أغسطس",
+      "en": "Augustus"
+    },
+    {
+      "key": "names_name_2147343873",
+      "table": "text/db/names.loc",
+      "ar": "أتيلا",
+      "en": "Attila"
+    },
+    {
+      "key": "names_name_2147344592",
+      "table": "text/db/names.loc",
+      "ar": "أتيلا",
+      "en": "Attila"
+    },
+    {
+      "key": "names_name_2147344836",
+      "table": "text/db/names.loc",
+      "ar": "غوديغيزل",
+      "en": "Godigisel"
+    },
+    {
+      "key": "names_name_2147344851",
+      "table": "text/db/names.loc",
+      "ar": "غوندريك",
+      "en": "Gunderic"
+    },
+    {
+      "key": "names_name_2147345003",
+      "table": "text/db/names.loc",
+      "ar": "ريسبنديال",
+      "en": "Respendial"
+    },
+    {
+      "key": "names_name_2147334233",
+      "table": "text/db/names.loc",
+      "ar": "ماركومير",
+      "en": "Marcomer"
+    },
+    {
+      "key": "names_name_2147344895",
+      "table": "text/db/names.loc",
+      "ar": "فالامير",
+      "en": "Valamir"
+    },
+    {
+      "key": "names_name_2147348049",
+      "table": "text/db/names.loc",
+      "ar": "فاندالاريوس",
+      "en": "Vandalarius"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_faction_leader_NewState_Text_290070",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_faction_leader_NewState_Text_290050",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction Leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_dy_faction_leader_NewState_Text_13006d",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction Leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_dy_faction_leader_NewState_Text_13006dm",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_religion_NewState_Text_b000c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الديانة:",
+      "en": "Religion:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_religion_NewState_Text_3f0002",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الديانة السائدة:",
+      "en": "Dominant religion:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_b0036",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الديانة",
+      "en": "Religion"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_initial_challenge:_NewState_Text_670040",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التحدي الأولي: ",
+      "en": "Initial challenge: "
+    },
+    {
+      "key": "uied_component_texts_localised_string_year_txt_NewState_Text_310044",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سنة البداية:",
+      "en": "Start year:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_year_tx_NewState_Text_310064",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سنة البداية:",
+      "en": "Start year:"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_4",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_5",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "أسطوري",
+      "en": "Legendary"
+    },
+    {
+      "key": "religions_onscreen_att_rel_chr_orthodox",
+      "table": "text/db/religions.loc",
+      "ar": "المسيحية الإغريقية",
+      "en": "Greek Christianity"
+    },
+    {
+      "key": "religions_onscreen_att_rel_chr_catholic",
+      "table": "text/db/religions.loc",
+      "ar": "المسيحية اللاتينية",
+      "en": "Latin Christianity"
+    },
+    {
+      "key": "religions_onscreen_att_rel_chr_arian",
+      "table": "text/db/religions.loc",
+      "ar": "المسيحية الآريوسية",
+      "en": "Arian Christianity"
+    },
+    {
+      "key": "religions_onscreen_att_rel_east_zoroastrian",
+      "table": "text/db/religions.loc",
+      "ar": "الزرادشتية",
+      "en": "Zoroastrianism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_pag_tengri",
+      "table": "text/db/religions.loc",
+      "ar": "التنغرية",
+      "en": "Tengriism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_pag_germanic",
+      "table": "text/db/religions.loc",
+      "ar": "الوثنية الجرمانية",
+      "en": "Germanic paganism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_pag_roman",
+      "table": "text/db/religions.loc",
+      "ar": "الوثنية الرومانية",
+      "en": "Graeco-Roman paganism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_semitic_paganism",
+      "table": "text/db/religions.loc",
+      "ar": "الوثنية السامية",
+      "en": "Semitic paganism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_judaism",
+      "table": "text/db/religions.loc",
+      "ar": "اليهودية",
+      "en": "Judaism"
+    },
+    {
+      "key": "religions_onscreen_att_rel_other",
+      "table": "text/db/religions.loc",
+      "ar": "ديانات أخرى",
+      "en": "Minor Religions"
+    }
+  ]
+}

@@ -96,6 +96,132 @@
       "table": "text/db/uied_component_texts.loc",
       "ar": "إلغاء",
       "en": "Cancel"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_31007f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_780056",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "دقة الشاشة",
+      "en": "Resolution"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_6d0020",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الجودة",
+      "en": "Quality"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_77005e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع",
+      "en": "Brightness"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_49000d1",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التباين",
+      "en": "Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_text_NewState_Text_6f003b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "منخفض",
+      "en": "Low"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_61005c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "متوسط",
+      "en": "Medium"
+    },
+    {
+      "key": "uied_component_texts_localised_string_dy_tax_level_high_Text_69002f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مرتفع",
+      "en": "High"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_1e0040",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "فائق",
+      "en": "Ultra"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_32001bb",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تنعيم الحواف",
+      "en": "Anti-Aliasing"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_37006bw",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "المزامنة الرأسية",
+      "en": "V-Sync"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_battle_options_NewState_Text_590076",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات المعركة",
+      "en": "Battle Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_battle_options_NewState_Text_590076n",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات المعركة",
+      "en": "Battle Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_title_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_78000c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إظهار الترجمة",
+      "en": "Show subtitles"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_74004b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "ذاكرة فيديو غير محدودة",
+      "en": "Unlimited video memory"
     }
   ]
 }

@@ -362,6 +362,37 @@ def build_fonts():
                 new_bitmaps.append(bytes(chunk_bm))
                 new_table[chunk_cp] = chunk_idx
 
+        # 1c. Render Chunk 0xE115: Seamless لفصا (alef final + sad medial + feh medial + lam initial)
+        lafsa_sub_cps = [0xFE8E, 0xFEBC, 0xFED4, 0xFEDF]
+        if all(sc in rendered_cells for sc in lafsa_sub_cps):
+            ov = max(1, round(px * 0.125))
+            w_alef, bm_alef = rendered_cells[0xFE8E]
+            w_sad, bm_sad = rendered_cells[0xFEBC]
+            w_feh, bm_feh = rendered_cells[0xFED4]
+            w_lam, bm_lam = rendered_cells[0xFEDF]
+
+            off_alef = 0
+            off_sad = max(0, w_alef - ov)
+            off_feh = off_sad + max(0, w_sad - ov)
+            off_lam = off_feh + max(0, w_feh - ov)
+            total_cw = off_lam + w_lam
+
+            chunk_bm = bytearray(total_cw * cell_h)
+            for (cw, cbm), off_x in [((w_alef, bm_alef), off_alef),
+                                     ((w_sad, bm_sad), off_sad),
+                                     ((w_feh, bm_feh), off_feh),
+                                     ((w_lam, bm_lam), off_lam)]:
+                for cy in range(cell_h):
+                    for cx in range(cw):
+                        val = cbm[cy * cw + cx]
+                        if val > 0:
+                            chunk_bm[cy * total_cw + off_x + cx] = max(chunk_bm[cy * total_cw + off_x + cx], val)
+
+            chunk_idx = len(new_dims)
+            new_dims.append((cell_ah, total_cw, total_cw, cell_h))
+            new_bitmaps.append(bytes(chunk_bm))
+            new_table[0xE115] = chunk_idx
+
         # 2. Append Round 3 Binary Blank Spacer Glyphs
         for _, cp, w in BLANK_SPACERS:
             idx_sp = len(new_dims)

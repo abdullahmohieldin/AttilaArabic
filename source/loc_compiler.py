@@ -184,6 +184,10 @@ def compile_all_locs(vanilla_pack_path: str = VANILLA_PACK,
                 # U+FE94 (Teh Marbuta final) + U+FEF4 (Yeh medial) + U+FED7 (Qaf medial) -> U+E112
                 # U+FEAE (Reh final) + U+FEB8 (Sheen medial) + U+FEDF (Lam initial) -> U+E113
                 shaped = shaped.replace("\uFE94\uFEF4\uFED7\uFEAE\uFEB8\uFEDF", "\uE112\uE113")
+                # الفصائل: U+FEDE (Lam final) + U+FE8B (Yeh hamza medial) -> U+E110 (ئل)
+                # U+FE8E (Alef final) + U+FEBC (Sad medial) + U+FED4 (Feh medial) + U+FEDF (Lam initial) -> U+E115 (لفصا)
+                # U+FE8D (Alef isolated)
+                shaped = shaped.replace("\uFEDE\uFE8B\uFE8E\uFEBC\uFED4\uFEDF\uFE8D", "\uE110\uE115\uFE8D")
                 final_text = shaped
 
             table_overrides.setdefault(table, {})[key] = final_text
