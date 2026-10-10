@@ -1,0 +1,47 @@
+{
+  "description": "Total War: ATTILA — Campaign Names Localisation",
+  "entries": [
+    {
+      "key": "campaigns_onscreen_name_main_attila",
+      "table": "text/db/campaigns.loc",
+      "ar": "أتيلا",
+      "en": "Attila"
+    },
+    {
+      "key": "campaigns_onscreen_name_pro_attila",
+      "table": "text/db/campaigns.loc",
+      "ar": "حرب القوط",
+      "en": "The Gothic War"
+    },
+    {
+      "key": "campaigns_onscreen_name_bel_attila",
+      "table": "text/db/campaigns.loc",
+      "ar": "الروماني الأخير",
+      "en": "The Last Roman"
+    },
+    {
+      "key": "campaigns_onscreen_name_cha_attila",
+      "table": "text/db/campaigns.loc",
+      "ar": "عصر شارلمان",
+      "en": "Age of Charlemagne"
+    },
+    {
+      "key": "campaign_map_playable_areas_onscreen_name_1564135515",
+      "table": "text/db/campaign_map_playable_areas.loc",
+      "ar": "الحملة الكبرى",
+      "en": "Grand Campaign"
+    },
+    {
+      "key": "campaign_map_playable_areas_onscreen_name_1564135525",
+      "table": "text/db/campaign_map_playable_areas.loc",
+      "ar": "الروماني الأخير",
+      "en": "The Last Roman"
+    },
+    {
+      "key": "campaign_map_playable_areas_onscreen_name_1564135529",
+      "table": "text/db/campaign_map_playable_areas.loc",
+      "ar": "عصر شارلمان",
+      "en": "Age of Charlemagne"
+    }
+  ]
+}

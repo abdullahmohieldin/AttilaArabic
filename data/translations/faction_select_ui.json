@@ -1,0 +1,160 @@
+{
+  "description": "Total War: ATTILA — Faction Select Screen UI Localisation",
+  "entries": [
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_30006e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "بدء الحملة",
+      "en": "Start Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_30006e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "بدء الحملة",
+      "en": "Start Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_530011",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حملة جديدة",
+      "en": "New Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_factions_NewState_Text_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions",
+      "raw_value": "\uE110\uE111\uE114\uFE8D"
+    },
+    {
+      "key": "uied_component_texts_localised_string_selection_txt_NewState_Text_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions",
+      "raw_value": "\uE110\uE111\uE114\uFE8D"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_factions_Tooltip_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions",
+      "raw_value": "\uE110\uE111\uE114\uFE8D"
+    },
+    {
+      "key": "uied_component_texts_localised_string_handle_NewState_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_handle_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_cmp_diff_slider_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_difficulty_NewState_Text_79004a",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مستوى الصعوبة",
+      "en": "Difficulty"
+    },
+    {
+      "key": "uied_component_texts_localised_string_year_tx_NewState_Text_310064",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سنة البداية:",
+      "en": "Start year:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_initial_challenge:_NewState_Text_670040",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التحدي الأولي:",
+      "en": "Initial challenge:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_header_cultural_NewState_Text_5e0000",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السمة الثقافية",
+      "en": "Cultural Trait"
+    },
+    {
+      "key": "uied_component_texts_localised_string_header_faction_NewState_Text_410063",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سمة الفصيل",
+      "en": "Faction Trait"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_1",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "سهل",
+      "en": "Easy"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_2",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "عادي",
+      "en": "Normal"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_3",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_4",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_5",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "أسطوري",
+      "en": "Legendary"
+    },
+    {
+      "key": "random_localisation_strings_string_hard",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "uied_component_texts_localised_string_medal1_default_Tooltip_5003a",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_2",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للاعبين المتمرسين في توتال وور.",
+      "en": "For experienced Total War players."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_slider_legendary",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "الحفظ اليدوي غير متاح في الحملة.\nلا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.",
+      "en": "Manual saving is unavailable in the campaign.\nOrders cannot be issued while battle is paused."
+    },
+    {
+      "key": "start_pos_factions_description_2120156326",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أطلق تقسيم الإمبراطورية\nعنان الشرق، مما مكنه من\nبسط نفوذه على العالم الروماني.\nأتاح المركز الإداري بالقسطنطينية\nاستبدال النظم القديمة،\nوملء الخزائن بالأموال.\nنجح الشرق في تحويل مسار\nهجرات البرابرة غرباً،\nلكن الإمبراطور أركاديوس\nسيواجه تحديات جسيمة،\nبين مؤامرات البلاط وخطر\nالساسانيين المستمر لضمان\nبقاء شعلة روما الأخيرة متقدة.",
+      "en": "Eastern Roman Empire campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156326",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أطلق تقسيم الإمبراطورية\nعنان الشرق، مما مكنه من\nبسط نفوذه على العالم الروماني.\nأتاح المركز الإداري بالقسطنطينية\nاستبدال النظم القديمة،\nوملء الخزائن بالأموال.\nنجح الشرق في تحويل مسار\nهجرات البرابرة غرباً،\nلكن الإمبراطور أركاديوس\nسيواجه تحديات جسيمة،\nبين مؤامرات البلاط وخطر\nالساسانيين المستمر لضمان\nبقاء شعلة روما الأخيرة متقدة.",
+      "en": "Eastern Roman Empire long description",
+      "is_narrative": true
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "description": "Total War: ATTILA — Faction Groups Localisation",
+  "entries": [
+    {
+      "key": "faction_groups_name_localised_att_fact_group_roman",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الإمبراطورية الرومانية",
+      "en": "Roman Empire"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_eastern",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الإمبراطوريات الشرقية",
+      "en": "Eastern Empires"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_barbarian",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الممالك البربرية",
+      "en": "Barbarian Kingdoms"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_barbarian_m",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الهجرات الكبرى",
+      "en": "Great Migrators"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_nomadic",
+      "table": "text/db/faction_groups.loc",
+      "ar": "القبائل البدوية",
+      "en": "Nomadic Tribes"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_sand",
+      "table": "text/db/faction_groups.loc",
+      "ar": "ممالك الصحراء",
+      "en": "Desert Kingdoms"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_norse",
+      "table": "text/db/faction_groups.loc",
+      "ar": "رجال الشمال",
+      "en": "Norsemen"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_celts",
+      "table": "text/db/faction_groups.loc",
+      "ar": "السلتيون",
+      "en": "Celts"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_slavs",
+      "table": "text/db/faction_groups.loc",
+      "ar": "السلاف",
+      "en": "Slavs"
+    }
+  ]
+}

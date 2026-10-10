@@ -25,8 +25,9 @@
 | **Zero-Box Guarantee** | ✅ **VERIFIED** | Missing `.notdef` tofu boxes completely eliminated by mapping isolated Presentation Forms-B and canonical base codepoints directly to true Tajawal glyphs. |
 | **Baseline Alignment** | ✅ **VERIFIED** | Automatic calibration using Latin capital 'H' bounds anchors Arabic baselines to match Latin typography without vertical clipping or floating text. |
 | **Intra-Cell Stroke Joining** | ✅ **VERIFIED** | Connecting baseline strokes extended edge-to-edge ($0$ to $w-1$) across all glyph cells, closing gaps down to the engine's hardcoded minimum. |
-| **RTL Paragraph Balancing** | ✅ **VERIFIED** | Pre-segmented 13-line narrative with binary PUA blank padding (`U+E001`–`U+E006`) aligns campaign description text flush-right without mid-line flipping. |
-| **Automated Test Suite** | ✅ **VERIFIED** | `tests/test_phase1_packs.py` asserts font integrity, loc format, and vanilla file hashes on every build (3/3 passing). |
+| **RTL Paragraph Balancing** | ✅ **VERIFIED** | Pre-segmented 13-line narrative with binary PUA blank padding (`U+E010`–`U+E015`) aligns campaign description text flush-right without mid-line flipping. |
+| **Data-Driven Loc Architecture** | ✅ **VERIFIED** | Universal compiler (`source/loc_compiler.py`) auto-compiles modular translation JSON files (`data/translations/`) across 7 tables with 108 strings covering Main Menu, Campaigns, Factions, Cultural Groups, and UI. |
+| **Automated Test Suite** | ✅ **VERIFIED** | `tests/` asserts font integrity, loc format, clean-room safety, baseline fit, and key mappings (10/10 passing). |
 
 ---
 
@@ -44,5 +45,5 @@
 
 ## 4. Current Build Hashes
 
-- **`Attila_Arabic_Phase1.pack`**: `D0AA87151CF05C3610B1E59E1B239B02BF7521563ECB96479ABA350495A49AA2`
-- **`Attila_Arabic_Phase1_fonts.pack`**: `C96F922C55C643D3591EC1D3AFEBC66B51F0374D2280829CE238D3B3641ADF58`
+- **`Attila_Arabic_Phase1.pack`**: `2333F87640A0E278B68B7EB20D05D174225EF14FBE802F1629BC7D1727529FAF`
+- **`Attila_Arabic_Phase1_fonts.pack`**: `0B1B3F5D72FE753C2D8E6F8D03CD8B74902D3AB4BC97DCA32C5302F2ECC51E82`
