@@ -1,0 +1,179 @@
+{
+  "description": "Total War: ATTILA — Playable and Major Factions Localisation",
+  "entries": [
+    {
+      "key": "factions_screen_name_att_fact_eastern_roman_empire",
+      "table": "text/db/factions.loc",
+      "ar": "الإمبراطورية الرومانية الشرقية",
+      "en": "Eastern Roman Empire"
+    },
+    {
+      "key": "factions_screen_name_att_fact_western_roman_empire",
+      "table": "text/db/factions.loc",
+      "ar": "الإمبراطورية الرومانية الغربية",
+      "en": "Western Roman Empire"
+    },
+    {
+      "key": "factions_screen_name_att_fact_blue",
+      "table": "text/db/factions.loc",
+      "ar": "الإمبراطورية الرومانية الغربية",
+      "en": "Western Roman Empire"
+    },
+    {
+      "key": "factions_screen_name_att_fact_sassanid_empire",
+      "table": "text/db/factions.loc",
+      "ar": "الإمبراطورية الساسانية",
+      "en": "Sassanid Empire"
+    },
+    {
+      "key": "factions_screen_name_att_fact_hunni",
+      "table": "text/db/factions.loc",
+      "ar": "الهون",
+      "en": "Huns"
+    },
+    {
+      "key": "factions_screen_name_att_fact_white_huns",
+      "table": "text/db/factions.loc",
+      "ar": "الهون البيض",
+      "en": "White Huns"
+    },
+    {
+      "key": "factions_screen_name_att_fact_alani",
+      "table": "text/db/factions.loc",
+      "ar": "الألان",
+      "en": "Alans"
+    },
+    {
+      "key": "factions_screen_name_att_fact_vandali",
+      "table": "text/db/factions.loc",
+      "ar": "الوندال",
+      "en": "Vandals"
+    },
+    {
+      "key": "factions_screen_name_att_fact_visigothi",
+      "table": "text/db/factions.loc",
+      "ar": "القوط الغربيون",
+      "en": "Visigoths"
+    },
+    {
+      "key": "factions_screen_name_att_fact_ostrogothi",
+      "table": "text/db/factions.loc",
+      "ar": "القوط الشرقيون",
+      "en": "Ostrogoths"
+    },
+    {
+      "key": "factions_screen_name_att_fact_franci",
+      "table": "text/db/factions.loc",
+      "ar": "الفرنجة",
+      "en": "Franks"
+    },
+    {
+      "key": "factions_screen_name_att_fact_saxones",
+      "table": "text/db/factions.loc",
+      "ar": "الساكسون",
+      "en": "Saxons"
+    },
+    {
+      "key": "factions_screen_name_att_fact_dani",
+      "table": "text/db/factions.loc",
+      "ar": "الدنماركيون",
+      "en": "Danes"
+    },
+    {
+      "key": "factions_screen_name_att_fact_gauti",
+      "table": "text/db/factions.loc",
+      "ar": "الغيتس",
+      "en": "Geats"
+    },
+    {
+      "key": "factions_screen_name_att_fact_iuti",
+      "table": "text/db/factions.loc",
+      "ar": "الجوت",
+      "en": "Jutes"
+    },
+    {
+      "key": "factions_screen_name_att_fact_suebi",
+      "table": "text/db/factions.loc",
+      "ar": "السويبيون",
+      "en": "Suebians"
+    },
+    {
+      "key": "factions_screen_name_att_fact_burgundii",
+      "table": "text/db/factions.loc",
+      "ar": "البورغنديون",
+      "en": "Burgundians"
+    },
+    {
+      "key": "factions_screen_name_att_fact_alamanni",
+      "table": "text/db/factions.loc",
+      "ar": "الألامانيون",
+      "en": "Alamans"
+    },
+    {
+      "key": "factions_screen_name_att_fact_langobardi",
+      "table": "text/db/factions.loc",
+      "ar": "اللومبارديون",
+      "en": "Langobards"
+    },
+    {
+      "key": "factions_screen_name_att_fact_axum",
+      "table": "text/db/factions.loc",
+      "ar": "أكسوم",
+      "en": "Aksum"
+    },
+    {
+      "key": "factions_screen_name_att_fact_himyar",
+      "table": "text/db/factions.loc",
+      "ar": "حِميَر",
+      "en": "Himyar"
+    },
+    {
+      "key": "factions_screen_name_att_fact_tanukhids",
+      "table": "text/db/factions.loc",
+      "ar": "تنوخ",
+      "en": "Tanukhids "
+    },
+    {
+      "key": "factions_screen_name_att_fact_lakhmids",
+      "table": "text/db/factions.loc",
+      "ar": "المناذرة",
+      "en": "Lakhmids"
+    },
+    {
+      "key": "factions_screen_name_att_fact_garamantes",
+      "table": "text/db/factions.loc",
+      "ar": "الجرمنتيون",
+      "en": "Garamantians"
+    },
+    {
+      "key": "factions_screen_name_att_fact_picti",
+      "table": "text/db/factions.loc",
+      "ar": "البكتيون",
+      "en": "Picts"
+    },
+    {
+      "key": "factions_screen_name_att_fact_ebdani",
+      "table": "text/db/factions.loc",
+      "ar": "الإبدانيون",
+      "en": "Ebdanians"
+    },
+    {
+      "key": "factions_screen_name_att_fact_votadini",
+      "table": "text/db/factions.loc",
+      "ar": "الكاليدونيون",
+      "en": "Caledonians"
+    },
+    {
+      "key": "factions_screen_name_att_fact_ghassanids",
+      "table": "text/db/factions.loc",
+      "ar": "الغساسنة",
+      "en": "Ghassanids"
+    },
+    {
+      "key": "factions_screen_name_bel_fact_byzantine_expedition",
+      "table": "text/db/factions.loc",
+      "ar": "الحملة الرومانية",
+      "en": "Roman Expedition"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "description": "Total War: ATTILA — Unit Ratings and Battlefield Stats Localisation",
+  "entries": [
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_excellent",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "ممتاز",
+      "en": "Excellent"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_good",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "جيد",
+      "en": "Good"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_average_positive",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "متوسط",
+      "en": "Average"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_average_negative",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "متوسط",
+      "en": "Average"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_poor",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "ضعيف",
+      "en": "Poor"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_very_poor",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "ضعيف جداً",
+      "en": "Very Poor"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_very_high",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "مرتفع جداً",
+      "en": "Very High"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_high",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "مرتفع",
+      "en": "High"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_low",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "منخفض",
+      "en": "Low"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_very_low",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "منخفض جداً",
+      "en": "Very Low"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_charge_strong",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "هجوم كاسح",
+      "en": "Devastating Charge"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_ramming",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "نطح مدمر",
+      "en": "Damaging Ramming"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_ramming_heavy",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "نطح ساحق",
+      "en": "Devastating Ramming"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_wardogs",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "كلاب حربية",
+      "en": "Has Wardogs"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_has_ranged_weapon",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "سلاح مقذوفات",
+      "en": "Has Missile Weapon"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_has_ranged_weapon_shp",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "سلاح مقذوفات",
+      "en": "Has Missile Weapon"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_greek_fire",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "نار إغريقية",
+      "en": "Greek Fire"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_scattershot",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "إطلاق ثلاث قذائف",
+      "en": "Fires three projectiles"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_ammo_refill",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "تزويد الذخيرة",
+      "en": "Can Refill Ammo"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_has_grenade",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "قنابل يدوية",
+      "en": "Has Grenades"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_encourage",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "رفع المعنويات",
+      "en": "Boosts Friendly Morale"
+    },
+    {
+      "key": "ui_unit_bullet_point_enums_onscreen_name_att_unit_small",
+      "table": "text/db/ui_unit_bullet_point_enums.loc",
+      "ar": "وحدة صغيرة",
+      "en": "Small Unit"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_attack",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الهجوم القريب",
+      "en": "Melee Attack"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_defence",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الدفاع القريب",
+      "en": "Melee Defence"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_weapon_damage",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الضرر القريب",
+      "en": "Melee Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_damage_base",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الضرر الأساسي",
+      "en": "Melee Base Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_damage_ap",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر خارق للدروع",
+      "en": "Armour-piercing Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_charge_bonus",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مكافأة الهجوم",
+      "en": "Charge Bonus"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_morale",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "المعنويات",
+      "en": "Morale"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_armour",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الدروع",
+      "en": "Armour"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_health",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الصحة",
+      "en": "Health"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_speed",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "السرعة",
+      "en": "Speed"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_weapon_range",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "المدى",
+      "en": "Range"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_reloading",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "معدل الإطلاق",
+      "en": "Rate of Fire"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_ammo",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الذخيرة",
+      "en": "Ammunition"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر المقذوفات",
+      "en": "Missile Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage_base",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر المقذوفات الأساسي",
+      "en": "Missile Base Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage_ap",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر مقذوفات خارق للدروع",
+      "en": "Armour-Piercing Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_block_chance",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "صد المقذوفات",
+      "en": "Missile Block Chance"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_cavalry",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مكافأة ضد الفرسان",
+      "en": "Attack Against Cavalry"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_infantry",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مكافأة ضد المشاة",
+      "en": "Attack Against Infantry"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_elephants",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مكافأة ضد الفيلة",
+      "en": "Attack Against Elephants"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_men_count",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "عدد الرجال",
+      "en": "Men Count"
+    }
+  ]
+}

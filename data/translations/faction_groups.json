@@ -1,0 +1,59 @@
+{
+  "description": "Total War: ATTILA — Faction Groups Localisation",
+  "entries": [
+    {
+      "key": "faction_groups_name_localised_att_fact_group_roman",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الرومانية\nالإمبراطورية",
+      "en": "Roman Empire"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_eastern",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الشرقية\nالإمبراطوريات",
+      "en": "Eastern Empires"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_barbarian",
+      "table": "text/db/faction_groups.loc",
+      "ar": "البربرية\nالممالك",
+      "en": "Barbarian Kingdoms"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_barbarian_m",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الكبرى\nالهجرات",
+      "en": "Great Migrators"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_nomadic",
+      "table": "text/db/faction_groups.loc",
+      "ar": "البدوية\nالقبائل",
+      "en": "Nomadic Tribes"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_sand",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الصحراء\nممالك",
+      "en": "Desert Kingdoms"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_norse",
+      "table": "text/db/faction_groups.loc",
+      "ar": "الشمال\nرجال",
+      "en": "Norsemen"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_celts",
+      "table": "text/db/faction_groups.loc",
+      "ar": "السلتيون",
+      "en": "Celts"
+    },
+    {
+      "key": "faction_groups_name_localised_att_fact_group_slavs",
+      "table": "text/db/faction_groups.loc",
+      "ar": "السلاف",
+      "en": "Slavs"
+    }
+  ]
+}

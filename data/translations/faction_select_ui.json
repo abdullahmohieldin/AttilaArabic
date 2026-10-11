@@ -1,0 +1,703 @@
+{
+  "description": "Total War: ATTILA — Faction Select Screen UI Localisation",
+  "entries": [
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_30006e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "بدء الحملة",
+      "en": "Start Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_30006e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "بدء الحملة",
+      "en": "Start Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_530011",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حملة جديدة",
+      "en": "New Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_factions_NewState_Text_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions"
+    },
+    {
+      "key": "uied_component_texts_localised_string_selection_txt_NewState_Text_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_factions_Tooltip_90022",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الفصائل",
+      "en": "Factions"
+    },
+    {
+      "key": "uied_component_texts_localised_string_handle_NewState_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_handle_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_cmp_diff_slider_Tooltip_7000b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مؤشر الصعوبة",
+      "en": "Difficulty slider"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_difficulty_NewState_Text_79004a",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "مستوى الصعوبة",
+      "en": "Difficulty"
+    },
+    {
+      "key": "uied_component_texts_localised_string_year_tx_NewState_Text_310064",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سنة البداية:",
+      "en": "Start year:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_year_txt_NewState_Text_310044",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سنة البداية:",
+      "en": "Start year:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_initial_challenge:_NewState_Text_670040",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التحدي الأولي:",
+      "en": "Initial challenge:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_faction_leader_NewState_Text_290070",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_faction_leader_NewState_Text_290050",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction Leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_dy_faction_leader_NewState_Text_13006d",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction Leader:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_dy_faction_leader_NewState_Text_13006dm",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "قائد الفصيل:",
+      "en": "Faction leader:"
+    },
+    {
+      "key": "names_name_2147354342",
+      "table": "text/db/names.loc",
+      "ar": "أركاديوس",
+      "en": "Arcadius"
+    },
+    {
+      "key": "names_name_2147343965",
+      "table": "text/db/names.loc",
+      "ar": "أركاديوس",
+      "en": "Arcadius"
+    },
+    {
+      "key": "uied_component_texts_localised_string_header_cultural_NewState_Text_5e0000",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السمة الثقافية",
+      "en": "Cultural Trait"
+    },
+    {
+      "key": "uied_component_texts_localised_string_header_faction_NewState_Text_410063",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سمة الفصيل",
+      "en": "Faction Trait"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_roman",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الولاء الإمبراطوري",
+      "en": "Imperial Allegiance"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_roman",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فوائد الإمبراطورية تجتذب الكثيرين، وخاصة من ينظرون إليها من الخارج.",
+      "en": "The benefits of Empire hold a certain appeal, especially to the outside observer."
+    },
+    {
+      "key": "effects_description_att_effect_faction_trait_roman_foederati_horde_levy",
+      "table": "text/db/effects.loc",
+      "ar": "إمكانية تجنيد قوات من الحشود الحليفة العابرة للأراضي الرومانية",
+      "en": "Can levy units from friendly hordes passing through Roman territory"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_roman_east",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "القوة الاقتصادية",
+      "en": "Economic Powerhouse"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_roman_east",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "السيطرة على مفترق طرق العالم وجني ثمار كل ما يمر عبره.",
+      "en": "Straddle the crossroads of the world and take pick of everything that passes by."
+    },
+    {
+      "key": "effects_description_att_effect_faction_trait_roman_east_economic_powerhouse_1_treasury_interest",
+      "table": "text/db/effects.loc",
+      "ar": "الدخل: فائدة %+n% على الخزينة في نهاية الدور",
+      "en": "Income:  %+n% interest on treasury at end of turn"
+    },
+    {
+      "key": "effects_description_att_effect_faction_trait_roman_east_economic_powerhouse_2_trade_tarrifs",
+      "table": "text/db/effects.loc",
+      "ar": "تعريفات التجارة: %+n%",
+      "en": "Trade tariffs: %+n%"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_roman_west",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الاندماج الثقافي",
+      "en": "Cultural Integration"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_roman_west",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الرجال هم الرجال، أياً كان أصلهم وموطنهم.",
+      "en": "Men are men, no matter their origin."
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_1",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "سهل",
+      "en": "Easy"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_2",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "عادي",
+      "en": "Normal"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_3",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_4",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_difficulty_level_5",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "أسطوري",
+      "en": "Legendary"
+    },
+    {
+      "key": "random_localisation_strings_string_vhard",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_hard",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "random_localisation_strings_string_normal",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "عادي",
+      "en": "Normal"
+    },
+    {
+      "key": "random_localisation_strings_string_easy",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "سهل",
+      "en": "Easy"
+    },
+    {
+      "key": "random_localisation_strings_string_expert",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_hard_NewState_Text_260001",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_easy_NewState_Text_180036",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سهل",
+      "en": "Easy"
+    },
+    {
+      "key": "uied_component_texts_localised_string_medal1_default_Tooltip_5003a",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "صعب",
+      "en": "Hard"
+    },
+    {
+      "key": "uied_component_texts_localised_string_medal1_default_Tooltip_260001",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "صعب جداً",
+      "en": "Very Hard"
+    },
+    {
+      "key": "uied_component_texts_localised_string_medal1_default_Tooltip_180036",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "سهل",
+      "en": "Easy"
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_0",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للاعبين الجدد على الألعاب الاستراتيجية.",
+      "en": "For players new to strategy games."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_1",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للاعبين المعتادين على الألعاب الاستراتيجية والجدد على توتال وور.",
+      "en": "For players familiar with strategy games but new to Total War."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_2",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للاعبين المعتادين على توتال وور.",
+      "en": "For players familiar with Total War."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_3",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للاعبين المتمرسين في توتال وور.",
+      "en": "For experienced Total War players."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_description_4",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "للمحترفين فقط! الحفظ اليدوي غير متاح في الحملة، ولا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.",
+      "en": "Only for the truly hardcore! Manual saves are not allowed in campaign..."
+    },
+    {
+      "key": "random_localisation_strings_string_campaign_difficulty_slider_legendary",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "الحفظ اليدوي غير متاح في الحملة.\nلا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.",
+      "en": "Manual saving is unavailable in the campaign.\nOrders cannot be issued while battle is paused."
+    },
+    {
+      "key": "start_pos_factions_description_2120156326",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أطلق تقسيم الإمبراطورية\nعنان الشرق، مما مكنه من\nبسط نفوذه على العالم الروماني.\nأتاح المركز الإداري بالقسطنطينية\nاستبدال النظم القديمة،\nوملء الخزائن بالأموال.\nنجح الشرق في تحويل مسار\nهجرات البرابرة غرباً،\nلكن الإمبراطور أركاديوس\nسيواجه تحديات جسيمة،\nبين مؤامرات البلاط وخطر\nالساسانيين المستمر لضمان\nبقاء شعلة روما الأخيرة متقدة.",
+      "en": "Eastern Roman Empire campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156326",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أطلق تقسيم الإمبراطورية\nعنان الشرق، مما مكنه من\nبسط نفوذه على العالم الروماني.\nأتاح المركز الإداري بالقسطنطينية\nاستبدال النظم القديمة،\nوملء الخزائن بالأموال.\nنجح الشرق في تحويل مسار\nهجرات البرابرة غرباً،\nلكن الإمبراطور أركاديوس\nسيواجه تحديات جسيمة،\nبين مؤامرات البلاط وخطر\nالساسانيين المستمر لضمان\nبقاء شعلة روما الأخيرة متقدة.",
+      "en": "Eastern Roman Empire long description",
+      "is_narrative": true
+    },
+    {
+      "key": "names_name_2147362044",
+      "table": "text/db/names.loc",
+      "ar": "خينغيلا",
+      "en": "Khingila"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الهجرة الكبرى",
+      "en": "The Great Migration"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الحكيم يرتحل. واليائس يرتحل دوماً. أما القوي فينجو ويزدهر.",
+      "en": "The wise move. The desperate move often. The mighty survive and prosper."
+    },
+    {
+      "key": "effects_description_att_effect_faction_trait_migrators_great_migration_growth",
+      "table": "text/db/effects.loc",
+      "ar": "النمو: %+n عند بدء الهجرة أو الاستقرار",
+      "en": "Growth: %+n when initiating a migration or resettling"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_nomad",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سوط الله",
+      "en": "Scourge of God"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_nomad",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أنت لا تعلم شيئاً. الجحيم مجرد كلمة، أما الحقيقة فهي أسوأ بكثير.",
+      "en": "You know nothing. Hell is only a word. The reality is much, much worse."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_white_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سوط الشرق",
+      "en": "Scourge of the East"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_white_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قد يكونون الأكثر تحضراً بين بني جلدتهم، لكنهم يبقون خصوماً متوحشين لا يعرفون الرحمة.",
+      "en": "They may be the most civilised of their kind, but remain savage, unforgiving opponents."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_suebi",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهاجرون مهرة",
+      "en": "Skilled Migrators"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_suebi_occupation",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهاجرون مهرة",
+      "en": "Skilled Migrators"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_suebi",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين تفوق القوة والعدد كل حد، فهناك دائماً سبيل للمضي قدماً.",
+      "en": "When power and numbers exceed all, there is always a way forward."
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_suebi_occupation",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين تفوق القوة والعدد كل حد، فهناك دائماً سبيل للمضي قدماً.",
+      "en": "When power and numbers exceed all, there is always a way forward."
+    },
+    {
+      "key": "start_pos_factions_description_2120157400",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "لا يضاهي الغموض المحيط بالهون البيض\nإلا الرعب الذي يلقونه في قلوب أعدائهم.\nمن منحدرات هندوكوش الجليدية،\nيرمقون العالم المتحضر بأطماعهم.\nومع كل أرض يجتاحونها يولد لغز جديد،\nفالرومان يرونهم هونا لصلابتهم،\nوالساسانيون يخلعون عليهم ألقاب فارسية،\nوالصينيون يرونهم خطرا يتربص خلف الأسوار.\nآلتهم الحربية لا تعرف الهوادة،\nوعيونهم ترنو لابتلاع بلاد فارس برمتها.",
+      "en": "White Huns campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120157400",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "لا يضاهي الغموض المحيط بالهون البيض\nإلا الرعب الذي يلقونه في قلوب أعدائهم.\nمن منحدرات هندوكوش الجليدية،\nيرمقون العالم المتحضر بأطماعهم.\nومع كل أرض يجتاحونها يولد لغز جديد،\nفالرومان يرونهم هونا لصلابتهم،\nوالساسانيون يخلعون عليهم ألقاب فارسية،\nوالصينيون يرونهم خطرا يتربص خلف الأسوار.\nآلتهم الحربية لا تعرف الهوادة،\nوعيونهم ترنو لابتلاع بلاد فارس برمتها.",
+      "en": "White Huns long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156317",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن هالة الرعب المحيطة بالهون بالغة العظم\nحتى أن أعداءهم لا يكادون يصدقون أنهم بشر.\nإن براعتهم الفريدة في ركوب الخيل هي سر قوتهم،\nوفي المعارك يشكل مزيج الرماية والسرعة\nقوة كاسحة تزرع الهلع في النفوس.\nاجتاح الهون أوروبا ووصل تهديدهم لروما ذاتها،\nوعليهم الآن تحويل هذه الفوضى لإمبراطورية عظمى.\nوبينما تتنازع القيادات تنتظر الحشود قدوم رجل\nيملك من القوة ما يوحد به قبائل الهون تحت إرادته.",
+      "en": "Huns campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156317",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن هالة الرعب المحيطة بالهون بالغة العظم\nحتى أن أعداءهم لا يكادون يصدقون أنهم بشر.\nإن براعتهم الفريدة في ركوب الخيل هي سر قوتهم،\nوفي المعارك يشكل مزيج الرماية والسرعة\nقوة كاسحة تزرع الهلع في النفوس.\nاجتاح الهون أوروبا ووصل تهديدهم لروما ذاتها،\nوعليهم الآن تحويل هذه الفوضى لإمبراطورية عظمى.\nوبينما تتنازع القيادات تنتظر الحشود قدوم رجل\nيملك من القوة ما يوحد به قبائل الهون تحت إرادته.",
+      "en": "Huns long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156287",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "السويبيون اتحاد لقبائل جرمانية متعددة،\nيجمعهم شغف عارم بالغزو والحرب.\nالقتال هو جوهر مجتمعهم ومصدر رفعتهم،\nويتميز محاربوهم بالعقدة السويبية الشهيرة.\nبعد صراع طويل مع الإمبراطورية الرومانية،\nبدأ الكثير منهم الهجرة غرباً رفقة الوندال،\nفراراً من بطش الهون وضغطهم المتزايد.\nعبروا الراين إلى بلاد الغال لنهب مدنها الثرية،\nوهناك تكمن غنائم سيادتهم الموعودة.",
+      "en": "Suebi campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156287",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "السويبيون اتحاد لقبائل جرمانية متعددة،\nيجمعهم شغف عارم بالغزو والحرب.\nالقتال هو جوهر مجتمعهم ومصدر رفعتهم،\nويتميز محاربوهم بالعقدة السويبية الشهيرة.\nبعد صراع طويل مع الإمبراطورية الرومانية،\nبدأ الكثير منهم الهجرة غرباً رفقة الوندال،\nفراراً من بطش الهون وضغطهم المتزايد.\nعبروا الراين إلى بلاد الغال لنهب مدنها الثرية،\nوهناك تكمن غنائم سيادتهم الموعودة.",
+      "en": "Suebi long description",
+      "is_narrative": true
+    },
+    {
+      "key": "random_localisation_strings_string_legendary",
+      "table": "text/db/random_localisation_strings.loc",
+      "ar": "أسطوري",
+      "en": "Legendary"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_eastern",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "المدرسة العظمى",
+      "en": "Grand School"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_eastern",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مهد العلوم والحضارات، ومركز المعرفة في الشرق.",
+      "en": "The cradle of sciences and civilisation in the East."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_eastern_sassanid",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "شاهنشاه (ملك الملوك)",
+      "en": "King of Kings"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_eastern_sassanid",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "سيادة مطلقة وتاج مرصع بالمجد يحكم الشرق بقبضة من حديد.",
+      "en": "Absolute sovereignty ruling the East with an iron fist."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الممالك الجديدة",
+      "en": "New Kingdoms"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فجر جديد يولد من رماد النظام القديم لتبنى ممالك جديدة.",
+      "en": "A new dawn rises from the ashes of the old order."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_franks",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "محاربون ضوار",
+      "en": "Ferocious Warriors"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian_franks",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بسالة وشراسة في ساحات الوغى لا تعرف التراجع.",
+      "en": "Ferocity in battle that knows no retreat."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_saxons",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ساحل الساكسون",
+      "en": "Saxon Shore"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_barbarian_saxons",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة البحار الذين تمتد أشرعتهم لتهديد كل الشواطئ.",
+      "en": "Raiders whose sails threaten every coastline."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_alamanni",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الوحدة الجرمانية",
+      "en": "Germanic Unity"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_burgindians",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "نشأة الصيد",
+      "en": "Bred for the Hunt"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_barbarian_langobards",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مختارو الإله غودان",
+      "en": "Godans Chosen"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_alans",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فروسية السارماتيين",
+      "en": "Sarmatian Horsemanship"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_alans",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "لركوب السهوب، يجب أن يكون الرجل وجواده كياناً واحداً.",
+      "en": "To ride the steppes, man and steed must be one."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_ostrogoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ورثة روما",
+      "en": "Inheritors of Rome"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_ostrogoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قد تتبدل الحضارات وتتغير، لكن المدينة الخالدة باقية أبداً.",
+      "en": "Civilisation may shift and change, but the eternal city remains."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_visigoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "دية الدم",
+      "en": "Blood Money"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_visigoths",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "دفع الجزية كفارة عادلة، إن لم تكن ضرورية تماماً.",
+      "en": "A tributary penance is only just, if not entirely necessary."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_migrators_vandals",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بحر الوندال",
+      "en": "Sea of the Vandals"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_migrators_vandals",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الرياح تنذر بالهلاك وتحمل الموت فوق الأمواج.",
+      "en": "The winds cry doom, and carry death across the waves."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_nomad_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "فرسان نهاية الزمان",
+      "en": "Horsemen of the Apocalypse"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_nomad_huns",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قدوم الفرسان يعني دمار البشرية وفناء العوالم.",
+      "en": "Come the horsemen, come the ruin of man."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_sands",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "ممالك الصحراء",
+      "en": "Desert Kingdoms"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_sands",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "حين لا ينجو هنا سوى الأشداء، يتطلب الأمر نسلاً فريداً ليزدهر ويسود.",
+      "en": "When only the hardiest survive, it takes a special breed to prosper."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_arabian",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة الصحراء",
+      "en": "Desert Power"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_tanukhids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة أسطوريون",
+      "en": "Legendary Raiders"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_tanukhids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة يحسب لها ألف حساب، وشعب لا يمكن الاستهانة به.",
+      "en": "Truly a force to be reckoned with, not to be underestimated."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_himyar",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "محاربو الصحراء",
+      "en": "Desert Warriors"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_lakhmids",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "مدينة الثقافة",
+      "en": "City of Culture"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_garamantes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "قوة الصحراء",
+      "en": "Desert Power"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_axum",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "بوابة الشرق",
+      "en": "Gateway to the East"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "غزاة الشمال",
+      "en": "Viking Raiders"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "النار والحرب هي كل ما يعرفه بعض الرجال، وهي التي تصنع مجدهم.",
+      "en": "Fire and war is all some men know."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_danes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أبناء البحار",
+      "en": "Seaborn"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_danes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "عانق الملح والأمواج كما تعانق الحبيب.",
+      "en": "Embrace the salt and spray as if they were a lover."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_geats",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الدم البارد",
+      "en": "Cold Blood"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_geats",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "يذوب الجليد حتى الأعماق حيث يشتد ويتصلب، وهكذا هم الرجال أيضاً.",
+      "en": "Ice thaws down to the core where it hardens."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_norse_jutes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الناهبون",
+      "en": "Despoilers"
+    },
+    {
+      "key": "effect_bundles_localised_description_att_faction_trait_norse_jutes",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الدمار فن قائم بذاته، جمال عابر وسريع الزوال.",
+      "en": "Destruction is its own art."
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_celtic",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الغنائم الخاطفة",
+      "en": "Swift Spoils"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_picts",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "أبناء الليل",
+      "en": "Children of the Night"
+    },
+    {
+      "key": "effect_bundles_localised_title_att_faction_trait_ebdani",
+      "table": "text/db/effect_bundles.loc",
+      "ar": "الهلاك والدمار",
+      "en": "Wrack & Ruin"
+    }
+  ]
+}

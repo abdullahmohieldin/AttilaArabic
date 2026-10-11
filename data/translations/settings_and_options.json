@@ -1,0 +1,215 @@
+{
+  "description": "Total War: ATTILA — Settings, Options and Common Navigation Localisation",
+  "entries": [
+    {
+      "key": "uied_component_texts_localised_string_tab_title_NewState_Text_18002d",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الرسوميات",
+      "en": "Graphics"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_title_NewState_Text_10042",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الصوت",
+      "en": "Sound"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_70033",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التحكم",
+      "en": "Controls"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_2d0006",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات اللعبة",
+      "en": "Game Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_2d0006",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات اللعبة",
+      "en": "Game Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_advanced_options_Tooltip_1d001d",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تخصيص رسوميات اللعبة يدوياً لتحقيق أفضل توازن بين الجودة والأداء.",
+      "en": "Customise the game's graphics manually.||This allows you to create a more tailored setup, allowing you to maximise quality and performance."
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_options_Tooltip_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_toggle_options_Tooltip_610078",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات المستشار",
+      "en": "Advice settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_back_Tooltip_a0021",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "رجوع",
+      "en": "Back"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_accept_Tooltip_640011",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "موافق",
+      "en": "Accept"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_apply_Tooltip_1c0048",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تطبيق",
+      "en": "Apply"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_clear_Tooltip_55",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعادة ضبط",
+      "en": "Reset"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_cancel_Text_48004e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إلغاء",
+      "en": "Cancel"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_cancel_Tooltip_6e0048",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إلغاء",
+      "en": "Cancel"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_31007f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_77005e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع",
+      "en": "Brightness"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_49000d1",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "التباين",
+      "en": "Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_battle_options_NewState_Text_590076",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات المعركة",
+      "en": "Battle Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_battle_options_NewState_Text_590076n",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات المعركة",
+      "en": "Battle Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_title_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_3f0004",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات الحملة",
+      "en": "Campaign Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_tx_NewState_Text_78000c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إظهار الترجمة",
+      "en": "Show subtitles"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_txt_NewState_Text_7700heading_tx_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_39003cs",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع والتباين",
+      "en": "Brightness & Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_1a0052",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع والتباين",
+      "en": "Brightness & Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_inactive_Text_1a0052",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع والتباين",
+      "en": "Brightness & Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_active_Text_1a0052",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع والتباين",
+      "en": "Brightness & Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_39003c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "السطوع والتباين",
+      "en": "Brightness & Gamma"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_inactive_Text_2d0006",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات اللعبة",
+      "en": "Game Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_active_Text_2d0006",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات اللعبة",
+      "en": "Game Settings"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_2d0006b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "إعدادات اللعبة",
+      "en": "Game Settings"
+    }
+  ]
+}

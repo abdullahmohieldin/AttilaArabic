@@ -29,7 +29,7 @@ class TestPhase1Packs(unittest.TestCase):
         pf = PackFile(LOC_PACK)
         self.assertEqual(pf.header.version, b"PFH4")
         self.assertEqual(pf.header.pack_type, 3) # mod type
-        self.assertEqual(len(pf.files), 4)
+        self.assertGreaterEqual(len(pf.files), 4)
 
         expected_keys = [
             ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_button_txt_NewState_Text_30006e"),
@@ -42,6 +42,11 @@ class TestPhase1Packs(unittest.TestCase):
             ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_cmp_diff_slider_Tooltip_7000b"),
             ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_medal1_default_Tooltip_5003a"),
             ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_header_cultural_NewState_Text_5e0000"),
+            ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_title_NewState_Text_16005b"),
+            ("text\\db\\uied_component_texts.loc", "uied_component_texts_localised_string_title_NewState_Text_700029"),
+            ("text\\db\\faction_groups.loc", "faction_groups_name_localised_att_fact_group_roman"),
+            ("text\\db\\campaigns.loc", "campaigns_onscreen_name_main_attila"),
+            ("text\\db\\campaign_map_playable_areas.loc", "campaign_map_playable_areas_onscreen_name_1564135515"),
             ("text\\db\\random_localisation_strings.loc", "random_localisation_strings_string_difficulty_level_3"),
             ("text\\db\\random_localisation_strings.loc", "random_localisation_strings_string_hard"),
             ("text\\db\\random_localisation_strings.loc", "random_localisation_strings_string_campaign_difficulty_description_2"),

@@ -1,0 +1,103 @@
+{
+  "description": "Total War: ATTILA — Grand Campaign Playable Faction Descriptions",
+  "entries": [
+    {
+      "key": "start_pos_factions_description_2120156339",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "تقف الإمبراطورية الرومانية الغربية على شفا الهاوية،\nإذ يذعن إمبراطورها لمشيئة قائد نصف وندالي،\nبينما ينعم شيوخها العاجزون في ضياع شاسعة.\nمنذ انقسام الإمبراطورية، تجلت علل الغرب بوضوح؛\nفلا عتاد ولا ذهب يكفي لبناء جيش حصين،\nمما تركها عاجزة أمام طوفان البرابرة الزاحف\nعبر حدود روما هرباً من جحافل الهون المرعبة.\nبات أباطرة روما ضعفاء تتقاذفهم أهواء القادة،\nأو يعزلهم نظراؤهم في الشرق بمكائدهم.\nومع ذلك، لا تزال فرصة النهوض مواتية؛\nفالمحن تلد الفرص العظيمة، وإن استُغلت بحزم،\nستبعث الإمبراطورية من جديد أشد بأساً وسطوة.",
+      "en": "The Western Roman Empire is on the very edge of catastrophe. Its Emperor dances to the tune of a half-Vandal general, its powerless Senators idle on vast, poorly-managed estates. Since the Empire’s division the flaws besetting the West have rapidly become apparent. There is neither the manpower or the gold needed for an effective army, leaving it unable to deal with the many displaced barbarians pouring across Rome’s borders ahead of the Hunnic horde. Roman Emperors have become increasingly fragile - many are manipulated by generals or deposed by their meddling Eastern counterparts. Nonetheless, it is still possible for the Western Empire to rise again. Times of crisis create opportunities which, if seized upon, will see the Empire re-forged and re-vitalised.",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156339",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "تقف الإمبراطورية الرومانية الغربية على شفا الهاوية،\nإذ يذعن إمبراطورها لمشيئة قائد نصف وندالي،\nبينما ينعم شيوخها العاجزون في ضياع شاسعة.\nوالأدهى من ذلك أن روما، أم الإمبراطورية، أُهملت\nلصالح عاصمة ميديولانوم الأكثر ملاءمة.\nمنذ تقسيم الإمبراطورية، تجلت علل الغرب بوضوح؛\nفلا عتاد ولا ذهب يكفي لبناء جيش حصين،\nمما تركها عاجزة أمام طوفان البرابرة الزاحف\nعبر حدود روما هرباً من جحافل الهون المرعبة.\nبات أباطرة روما ضعفاء تتقاذفهم أهواء القادة،\nأو يعزلهم نظراؤهم في الشرق بمكائدهم.\nومع ذلك، لا تزال فرصة النهوض مواتية ثانية؛\nفالمحن تلد التغيير والفرص العظيمة، وإن استُغلت،\nستبعث الإمبراطورية من جديد أشد بأساً وسطوة.",
+      "en": "Western Roman Empire long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156314",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "الساسانيون هم سلالة المجد الفارسي التليد،\nالذي تمتد جذوره لما يناهز ألف عام من العظمة.\nوطد الساسانيون سلطانهم في إقليم فارس\nقبل أن ينتزعوا زمام الحكم من الفرثيين.\nومنذ ذلك الحين، نجحت إدارتهم المركزية الصارمة\nفي إعادة إحياء حدود الإمبراطورية وتوسيع رقعتها.\nغير أن هذه المكانة العالية جلبت أعداء كُثراً؛\nفالقوى الخارجية تهدد سيطرتهم على طريق الحرير،\nبينما يمكر الرومان الشرقيون بهم حتى وقت السلم.\nلكن لا شيء يثني الساسانيين عن المضي قدماً؛\nفشرعية عرشهم قائمة على البأس العسكري،\nولا بد من مواصلة الفتوحات ليبقى المجد فارسياً.",
+      "en": "The Sassanids are the latest in line of Persian empires stretching back almost 1,000 years. Sassanid vassals consolidated their power in Fars before seizing control of the Parthian Empire. Since then, their lean, centralised administration has revitalised and expanded its boundaries. Such prominence inevitably attracts opposition, however, and the Sassanids now find themselves in a delicate situation. Forces from without threaten their control of the Silk Road, while the Eastern Romans undermine them even in times of peace. Yet the Sassanids cannot be slowed by such things. As their claim to the throne is rooted in military prowess it is imperative that their recent conquests continue, lest control be wrested from Persian hands once more.",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156314",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "الساسانيون هم سلالة المجد الفارسي التليد،\nالذي تمتد جذوره لما يناهز ألف عام من العظمة.\nحين شلت الحرب الأهلية أسيادهم الفرثيين،\nوطد الساسانيون نفوذهم في فارس قبل انتزاع الملك.\nتشكل إدارتهم المركزية الصارمة نقيضاً للحكم الفرثي،\nوبدعم من كهنة الزرادشتية، أحيت الإمبراطورية حدودها.\nغير أن هذه المكانة البارزة جلبت أعداء كُثراً؛\nفالقوى الخارجية تهدد سيطرتهم على طريق الحرير،\nبينما يمكر الرومان الشرقيون بهم حتى وقت السلم.\nلكن لا شيء يثني الساسانيين عن المضي قدماً؛\nفشرعية عرشهم قائمة على البأس العسكري،\nولا بد من مواصلة الفتوحات ليبقى المجد فارسياً.",
+      "en": "Sassanid Empire long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156274",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أقسم القوط الغربيون، رسل الانتقام البربري،\nعلى رد الصاع صاعين لروما بعد عقود من القهر.\nألجأهم غزو الهون لالتماس الملاذ من فالنس،\nورغم قبوله، عمد قادته لابتزاز اللاجئين ببطش،\nمما دفع القوط للثورة وقُتل فالنس في أدريانوبل.\nتلا ذلك صلح قاتل فيه القوط بقيادة ألاريك\nضد الفرنجة عوناً للإمبراطور ثيودوسيوس الأول،\nلكن الإمبراطور جحدهم حقوقهم ومكافأتهم.\nواليوم، طلباً للثأر ونيل ما يستحقونه،\nوجّه ألاريك أنظاره نحو الجائزة الكبرى: مدينة روما!",
+      "en": "The Visigoths campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156274",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "أقسم القوط الغربيون، رسل الانتقام البربري،\nعلى رد الصاع صاعين لروما بعد عقود من القهر.\nفي البداية لم ينشدوا سوى الملاذ هرباً من الهون،\nفقبل فالنس رجاءهم ليتخذهم درعاً وحصناً لروما.\nغير أن قادة الرومان بطشوا باللاجئين وابتزوهم،\nفثار القوط وقتلوا فالنس المتهور في أدريانوبل.\nتلا ذلك صلح خاض فيه القوط حروباً عوناً لروما،\nورغم نصرهم المؤزر، حرمهم الإمبراطور من جزائهم.\nوالآن، انطلق الملك ألاريك في حملة تأديبية،\nواضعاً نصب عينيه الجائزة العظمى: مدينة روما نفسها!",
+      "en": "Visigoths long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156270",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن ترحال القوط الشرقيين في أراضي الرومان\nيخفي وراءه ماضياً لإمبراطورية كانت ذات شأن عظيم.\nعُرفوا بـ الغروتونغي، وهم حلف من شعوب البلطيق\nاستقروا على ضفاف البحر الأسود قبل عقود،\nفكانوا أول الشعوب الجرمانية مواجهة للغزو البدوي.\nيعيشون اليوم على تخوم الإمبراطورية في خوف دائم\nمن بطش الرومان وغارات البرابرة المنافسين،\nمضطرين للقتال كمرتزقة لصالح الهون أنفسهم.\nومع ذلك، لا تزال ذكرى سيادتهم تبعث الأمل فيهم؛\nفقائد حازم قادر على انتشالهم من وهدة الذل\nوإعادة مجدهم القديم إلى سالف عهده.",
+      "en": "The Ostrogoths campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156270",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن ترحال القوط الشرقيين في أراضي الرومان\nيخفي وراءه ماضياً لإمبراطورية كانت ذات شأن عظيم.\nعُرفوا بـ الغروتونغي، وهم حلف من شعوب البلطيق\nاستقروا على ضفاف البحر الأسود قبل عقود،\nفكانوا أول الشعوب الجرمانية مواجهة للغزو البدوي.\nالتجأوا لروما على خطى أبناء عمومتهم، لكن رُفضوا،\nفتسللوا عبر الدانوب تحت جنح الظلام.\nيعيشون اليوم على تخوم الإمبراطورية في قلق دائم،\nمضطرين للقتال كمرتزقة لصالح الهون أنفسهم.\nومع ذلك، لا تزال ذكرى سيادتهم تبعث الأمل فيهم؛\nفقائد قوي كفيل بإنقاذهم واستعادة أيام مجدهم.",
+      "en": "Ostrogoths long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156272",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "بعد أن خذلهم حلفاؤهم الرومان في ساعة العسرة،\nيجد الوندال أنفسهم عند منعطف حاسم نحو الجنوب.\nقاتلوا طويلاً كحلفاء لروما ضد تمردات البرابرة،\nوكوفئوا بأراضٍ في بانونيا وتعايشوا بسلام،\nمما أفسح المجال لبروز قادة كبار مثل ستيليكو،\nالوندالي الذي أمسك بمقاليد حكم الغرب الروماني.\nلكن قدوم الهون قلب الموازين ودحر الوندال عن ديارهم.\nاليوم، بات لزاماً عليهم شق طريقهم عبر أوروبا بالسيف،\nلتأسيس مملكة خاصة بهم، أنى كانت كلفة القتال.",
+      "en": "The Vandals campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156272",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "بعد أن خذلهم حلفاؤهم الرومان في ساعة العسرة،\nيجد الوندال أنفسهم عند منعطف حاسم نحو الجنوب.\nتعود أواصر التحالف إلى الحروب الماركومانية؛\nإذ قاتل الوندال حلفاء لروما ضد ثورات البرابرة،\nوكوفئوا بأراضٍ في بانونيا واندمجوا في الإمبراطورية،\nمما مكن شخصيات كستيليكو من اعتلاء سدة النفوذ.\nلكن مع زحف الهون، انقلبت الموازين واقتُلعوا من ديارهم.\nومع رفض الرومان نجدتهم، لا مناص من القتال\nوشق طريقهم عبر أوروبا لتأسيس مملكة مستقلة.",
+      "en": "Vandals long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156278",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "بينما يقف العالم على شفا الفوضى العارمة،\nيتأرجح الفرنجة بين دورين: الهادمون أم الوارثون!\nإنهم حلف لقبائل جرمانية من حوض الراين الأدنى،\nسُمح لهم بالاستقرار في توكساندريا كحلفاء لروما.\nورغم أن قائدهم الحالي فاراموند مثال للحكمة،\nفإن زعيماً أكثر جرأة قادر على قيادتهم للمجد\nفي مواجهة إمبراطورية تتداعى أركانها كل يوم.\nولكي تولد مملكة للفرنجة تدوم من رماد روما،\nيجب توحيد الصفوف؛ فالفرنجة يد واحدة!",
+      "en": "The Franks campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156278",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "بينما يقف العالم على شفا الفوضى العارمة،\nيتأرجح الفرنجة بين دورين: الهادمون أم الوارثون!\nحلف لقبائل جرمانية من حوض الراين الأدنى، ويعني اسمهم 'الأحرار'.\nبعد حملة رومانية، استقروا جنوب الراين في توكساندريا\nأملاً في وقف غاراتهم ورفد الفيالق بمقاتلين جدد.\nورغم أن قائدهم الحالي فاراموند قدوة للحكام،\nفإن أميراً مقداماً قادر على قيادتهم للعظمة والسيادة.\nولكي تقوم مملكة فرنجية خالدة من رماد روما،\nيجب توحيد الشعب؛ فلا بد أن يكون الفرنجة يداً واحدة!",
+      "en": "Franks long description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_description_2120156281",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "إن بعد الساكسون عن قلب روما يلفهم بالغموض،\nويمنحهم حرية الإغارة والغزو كما يشاءون.\nوبينما يتنازع البرابرة على فتات الإمبراطورية المتداعية،\nيرنو الساكسون بأبصارهم نحو المقاطعات الشمالية المهملة.\nتعد بريطانيا هدفاً مغرياً ذاق ويلات غاراتهم سابقاً،\nومنذ ذلك الحين ظل الساكسون شوكة في خاصرة روما.\nحتى حصون 'الشاطئ الساكسوني' التي شيدت لدرء خطرهم،\nليست سوى عقبة يسيرة أمام إرادة الساكسون الصلبة!",
+      "en": "The Saxons campaign description",
+      "is_narrative": true
+    },
+    {
+      "key": "start_pos_factions_long_description_2120156281",
+      "table": "text/db/start_pos_factions.loc",
+      "ar": "ذكر بطليموس الساكسون في جغرافيته عام 130 ميلادية،\nواشتق اسمهم من خنجر 'السيكس' الرهيب الذي يحملونه.\nكانوا قبائل شجاعة انتشرت عبر أوروبا دون قائد أوحد.\nوبعد انسحاب الرومان من بريطانيا مطلع القرن الخامس،\nاستوطن الساكسون هناك ووضعوا أسس إنجلترا المستقبلية.\nأما من بقوا في البر الأوروبي فاحتكوا بالفرنجة الأقوياء.\nلا يزال الساكسون يذودون بضراوة عن معتقداتهم الوثنية،\nويغيرون على جيرانهم دون هوادة متطلعين للغلبة والنصر.\nإله الحرب تير سيقود شعبه نحو الظفر والسيادة المطلقة!",
+      "en": "Saxons long description",
+      "is_narrative": true
+    }
+  ]
+}

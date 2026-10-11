@@ -24,25 +24,22 @@
 | **Arabic Shaping (BiDi)** | ✅ **VERIFIED** | Logical-to-visual conversion into Arabic Presentation Forms-B correctly renders cursive letters in right-to-left order. |
 | **Zero-Box Guarantee** | ✅ **VERIFIED** | Missing `.notdef` tofu boxes completely eliminated by mapping isolated Presentation Forms-B and canonical base codepoints directly to true Tajawal glyphs. |
 | **Baseline Alignment** | ✅ **VERIFIED** | Automatic calibration using Latin capital 'H' bounds anchors Arabic baselines to match Latin typography without vertical clipping or floating text. |
-| **Intra-Cell Stroke Joining** | ✅ **VERIFIED** | Connecting baseline strokes extended edge-to-edge ($0$ to $w-1$) across all glyph cells, closing gaps down to the engine's hardcoded minimum. |
-| **RTL Paragraph Balancing** | ✅ **VERIFIED** | Pre-segmented 13-line narrative with binary PUA blank padding (`U+E001`–`U+E006`) aligns campaign description text flush-right without mid-line flipping. |
-| **Automated Test Suite** | ✅ **VERIFIED** | `tests/test_phase1_packs.py` asserts font integrity, loc format, and vanilla file hashes on every build (3/3 passing). |
+| **Intra-Cell Stroke Joining** | ✅ **VERIFIED** | Connecting baseline strokes extended edge-to-edge ($0$ to $w-1$) across all glyph cells, and allocated advance shortened (`alloc_w = max(1, w - 1)`) for connecting forms, completely neutralizing the Warscape engine's $+1\text{ px}$ advance and eliminating seams across all connected words. |
+| **RTL Paragraph Balancing** | ✅ **VERIFIED** | Pre-segmented 13-line narrative with binary PUA blank padding (`U+E010`–`U+E015`) aligns campaign description text flush-right without mid-line flipping. |
+| **Data-Driven Loc Architecture** | ✅ **VERIFIED** | Universal compiler (`source/loc_compiler.py`) auto-compiles modular translation JSON files (`data/translations/`) across 11 tables with 194 strings covering Main Menu, Custom Battles, Unit Stats, Settings, Campaigns, Factions, Cultural Groups, Traits, and UI. |
+| **Automated Test Suite** | ✅ **VERIFIED** | `tests/` asserts font integrity, loc format, clean-room safety, baseline fit, and key mappings (10/10 passing). |
 
 ---
 
-## 3. Verified Engine Constraints & Precedents
+## 3. Verified Engine Invariants & Solutions
 
-### The 1-Pixel Hairline Tile Seam
-- **Observed Behavior:** Between connected cursive letters, an exact 1-pixel gap exists along the connecting baseline.
-- **Engine Mechanics:** The Warscape text renderer draws characters on individual 2D rectangular quads and advances each quad by $\text{advance} = w + 1\text{ px}$. The $+1\text{ px}$ margin is an engine-level rule designed to keep Latin characters from smudging.
-- **Community Precedents:**
-  - *Total War: ROME II* ("Shyizer Arabic - تعريب شيزر"): Mod uses identical Tajawal Presentation Forms-B and exhibits the exact same 1-pixel hairline seam.
-  - *Total War: THREE KINGDOMS* ("Three Kingdoms Arabic" by Hussain / AlmightyJack): Mod uses identical CUF bitmap fonts and shares the same engine quad advance constraint.
-- **Conclusion:** The 1-pixel seam is the physical limit of the Warscape text renderer without binary code injection into the game executable.
+### The 1-Pixel Advance Compensation
+- **Engine Mechanics:** The Warscape text renderer draws characters on individual 2D rectangular quads and advances each quad by $\text{advance} = \text{alloc\_w} + 1\text{ px}$.
+- **Resolution:** By setting $\text{alloc\_w} = \max(1, w - 1)$ for all connecting forms (`FINAL`, `MEDIAL`, Tatweel), the engine advance becomes $(w - 1) + 1 = w\text{ px}$. This achieves 100% seamless glyph-to-glyph connection across all fonts and screens with 0-pixel gap.
 
 ---
 
 ## 4. Current Build Hashes
 
-- **`Attila_Arabic_Phase1.pack`**: `D0AA87151CF05C3610B1E59E1B239B02BF7521563ECB96479ABA350495A49AA2`
-- **`Attila_Arabic_Phase1_fonts.pack`**: `C96F922C55C643D3591EC1D3AFEBC66B51F0374D2280829CE238D3B3641ADF58`
+- **`Attila_Arabic_Phase1.pack`**: `352D42D804837F0B42740D8E91784395D1C072426C13CC35D7941D61106611AD`
+- **`Attila_Arabic_Phase1_fonts.pack`**: `6018B5F37772D2321E551C5CA25AE264727998B1F02CA3413424071714D8C4FF`

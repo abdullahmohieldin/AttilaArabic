@@ -1,0 +1,233 @@
+{
+  "description": "Total War: ATTILA — Main Menu Localisation",
+  "entries": [
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_16005b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الحملات",
+      "en": "Campaigns"
+    },
+    {
+      "key": "uied_component_texts_localised_string_subtitle_NewState_Text_240010",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الحملات",
+      "en": "Campaigns"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_23001bb",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تحميل حملة",
+      "en": "Load Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_23001b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تحميل حملة",
+      "en": "Load Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_23001b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تحميل حملة",
+      "en": "Load campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_23001b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تحميل حملة",
+      "en": "Load campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_1c0025",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "المقدمة",
+      "en": "Prologue"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_530011r",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الحملة الكبرى",
+      "en": "Grand Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_inactive_Text_c0020",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الروماني الأخير",
+      "en": "The Last Roman"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_active_Text_c0020",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الروماني الأخير",
+      "en": "The Last Roman"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_active_Text_3b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "عصر شارلمان",
+      "en": "Age of Charlemagne "
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_inactive_Text_1b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "عصر شارلمان",
+      "en": "Age of Charlemagne"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_430007",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حملة متعددة اللاعبين",
+      "en": "Multiplayer Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_430007",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حملة متعددة اللاعبين",
+      "en": "Multiplayer Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_430007v",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حملة متعددة اللاعبين",
+      "en": "Multiplayer Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_700029",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "المعارك",
+      "en": "Battles"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_3a000cm",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة تاريخية",
+      "en": "Historical Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_3a000c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة تاريخية",
+      "en": "Historical Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_36000fs",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة مخصصة",
+      "en": "Custom Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_36000f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة مخصصة",
+      "en": "Custom Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_250075x",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة متعددة اللاعبين",
+      "en": "Multiplayer Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_title_mp_Text_250075",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة متعددة اللاعبين",
+      "en": "Multiplayer Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_250075",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة متعددة اللاعبين",
+      "en": "Multiplayer Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_460009",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة سريعة",
+      "en": "Quick Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_tx_NewState_Text_460009j",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة سريعة",
+      "en": "Quick Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_1d002f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "لوائح المتصدرين",
+      "en": "Leaderboards"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_700030",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تسجيلات المعارك",
+      "en": "Replays"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_700030",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "تسجيلات المعارك",
+      "en": "Replays"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tab_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_header_NewState_Text_31007f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_title_NewState_Text_770027",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الخيارات",
+      "en": "Options"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_62003c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "فريق العمل",
+      "en": "Credits"
+    },
+    {
+      "key": "uied_component_texts_localised_string_heading_txt_NewState_Text_62003c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "فريق العمل",
+      "en": "Credits"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_10038",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "خروج",
+      "en": "Quit"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_continue_campaign_Text_380007",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "استئناف الحملة",
+      "en": "Continue Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_380007",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "استئناف الحملة",
+      "en": "Continue Campaign"
+    },
+    {
+      "key": "uied_component_texts_localised_string_string_NewState_Text_180007",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "استئناف الحملة",
+      "en": "Continue campaign"
+    }
+  ]
+}

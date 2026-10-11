@@ -12,11 +12,13 @@ import sys
 import arabic_reshaper
 from bidi.algorithm import get_display
 
-TAG_RE = re.compile(r"(\[\[.*?\]\]|%[sdif]|{\d+})")
+TAG_RE = re.compile(r"(\[\[.*?\]\]|%[+-]?\d*n%?|%[+-]?\d*[sdif]|{\d+})")
 _MARK = "\ue000"
 
 
-def shape(text: str, base_dir: str = "R") -> str:
+def _shape_line(text: str, base_dir: str = "R") -> str:
+    if not text:
+        return ""
     parts = TAG_RE.split(text)
     stash = {}
     # even indices are plain text, odd indices are protected tokens
@@ -34,6 +36,16 @@ def shape(text: str, base_dir: str = "R") -> str:
     for i, tok in stash.items():
         visual = visual.replace(_MARK + chr(0xE001 + i), tok)
     return visual
+
+
+def shape(text: str, base_dir: str = "R") -> str:
+    if not text:
+        return ""
+    if "||" in text:
+        return "||".join(shape(part, base_dir=base_dir) for part in text.split("||"))
+    if "\n" in text:
+        return "\n".join(_shape_line(line, base_dir=base_dir) for line in text.split("\n"))
+    return _shape_line(text, base_dir=base_dir)
 
 
 if __name__ == "__main__":

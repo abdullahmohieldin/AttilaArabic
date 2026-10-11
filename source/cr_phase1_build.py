@@ -274,6 +274,7 @@ def build_fonts():
             list(range(0x064B, 0x0653))  # Shaddah, Kasrah, Fathah, Dammah, Sukun
         )
 
+        rendered_cells = {}
         for cp in sorted(set(arabic_cps)):
             if cp in tajawal_cmap:
                 char_to_draw = chr(cp)
@@ -324,10 +325,73 @@ def build_fonts():
                             for x in range(last_x + 1, w):
                                 cell_bm[cy * w + x] = stroke_val
 
+            rendered_cells[cp] = (w, cell_bm)
+            alloc_w = max(1, w - 1) if is_conn_right else w
             glyph_idx = len(new_dims)
-            new_dims.append((cell_ah, w, w, cell_h))
+            new_dims.append((cell_ah, alloc_w, w, cell_h))
             new_bitmaps.append(bytes(cell_bm))
             new_table[cp] = glyph_idx
+
+        # 1b. Render Seamless 0-Pixel Connected Chunk Ligatures
+        CHUNK_DEFS = [
+            # الفصائل: split so no chunk exceeds engine h_size (48px)
+            (0xE110, [0xFEDE, 0xFE8B]),                 # ئل (lam final + yeh hamza initial, ~26px)
+            (0xE111, [0xFE8E, 0xFEBC]),                 # صا (alef final + sad medial, ~34px)
+            (0xE114, [0xFED4, 0xFEDF]),                 # لف (feh medial + lam initial, ~23px)
+            # الشرقية
+            (0xE112, [0xFE94, 0xFEF4, 0xFED7]),         # قية
+            (0xE113, [0xFEAE, 0xFEB8, 0xFEDF]),         # لشر
+        ]
+        for chunk_cp, sub_cps in CHUNK_DEFS:
+            chunk_sub_cells = [rendered_cells[sc] for sc in sub_cps if sc in rendered_cells]
+            if len(chunk_sub_cells) == len(sub_cps):
+                total_cw = sum(cw for cw, _ in chunk_sub_cells)
+                chunk_bm = bytearray(total_cw * cell_h)
+                curr_cx = 0
+                for cw, cbm in chunk_sub_cells:
+                    for cy in range(cell_h):
+                        for cx in range(cw):
+                            chunk_bm[cy * total_cw + curr_cx + cx] = cbm[cy * cw + cx]
+                    curr_cx += cw
+                last_sub_cp = sub_cps[-1]
+                last_name = unicodedata.name(chr(last_sub_cp), "")
+                chunk_conn = ("FINAL" in last_name or "MEDIAL" in last_name or last_sub_cp == 0x0640)
+                chunk_aw = max(1, total_cw - 1) if chunk_conn else total_cw
+                chunk_idx = len(new_dims)
+                new_dims.append((cell_ah, chunk_aw, total_cw, cell_h))
+                new_bitmaps.append(bytes(chunk_bm))
+                new_table[chunk_cp] = chunk_idx
+
+        # 1c. Render Chunk 0xE115: Seamless لفصا (alef final + sad medial + feh medial + lam initial)
+        lafsa_sub_cps = [0xFE8E, 0xFEBC, 0xFED4, 0xFEDF]
+        if all(sc in rendered_cells for sc in lafsa_sub_cps):
+            ov = max(1, round(px * 0.125))
+            w_alef, bm_alef = rendered_cells[0xFE8E]
+            w_sad, bm_sad = rendered_cells[0xFEBC]
+            w_feh, bm_feh = rendered_cells[0xFED4]
+            w_lam, bm_lam = rendered_cells[0xFEDF]
+
+            off_alef = 0
+            off_sad = max(0, w_alef - ov)
+            off_feh = off_sad + max(0, w_sad - ov)
+            off_lam = off_feh + max(0, w_feh - ov)
+            total_cw = off_lam + w_lam
+
+            chunk_bm = bytearray(total_cw * cell_h)
+            for (cw, cbm), off_x in [((w_alef, bm_alef), off_alef),
+                                     ((w_sad, bm_sad), off_sad),
+                                     ((w_feh, bm_feh), off_feh),
+                                     ((w_lam, bm_lam), off_lam)]:
+                for cy in range(cell_h):
+                    for cx in range(cw):
+                        val = cbm[cy * cw + cx]
+                        if val > 0:
+                            chunk_bm[cy * total_cw + off_x + cx] = max(chunk_bm[cy * total_cw + off_x + cx], val)
+
+            chunk_idx = len(new_dims)
+            new_dims.append((cell_ah, total_cw, total_cw, cell_h))
+            new_bitmaps.append(bytes(chunk_bm))
+            new_table[0xE115] = chunk_idx
 
         # 2. Append Round 3 Binary Blank Spacer Glyphs
         for _, cp, w in BLANK_SPACERS:
@@ -365,116 +429,8 @@ def build_fonts():
 
 
 def build_loc():
-    print("\n--- Building Phase 1 Round 3 Loc ---")
-    pack = PackFile(VANILLA_PACK)
-
-    # 13-line right-aligned historical narrative for Eastern Roman Empire
-    narrative_raw = [
-        "أطلق تقسيم الإمبراطورية",
-        "عنان الشرق، مما مكنه من",
-        "بسط نفوذه على العالم الروماني.",
-        "أتاح المركز الإداري بالقسطنطينية",
-        "استبدال النظم القديمة،",
-        "وملء الخزائن بالأموال.",
-        "نجح الشرق في تحويل مسار",
-        "هجرات البرابرة غرباً،",
-        "لكن الإمبراطور أركاديوس",
-        "سيواجه تحديات جسيمة،",
-        "بين مؤامرات البلاط وخطر",
-        "الساسانيين المستمر لضمان",
-        "بقاء شعلة روما الأخيرة متقدة."
-    ]
-
-    target_panel_w = 300
-    px_12 = calibrate_px(11) # cap_h for la_gioconda_12 is 11
-    font_12 = ImageFont.truetype(TAJAWAL, px_12, layout_engine=ImageFont.Layout.BASIC)
-    tt = TTFont(TAJAWAL)
-    tajawal_cmap = tt.getBestCmap()
-
-    narrative_lines = []
-    for line_text in narrative_raw:
-        shaped_text = shape(line_text)
-        total_w = 0
-        for ch in shaped_text:
-            cp = ord(ch)
-            if cp in tajawal_cmap:
-                target_ch = ch
-            else:
-                decomp = decompose_cp(cp)
-                target_ch = chr(decomp) if decomp in tajawal_cmap else ch
-            mask = font_12.getmask(target_ch)
-            mw = mask.size[0]
-            pitch = (mw + 1) if mw > 0 else 6
-            total_w += pitch
-        indent = max(0, target_panel_w - total_w)
-        spacer = make_spacer(indent)
-        narrative_lines.append(spacer + shaped_text)
-
-    ere_narrative_text = "\n".join(narrative_lines)
-
-    overrides = {
-        # 1. Start Campaign button
-        TARGET_KEYS["btn_start_campaign_1"][1]: "[B] " + shape("بدء الحملة"),
-        TARGET_KEYS["btn_start_campaign_2"][1]: "[B] " + shape("بدء الحملة"),
-        # 2. Factions header
-        TARGET_KEYS["header_factions_1"][1]: "[F] " + shape("الفصائل"),
-        TARGET_KEYS["header_factions_2"][1]: "[F] " + shape("الفصائل"),
-        TARGET_KEYS["header_factions_3"][1]: "[F] " + shape("الفصائل"),
-        # 3. Difficulty slider tooltip
-        TARGET_KEYS["diff_tooltip_1"][1]: "[S] " + shape("مؤشر الصعوبة"),
-        TARGET_KEYS["diff_tooltip_2"][1]: "[S] " + shape("مؤشر الصعوبة"),
-        TARGET_KEYS["diff_tooltip_3"][1]: "[S] " + shape("مؤشر الصعوبة"),
-        # 4. Hard label
-        TARGET_KEYS["diff_hard_1"][1]: "[H] " + shape("صعب"),
-        TARGET_KEYS["diff_hard_2"][1]: "[H] " + shape("صعب"),
-        TARGET_KEYS["diff_hard_3"][1]: "[H] " + shape("صعب"),
-        # 5. Difficulty description
-        TARGET_KEYS["diff_desc"][1]: "[D] " + shape("للاعبين المتمرسين في توتال وور."),
-        # 6. Difficulty legendary body description
-        TARGET_KEYS["diff_legendary"][1]: "[L] " + "\n".join([shape("الحفظ اليدوي غير متاح في الحملة."), shape("لا يمكن إصدار الأوامر أثناء إيقاف المعركة مؤقتاً.")]),
-        # 7. Cultural trait header
-        TARGET_KEYS["header_cultural"][1]: "[C] " + shape("السمة الثقافية"),
-        # 8. Faction title
-        TARGET_KEYS["faction_title"][1]: "[T] " + shape("الإمبراطورية الرومانية الشرقية"),
-        # 9. Faction description
-        TARGET_KEYS["ere_description"][1]: ere_narrative_text,
-        TARGET_KEYS["ere_long_description"][1]: ere_narrative_text,
-    }
-
-    files_to_edit = {
-        r"text\db\uied_component_texts.loc",
-        r"text\db\random_localisation_strings.loc",
-        r"text\db\factions.loc",
-        r"text\db\start_pos_factions.loc",
-    }
-
-    loc_entries = {}
-    for fpath in files_to_edit:
-        raw = pack.get_file(fpath)
-        if raw is None:
-            raw = pack.get_file(fpath.replace("\\", "/"))
-        assert raw is not None, f"Loc file missing in vanilla: {fpath}"
-
-        rows, version, count = loc_decode(raw)
-        updated_rows = []
-        overridden_in_file = 0
-        for k, text, flag in rows:
-            if k in overrides:
-                overridden_in_file += 1
-                updated_rows.append((k, overrides[k], flag))
-            else:
-                updated_rows.append((k, text, flag))
-
-        print(f"  {fpath}: {len(rows)} entries ({overridden_in_file} overridden)")
-        encoded = loc_encode(updated_rows)
-        loc_entries[fpath] = encoded
-
-    out_loc_pack = os.path.join(OUT_DIR, "Attila_Arabic_Phase1.pack")
-    write_pack(out_loc_pack, loc_entries)
-
-    l_hash = sha256_file(out_loc_pack)
-    print(f"Created {out_loc_pack} ({len(loc_entries)} tables, SHA256: {l_hash})")
-    return out_loc_pack, l_hash
+    from source.loc_compiler import compile_all_locs
+    return compile_all_locs()
 
 
 def main():

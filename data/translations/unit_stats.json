@@ -1,0 +1,161 @@
+{
+  "description": "Total War: ATTILA — Unit Stats Localisation",
+  "entries": [
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_morale",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الروح المعنوية",
+      "en": "Morale"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_health",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الصحة",
+      "en": "Health"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_men_count",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "عدد الجنود",
+      "en": "Men Count"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_speed",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "السرعة",
+      "en": "Speed"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_armour",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الدرع",
+      "en": "Armour"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_shield_defence",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "دفاع الدرع",
+      "en": "Shield Defence"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_shield_armour",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "تصفيح الدرع",
+      "en": "Shield Armour"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_defence",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الدفاع في الاشتباك",
+      "en": "Melee Defence"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_attack",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الهجوم في الاشتباك",
+      "en": "Melee Attack"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_weapon_damage",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر الاشتباك",
+      "en": "Melee Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_damage_base",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الضرر الأساسي",
+      "en": "Melee Base Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_melee_damage_ap",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر اختراق الدروع",
+      "en": "Armour-piercing Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_charge_bonus",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مكافأة الاندفاع",
+      "en": "Charge Bonus"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر القذائف",
+      "en": "Missile Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage_base",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "ضرر القذائف الأساسي",
+      "en": "Missile Base Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_damage_ap",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "قذائف خارقة للدروع",
+      "en": "Armour-Piercing Damage"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_weapon_range",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "المدى",
+      "en": "Range"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_ammo",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الذخيرة",
+      "en": "Ammunition"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_reloading",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "معدل إطلاق النار",
+      "en": "Rate of Fire"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_accuracy",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "الدقة",
+      "en": "Accuracy"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_missile_block_chance",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "صد القذائف",
+      "en": "Missile Block Chance"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_cavalry",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "هجوم ضد الفرسان",
+      "en": "Attack Against Cavalry"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_infantry",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "هجوم ضد المشاة",
+      "en": "Attack Against Infantry"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_bonus_vs_elephants",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "هجوم ضد الفيلة",
+      "en": "Attack Against Elephants"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_ship_health",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "صلابة الهيكل",
+      "en": "Hull Strength"
+    },
+    {
+      "key": "ui_unit_stats_onscreen_name_stat_ship_health_fire",
+      "table": "text/db/ui_unit_stats.loc",
+      "ar": "مقاومة النيران",
+      "en": "Fire Resistance"
+    }
+  ]
+}

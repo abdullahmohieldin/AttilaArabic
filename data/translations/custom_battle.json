@@ -1,0 +1,101 @@
+{
+  "description": "Total War: ATTILA — Custom Battle UI Localisation",
+  "entries": [
+    {
+      "key": "uied_component_texts_localised_string_funds_tx_NewState_Text_2b005b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الأموال:",
+      "en": "Funds:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_army_value_label_NewState_Text_2b005b",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الأموال المتبقية: ",
+      "en": "Funds left: "
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_180062",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "وقت المعركة:",
+      "en": "Time of day:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_4e002c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "الطقس:",
+      "en": "Weather:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_290010",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حجم الوحدات:",
+      "en": "Unit size:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_330010l",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "حجم الوحدات",
+      "en": "Unit Size"
+    },
+    {
+      "key": "uied_component_texts_localised_string_label_txt_NewState_Text_4e0066",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "نوع المعركة:",
+      "en": "Battle type:"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_740066",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "نوع المعركة",
+      "en": "Battle Type"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_txt_NewState_Text_740066v",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "نوع المعركة",
+      "en": "Battle type"
+    },
+    {
+      "key": "uied_component_texts_localised_string_battle_type_land_Text_5f0072",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة برية",
+      "en": "Land Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_button_naval_Tooltip_50000e",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "معركة بحرية",
+      "en": "Naval Battle"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_land_battles_NewState_Text_44003f",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "المعارك البرية (انتصارات/الكل)",
+      "en": "Land battles (victories/all)"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_naval_battles_NewState_Text_1d0015",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "المعارك البحرية (انتصارات/الكل)",
+      "en": "Naval battles (victories/all)"
+    },
+    {
+      "key": "uied_component_texts_localised_string_TX_Battle_deployment_Ambush_Text_700071",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "كمين!",
+      "en": "Ambush!"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_battle_type_Intercepted_Text_3a0019",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "فشل الكمين",
+      "en": "Ambush Failed"
+    },
+    {
+      "key": "uied_component_texts_localised_string_tx_queue_NewState_Text_4c006c",
+      "table": "text/db/uied_component_texts.loc",
+      "ar": "آلات الحصار",
+      "en": "Siege Engines"
+    }
+  ]
+}
