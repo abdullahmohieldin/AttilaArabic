@@ -1,0 +1,65 @@
+term_en,term_ar,category,notes
+Eastern Roman Empire,الإمبراطورية الرومانية الشرقية,faction,Standard historical MSA
+Western Roman Empire,الإمبراطورية الرومانية الغربية,faction,Standard historical MSA
+Sassanid Empire,الإمبراطورية الساسانية,faction,Standard historical MSA
+Huns,الهون,faction,Standard historical MSA
+Visigoths,القوط الغربيون,faction,Standard historical MSA
+Ostrogoths,القوط الشرقيون,faction,Standard historical MSA
+Vandals,الوندال,faction,Standard historical MSA
+Franks,الفرنجة,faction,Standard historical MSA
+Saxons,الساكسون,faction,Standard historical MSA
+Alans,الآلان,faction,Standard historical MSA
+Geats,الغيتس,faction,Standard historical MSA
+Jutes,اليوتس,faction,Standard historical MSA
+Danes,الدانماركيون,faction,Standard historical MSA
+Picts,البيكتس,faction,Standard historical MSA
+Caledonians,الكاليدونيون,faction,Standard historical MSA
+Ebdani,الإبدانيون,faction,Standard historical MSA
+Tanukhids,التنوخيون,faction,Standard historical MSA
+Himyar,حمير,faction,Standard historical MSA
+Lakhmids,المناذرة,faction,Historical Arabic Kingdom of Al-Hirah
+Aksum,أكسوم,faction,Standard historical MSA
+Anteans,الأنطيون,faction,Slavic faction (Slavs DLC)
+Sclavenians,الصقالبة,faction,Slavic faction (Slavs DLC)
+Venedians,الفينيديون,faction,Slavic faction (Slavs DLC)
+Christianity (Eastern Orthodox),المسيحية (الأرثوذكسية الشرقية),religion,Orthodox Christian denomination
+Christianity (Western Church),المسيحية (الكنيسة الغربية),religion,Western Catholic/Nicene Christian
+Christianity (Arianism),المسيحية (الآريوسية),religion,Arian Christian denomination
+Zoroastrianism,الزرادشتية,religion,Sassanid state religion
+Tengriism,التنغرية,religion,Hunnic shamanic belief
+Germanic Paganism,الوثنية الجرمانية,religion,Barbarian belief
+Celtic Paganism,الوثنية الكلتية,religion,British Isles belief
+Graeco-Roman Paganism,الوثنية اليونانية الرومانية,religion,Classical paganism
+Semitic Paganism,الوثنية السامية,religion,Arabian peninsula belief
+Roman Empire,الإمبراطورية الرومانية,culture,Group heading
+Nomadic Tribes,القبائل البدوية,culture,Group heading
+Great Migrators,المهاجرون العظام,culture,Group heading
+Barbarian Kingdoms,الممالك البربرية,culture,Group heading
+Desert Kingdoms,ممالك الصحراء,culture,Group heading
+Nordic Factions,الفصائل الإسكندنافية,culture,Group heading
+Celtic Factions,الفصائل الكلتية,culture,Group heading
+Slavic Factions,الفصائل السلافية,culture,Group heading
+Faction Leader,قائد الفصيل,ui,Leader title on faction screen
+Religion,الديانة,ui,Religion label on faction screen
+Cultural Trait,سمة الثقافة,ui,Culture header
+Faction Trait,سمة الفصيل,ui,Faction trait header
+Starting Difficulty,صعوبة البداية,ui,Difficulty rating
+Start Campaign,ابدأ الحملة,ui,Main launch button
+Back,عودة,ui,Navigation return button
+Easy,سهل,ui,Difficulty level
+Normal,متوسط,ui,Difficulty level
+Hard,صعب,ui,Difficulty level
+Very Hard,صعب جداً,ui,Difficulty level
+Legendary,أسطوري,ui,Difficulty level
+Grand Campaign,الحملة الكبرى,ui,Main campaign name
+The Last Roman,الروماني الأخير,ui,DLC campaign name
+Age of Charlemagne,عصر شارلمان,ui,DLC campaign name
+Main Menu,القائمة الرئيسية,ui,Frontend navigation
+Options,الخيارات,ui,Settings menu
+Graphics,الرسوميات,ui,Video options
+Audio,الصوت,ui,Sound options
+Game Settings,إعدادات اللعبة,ui,Gameplay preferences
+Custom Battle,معركة مخصصة,ui,Battle lobby
+Single Player,لاعب واحد,ui,Campaign selection
+Multiplayer,لاعبون متعددون,ui,Online lobby
+Exit,خروج,ui,Quit game

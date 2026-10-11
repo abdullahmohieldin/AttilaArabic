@@ -1,0 +1,37 @@
+{
+  "total_entries": 459,
+  "total_batches": 5,
+  "completed_batches": 5,
+  "batches_info": [
+    {
+      "batch": "batch_01",
+      "count": 110,
+      "tier": "1A",
+      "status": "VALIDATED"
+    },
+    {
+      "batch": "batch_02",
+      "count": 110,
+      "tier": "1A",
+      "status": "VALIDATED"
+    },
+    {
+      "batch": "batch_03",
+      "count": 110,
+      "tier": "1A",
+      "status": "VALIDATED"
+    },
+    {
+      "batch": "batch_04",
+      "count": 110,
+      "tier": "1B",
+      "status": "VALIDATED"
+    },
+    {
+      "batch": "batch_05",
+      "count": 19,
+      "tier": "1B",
+      "status": "VALIDATED"
+    }
+  ]
+}

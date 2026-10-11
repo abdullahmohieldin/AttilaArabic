@@ -30,4 +30,11 @@ reference/
 # Editor / agent-tool config, not part of the project
 .zcodeignore
 .zcode/
-tw_attila_ar/
+tw_attila_ar/backup/
+tw_attila_ar/out/
+tw_attila_ar/screenshots/
+tw_attila_ar/quarantine/
+tw_attila_ar/vendor/
+*.zip
+*.pdb
+*.debo_broken
